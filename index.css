@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  padding-left: 20vw;
+  overflow-x: hidden;
+}
+
+.circle {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+h1,
+a {
+  font-family: "./Assets/fonts/Robot slab/RobotoSlab-Medium.ttf";
+}
+
+p {
+  font-family: "./Assets/fonts/open sans/OpenSans-Bold.ttf";
+}
+
+header {
+  width: 80vw;
+  min-height: 100vh;
+}
+
+header h1 {
+  font-size: 72px;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 32px;
+}
+
+nav {
+  position: fixed;
+  width: 20vw;
+  min-width: 200px;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  text-align: center;
+}
+
+section#about {
+  width: 80vw;
+  min-height: 100vh;
+}
+
+section#about h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+section#resume {
+  width: 80vh;
+  min-height: 100vh;
+}
+/*# sourceMappingURL=index.css.map */
