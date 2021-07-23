@@ -1,5 +1,5 @@
 // JQuery is written here
-$(function(){
+$(function () {
     const titles = $('header p').data('title').split(", ");
 
     // Making writing animation in header
@@ -7,25 +7,30 @@ $(function(){
     let text = "", back = false;
     setInterval(() => {
         $('header p').html(`I am a <span class="text-decoration-underline text-primary fw-bold">${text}</span>`)
-        if (back)
-        {
-            text = text.substring(0, text.length-1);
+        if (back) {
+            text = text.substring(0, text.length - 1);
             i--;
-            if (i < 0)
-            {
+            if (i < 0) {
                 back = false;
                 j = (j + 1) % titles.length;
                 i = 0;
             }
         }
-        else{
+        else {
             text += titles[j][i];
             i++;
-            if (i >= titles[j].length){
+            if (i >= titles[j].length) {
                 back = true;
             }
         }
     }, 300);
 
-
 });
+
+
+// Making functionality for the skill section
+let span = document.querySelectorAll(".rect-box span");
+
+span.forEach(element => {
+    element.style.width = `${element.parentNode.getAttribute("data-filled")}`;
+})

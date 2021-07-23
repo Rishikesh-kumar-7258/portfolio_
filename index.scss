@@ -72,3 +72,17 @@ section {
         font-weight: bold;
     }
 }
+
+.skill-box {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    .rect-box{
+        position : relative;
+        span{
+            position : absolute;
+            height : 100%;
+            background : #0d6efd;
+        }
+    }
+}
