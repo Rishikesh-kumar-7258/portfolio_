@@ -60,18 +60,15 @@ nav {
     left: 0;
     top: 0;
     text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-section#about {
+section {
     width: 80vw;
     min-height: 100vh;
     h1 {
         font-size: 48px;
         font-weight: bold;
     }
-}
-
-section#resume {
-    width: 80vh;
-    min-height: 100vh;
 }
