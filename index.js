@@ -25,12 +25,27 @@ $(function () {
         }
     }, 300);
 
+    //Toggling the view for rectangle and circular boxes
+    $(".view-toggler").click(() => {
+        console.log("Button was clicked");
+
+        $('.skill-box').toggleClass("border")
+        $('.skill-box > div').toggleClass("rect-box circle-box");
+        $('.skill-box > div > span').toggleClass("rounded-pill");
+
+        // Making functionality for the skill section
+        let span = document.querySelectorAll(".rect-box span");
+
+        span.forEach(element => {
+            element.style.width = `${element.parentNode.getAttribute("data-filled")}`;
+        })
+        
+        // Making skills section for circular view
+        $(".circle-box").css({ background: `conic-gradient(#0d6efd 0 ${$(".circle-box").data("filled")} , gray ${$(".circle-box").data("filled")} 360deg)` })
+
+    })
+
+
+
+
 });
-
-
-// Making functionality for the skill section
-let span = document.querySelectorAll(".rect-box span");
-
-span.forEach(element => {
-    element.style.width = `${element.parentNode.getAttribute("data-filled")}`;
-})

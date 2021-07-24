@@ -61,19 +61,57 @@ section h1 {
 }
 
 .skill-box {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .skill-box .rect-box {
   position: relative;
+  padding: 10px 0;
+  width: 100%;
+  background-color: transparent !important;
 }
 
 .skill-box .rect-box span {
   position: absolute;
   height: 100%;
   background: #0d6efd;
+  left: 0;
+  top: 0;
+}
+
+.skill-box .circle-box {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skill-box .circle-box span {
+  position: absolute;
+  width: 80px !important;
+  height: 80px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #0d6efd;
+  z-index: 5;
 }
 /*# sourceMappingURL=index.css.map */
