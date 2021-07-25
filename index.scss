@@ -28,7 +28,7 @@ body {
 }
 
 h1,
-a {
+a,.btn {
     font-family: "./Assets/fonts/Robot slab/RobotoSlab-Medium.ttf";
 }
 
@@ -81,7 +81,6 @@ section {
         position : relative;
         padding : 10px 0;
         width : 100%;
-        background-color: transparent !important;
         span{
             position : absolute;
             height : 100%;

@@ -16,7 +16,7 @@ body {
 }
 
 h1,
-a {
+a, .btn {
   font-family: "./Assets/fonts/Robot slab/RobotoSlab-Medium.ttf";
 }
 
@@ -77,7 +77,6 @@ section h1 {
   position: relative;
   padding: 10px 0;
   width: 100%;
-  background-color: transparent !important;
 }
 
 .skill-box .rect-box span {

@@ -26,26 +26,45 @@ $(function () {
     }, 300);
 
     //Toggling the view for rectangle and circular boxes
+    is_circle = false;
     $(".view-toggler").click(() => {
-        console.log("Button was clicked");
+
+        is_circle = !is_circle;
 
         $('.skill-box').toggleClass("border")
         $('.skill-box > div').toggleClass("rect-box circle-box");
         $('.skill-box > div > span').toggleClass("rounded-pill");
 
-        // Making functionality for the skill section
-        let span = document.querySelectorAll(".rect-box span");
+        fill();
 
-        span.forEach(element => {
-            element.style.width = `${element.parentNode.getAttribute("data-filled")}`;
-        })
-        
         // Making skills section for circular view
-        $(".circle-box").css({ background: `conic-gradient(#0d6efd 0 ${$(".circle-box").data("filled")} , gray ${$(".circle-box").data("filled")} 360deg)` })
+        if (is_circle) 
+        {
+            let circles = document.querySelectorAll(".circle-box");
+
+            circles.forEach((element) => {
+                element.style.background = `conic-gradient(#0d6efd 0 ${$(this).data('filled')} , lightblue ${$(this).data('filled')} 360deg)`;
+                console.log("This event is fired");
+            })
+        }
+        else $(".rect-box").css({background : "none"});
 
     })
-
-
-
-
 });
+
+// Making functionality for the skill section
+function fill() {
+    let span = document.querySelectorAll(".rect-box span");
+    let rect = document.querySelectorAll(".rect-box");
+
+    rect.forEach((element) => {
+        element.style.background = "none";
+    })
+
+    span.forEach(element => {
+        element.style.width = `${element.parentNode.getAttribute("data-filled")}`;
+    })
+
+}
+
+fill();
