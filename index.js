@@ -38,16 +38,14 @@ $(function () {
         fill();
 
         // Making skills section for circular view
-        if (is_circle) 
-        {
+        if (is_circle) {
             let circles = document.querySelectorAll(".circle-box");
 
             circles.forEach((element) => {
-                element.style.background = `conic-gradient(#0d6efd 0 ${$(this).data('filled')} , lightblue ${$(this).data('filled')} 360deg)`;
-                console.log("This event is fired");
+                element.style.background = `conic-gradient(#0d6efd 0 ${element.getAttribute("data-filled")} , lightblue ${element.getAttribute("data-filled")} 360deg)`;
             })
         }
-        else $(".rect-box").css({background : "none"});
+        else $(".rect-box").css({ background: "none" });
 
     })
 });

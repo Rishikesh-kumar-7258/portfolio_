@@ -16,7 +16,7 @@ body {
 }
 
 h1,
-a, .btn {
+a {
   font-family: "./Assets/fonts/Robot slab/RobotoSlab-Medium.ttf";
 }
 
@@ -110,7 +110,18 @@ section h1 {
   height: 80px;
   border-radius: 50%;
   background: white;
-  border: 1px solid #0d6efd;
   z-index: 5;
+}
+
+.skill-box .circle-box::before {
+  content: attr(data-filled);
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: 10;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 /*# sourceMappingURL=index.css.map */
