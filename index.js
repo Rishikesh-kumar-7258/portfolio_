@@ -48,6 +48,20 @@ $(function () {
         else $(".rect-box").css({ background: "none" });
 
     })
+
+    // submitting form
+    $('form').submit(function()
+    {
+        console.log("form is submittted");
+        let name = $("#name").val();
+        let email = $("#email").val();
+        let phone = $("#phone").val();
+        let message = $("#message").val();
+
+        alert(name, email, phone, message);
+
+        return false;
+    })
 });
 
 // Making functionality for the skill section
