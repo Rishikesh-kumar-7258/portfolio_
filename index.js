@@ -52,13 +52,13 @@ $(function () {
     // submitting form
     $('form').submit(function()
     {
-        console.log("form is submittted");
+        alert("form is submittted");
         let name = $("#name").val();
         let email = $("#email").val();
         let phone = $("#phone").val();
         let message = $("#message").val();
 
-        alert(name, email, phone, message);
+        console.log(name, email, phone, message);
 
         return false;
     })
