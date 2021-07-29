@@ -16,11 +16,11 @@ body {
 }
 
 h1,
-a {
+a, h2 {
   font-family: "./Assets/fonts/Robot slab/RobotoSlab-Medium.ttf";
 }
 
-p {
+p, li {
   font-family: "./Assets/fonts/open sans/OpenSans-Bold.ttf";
 }
 
@@ -66,6 +66,11 @@ section h1 {
   border-left: 10px solid #0d6efd;
   margin: 5px 0;
   border-radius: 10px 0 0 10px;
+}
+
+.list-group .list-group-item li {
+  margin: 0;
+  border: 0;
 }
 
 .skill-box {
