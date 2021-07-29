@@ -62,6 +62,12 @@ $(function () {
 
         return false;
     })
+
+    // Making toggle button work
+    $(".nav-toggler").click(() => {
+        $("nav").toggleClass('hide');
+    })
+
 });
 
 // Making functionality for the skill section
@@ -80,3 +86,44 @@ function fill() {
 }
 
 fill();
+
+// Toggle navbar
+const nav_toggle = document.querySelector(".nav-toggler");
+const nav = document.querySelector("nav");
+const section = document.querySelectorAll("section");
+const header = document.querySelector("header");
+
+let is_nav_visible = innerWidth > 780 ? true : false;
+window.addEventListener('resize', responsive)
+
+function responsive()
+{
+    if (innerWidth > 780) 
+    {
+        nav_toggle.classList.add("hide");
+        section.forEach(element => {
+            element.classList.add("p-5");
+        })
+        header.classList.add("px-5");
+        if (!is_nav_visible)
+        {
+            nav.classList.remove("hide");
+            is_nav_visible = true;
+        }
+    }
+    else
+    {
+        nav_toggle.classList.remove("hide");
+        section.forEach(element => {
+            element.classList.remove("p-5");
+        })
+        header.classList.remove("px-5");
+        if (is_nav_visible)
+        {
+            nav.classList.add("hide");
+            is_nav_visible = false;
+        }
+    }
+}
+
+responsive();

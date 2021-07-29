@@ -12,11 +12,14 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
+    list-style-type: none;
 }
 
 body {
     width: 100vw;
+    min-width: 330px;
     padding-left: 20vw;
     overflow-x: hidden;
 }
@@ -59,6 +62,7 @@ nav {
     text-align: center;
     overflow-x: hidden;
     overflow-y: auto;
+    z-index : 5;
 }
 
 section {
@@ -149,4 +153,79 @@ section {
             place-items: center;
         }
     }
+}
+
+section#resume{
+    div.container-fluid{
+        margin : 15px 0;
+        padding : 0;
+        ul{
+            $border-width : 5px;
+            border-left : $border-width solid #0d6efd;
+            position : relative;
+            margin : 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color : gray;
+
+    
+            &::before{
+                $dim : 15px;
+                content : "";
+                position : absolute;
+                left : -$border-width/2;
+                top : 0;
+                width : $dim;
+                height : $dim;
+                background-color : #fff;
+                border : $border-width solid #0d6efd;
+                border-radius : 50%;
+                transform: translate(-50%);
+            }
+    
+            .list-title{
+                margin : 5px 0;
+                h3{
+                    margin : 0;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+
+// Responsiveness
+.nav-toggler{
+    $dim : 30px;
+    width : $dim;
+    height : $dim;
+    position : fixed;
+    left : 0;
+    top : 0;
+    background-color: #fff;
+    @include flex(column);
+    z-index : 10;
+    .line{
+        width : 100%;
+        background-color : #000;
+        padding : 3px;
+        border-radius : 5px;
+    }
+}
+
+.hide{
+    display : none;
+}
+@media (max-width : 780px) {
+
+    body{
+        padding : 0;
+    }
+
+    nav{
+        width : 100%;
+        background-color: #fff;
+    }
+
 }
