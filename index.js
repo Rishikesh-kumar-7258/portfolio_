@@ -127,3 +127,16 @@ function responsive()
 }
 
 responsive();
+
+// Form validation
+const input = document.querySelectorAll("form input");
+
+input.forEach(element => {
+    // console.log(element.type);
+    element.addEventListener('input', (e) => {
+        if (element.type === 'text')
+        {
+            element.style.border = "1px solid red";
+        }
+    })
+})
