@@ -130,13 +130,33 @@ responsive();
 
 // Form validation
 const input = document.querySelectorAll("form input");
-
+let error = document.createElement("p");
+error.classList.add("error");
 input.forEach(element => {
     // console.log(element.type);
     element.addEventListener('input', (e) => {
+        
         if (element.type === 'text')
         {
-            element.style.border = "1px solid red";
+            if (element.value.length <= 2) 
+            {
+                error.innerText = "The text length should be more than 2 characters."
+            }
+            else if (element.value.length >= 20)
+            {
+                error.innerText = "The text should be less than 20 characters."
+            }
+            else 
+            {
+                error.innerText = "";
+            }
         }
+        else if (element.type === 'email')
+        {
+            if (!element.value.includes('@')) error.innerText = "Invalid email"
+            else error.innerText = "";
+        }
+
+        element.after(error);
     })
 })

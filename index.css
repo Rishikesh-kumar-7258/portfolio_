@@ -195,6 +195,14 @@ section#resume div.container-fluid ul .list-title h3 {
   font-weight: bold;
 }
 
+.error {
+  color: red;
+  font-size: 8px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
 .nav-toggler {
   width: 30px;
   height: 30px;
