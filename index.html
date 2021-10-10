@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" href="./Assets/Images/portfolio_logo.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="./Assets/Images/portfolio_logo.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/d59016f14e.js" crossorigin="anonymous"></script>
     <title>Rishikesh Kumar | portfolio</title>
@@ -70,6 +70,16 @@
         </div>
         <ul class="list-group">
             <li class="list-group-item">
+                <h2><span><i class="fas fa-gamepad"></i></span> Game Developer</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">I also have some basic experience in game development.</li>
+                    <li class="list-group-item">I learnt <strong>Lua</strong> programming language and <strong>Love2D</strong>  plateform for developing
+                        some simple games.</li>
+                    <li class="list-group-item">Currently I am working on game development with <strong>pygame</strong> library in <strong>python</strong>.</li>
+                    <li class="list-group-item">I have made some exciting games like flappy-bird, block-breaker, slide-puzzle, hot-air-balloon</li>
+                </ul>
+            </li>
+            <li class="list-group-item">
                 <h2><span><i class="fas fa-laptop-code"></i></span> Web Developer</h2>
                 <ul class="list-group">
                     <li class="list-group-item">I am an enthusiastic web developer with specilisation in front-end
@@ -95,14 +105,6 @@
                     <li class="list-group-item">I am a 3 &#9733; (Max 3 &#9733;) coder at codechef with rating 1727 (Max
                         1727).</li>
                     <li class="list-group-item">I got a global rank of 89 in July Cook Off challenge 2021.</li>
-                </ul>
-            </li>
-            <li class="list-group-item">
-                <h2><span><i class="fas fa-gamepad"></i></span> Game Development</h2>
-                <ul class="list-group">
-                    <li class="list-group-item">I also have some basic experience in game development.</li>
-                    <li class="list-group-item">I learnt Lua programming language and Love2D plateform for developing
-                        some simple games.</li>
                 </ul>
             </li>
         </ul>
@@ -247,6 +249,7 @@
             <a href="https://github.com/Rishikesh-kumar-7258/WebD-club-project" target="_blank"  class="col-sm-12 col-md-6"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=WebD-club-project&theme=tokyonight"></a>
             <a href="https://github.com/Rishikesh-kumar-7258/HungrySnake" target="_blank"  class="col-sm-12 col-md-6"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=HungrySnake&theme=tokyonight"></a>
             <a href="https://github.com/Rishikesh-kumar-7258/NoteProject" target="_blank"  class="col-sm-12 col-md-6"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=NoteProject&theme=tokyonight"></a>
+            <a href="https://github.com/Rishikesh-kumar-7258/Hot_Air_Balloon" target="_blank"  class="col-sm-12 col-md-6"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=Hot_Air_Balloon&theme=tokyonight"></a>
         </div>
     </section>
     <section id="contactus" class="container p-5">
@@ -258,10 +261,9 @@
                 <div class="col-sm-12 col-md-6">
                     <h2 class="text-center">Contact Details</h2>
                     <address class="d-flex flex-column justify-content-around">
-                        <a href="tel:+917258060710"><span class="fas fa-phone-alt">Phone:</span> 7258060710</a>
-                        <a href="mailto:rishi7258prince@gmail.com"><span class="fas fa-envelope">Email:</span>
-                            rishi7258prince@gmail.com</a>
-                        <p>village : Pain</p>
+                        <a href="tel:+917258060710" class="text-decoration-none text-dark py-1"><span">Phone:</span> 7258060710</a>
+                        <a href="mailto:rishi7258prince@gmail.com" class="text-decoration-none text-dark py-1"><span>Email:</span> rishi7258prince@gmail.com</a>
+                        <p class="pt-1">village : Pain</p>
                         <p>Post : Pain </p>
                         <p>Distric : Sheikhpura</p>
                         <p>Police Station : Sheikhpura</p>
@@ -269,23 +271,28 @@
                         <p>Pin Code : 811105</p>
                     </address>
                 </div>
+
+                <!-- Contact form -->
                 <div class="col-sm-12 col-md-6">
                     <h2 class="text-center">Feedback</h2>
-                    <form class="container">
-                        <div class="row g-3">
-                            <label for="name" class="col-md-3 col-sm-12">Name</label>
-                            <input type="text" name="name" id="name" class="col-md-9 col-sm-12" required>
-                            <label for="email" class="col-md-3 col-sm-12">Email</label>
-                            <input type="email" name="email" id="email" class="col-md-9 col-sm-12" required>
-                            <label for="phone" class="col-md-3 col-sm-12">Phone</label>
-                            <input type="number" name="phone" id="phone" class="col-md-9 col-sm-12">
-                            <textarea name="message" id="message" cols="30" rows="10" class="col-12"
-                                placeholder="Please enter your message"></textarea>
-                            <div class="col-12">
-                                <input type="submit" value="Submit" class="btn btn-primary">
-                                <input type="reset" value="Reset" class="btn btn-primary">
-                            </div>
+                    <form>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                            <label for="name">Your Name</label>
                         </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email">
+                            <label for="email">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="message" name="message" style="height: 100px;"></textarea>
+                            <label for="message">Enter your message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
                     </form>
                 </div>
             </div>
