@@ -72,10 +72,6 @@ $(function () {
         $("body").toggleClass("dark-mode");
         $(".dark-mode-btn .fas").toggleClass("fa-sun fa-moon");
         $(".list-group-item").toggleClass("list-group-item-dark");
-        $("#projects .row a img").attr(
-          "src",
-          "https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=Block_breaker&theme=tokyonight"
-        );
     })
 
 });
