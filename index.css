@@ -1,8 +1,30 @@
+:root {
+  --bg-color: white;
+  --font-color: black;
+}
+
+.dark-mode {
+  --bg-color: black;
+  --font-color: white;
+}
+
+.dark-mode-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 100;
+  background-color: var(--bg-color);
+}
+
+.fa-sun {
+  color: yellow;
+}
+
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
 }
@@ -12,6 +34,8 @@ body {
   min-width: 330px;
   padding-left: 20vw;
   overflow-x: hidden;
+  background-color: var(--bg-color);
+  color: var(--font-color);
 }
 
 .circle {
@@ -34,12 +58,10 @@ header {
   width: 80vw;
   min-height: 100vh;
 }
-
 header h1 {
   font-size: 72px;
   font-weight: 700;
 }
-
 header p {
   font-size: 32px;
 }
@@ -61,7 +83,6 @@ section {
   width: 80vw;
   min-height: 100vh;
 }
-
 section h1 {
   font-size: 48px;
   font-weight: bold;
@@ -79,36 +100,24 @@ section h1 {
   margin: 5px 0;
   border-radius: 10px 0 0 10px;
 }
-
 .list-group .list-group-item li {
   margin: 0;
   border: 0;
 }
 
 .skill-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: flex-start;
+  flex-direction: column;
 }
-
 .skill-box div {
-  -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
-
 .skill-box .rect-box {
   position: relative;
   padding: 10px 0;
   width: 100%;
 }
-
 .skill-box .rect-box span {
   position: absolute;
   height: 100%;
@@ -116,7 +125,6 @@ section h1 {
   left: 0;
   top: 0;
 }
-
 .skill-box .rect-box::before {
   content: attr(data-filled);
   position: absolute;
@@ -126,24 +134,15 @@ section h1 {
   text-align: end;
   padding: 2px;
 }
-
 .skill-box .circle-box {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
 }
-
 .skill-box .circle-box span {
   position: absolute;
   width: 80px !important;
@@ -152,7 +151,6 @@ section h1 {
   background: white;
   z-index: 5;
 }
-
 .skill-box .circle-box::before {
   content: attr(data-filled);
   position: absolute;
@@ -160,7 +158,6 @@ section h1 {
   height: 100px;
   border-radius: 50%;
   z-index: 10;
-  display: -ms-grid;
   display: grid;
   place-items: center;
 }
@@ -169,7 +166,6 @@ section#resume div.container-fluid {
   margin: 15px 0;
   padding: 0;
 }
-
 section#resume div.container-fluid ul {
   border-left: 5px solid #0d6efd;
   position: relative;
@@ -178,7 +174,6 @@ section#resume div.container-fluid ul {
   padding-bottom: 10px;
   color: gray;
 }
-
 section#resume div.container-fluid ul::before {
   content: "";
   position: absolute;
@@ -189,14 +184,11 @@ section#resume div.container-fluid ul::before {
   background-color: #fff;
   border: 5px solid #0d6efd;
   border-radius: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  transform: translate(-50%);
 }
-
 section#resume div.container-fluid ul .list-title {
   margin: 5px 0;
 }
-
 section#resume div.container-fluid ul .list-title h3 {
   margin: 0;
   font-weight: bold;
@@ -217,21 +209,12 @@ section#resume div.container-fluid ul .list-title h3 {
   left: 0;
   top: 0;
   background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
   z-index: 10;
 }
-
 .nav-toggler .line {
   width: 100%;
   background-color: #000;
@@ -251,5 +234,4 @@ section#resume div.container-fluid ul .list-title h3 {
     width: 100%;
     background-color: #fff;
   }
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

@@ -9,6 +9,31 @@
     flex-direction: $direction;
 }
 
+// variables 
+:root{
+    --bg-color : white;
+    --font-color : black;
+}
+
+.dark-mode{
+    --bg-color : black;
+    --font-color : white;
+}
+
+.dark-mode-btn{
+    position : fixed;
+    bottom : 20px;
+    right : 20px;
+    cursor: pointer;
+    z-index: 100;
+    background-color: var(--bg-color);
+}
+
+.fa-sun{
+    color : yellow;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -22,6 +47,8 @@ body {
     min-width: 330px;
     padding-left: 20vw;
     overflow-x: hidden;
+    background-color: var(--bg-color);
+    color: var(--font-color);
 }
 
 // CLASSESS

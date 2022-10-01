@@ -15,6 +15,12 @@
 </head>
 
 <body>
+
+    <!-- Button to change to dark mode -->
+    <div class="dark-mode-btn border rounded-pill p-3" title="Change theme">
+        <i class="fas fa-moon"></i>
+    </div>
+
     <div class="nav-toggler">
         <div class="line"></div>
         <div class="line"></div>
@@ -45,6 +51,7 @@
                 <a href="#home" class="col-12 p-3 border btn btn-primary"><span class="fas fa-home"></span> Home</a>
                 <a href="#about" class="col-12 p-3 border btn btn-primary"><span class="fas fa-portrait"></span> About
                     Me</a>
+                <a href="#experience" class="col-12 p-3 border btn btn-primary"><span class="fas fa-portrait"></span> Experience</a>
                 <a href="#skills" class="col-12 p-3 border btn btn-primary"><span class="fas fa-chess"></span>
                     Skills</a>
                 <a href="#resume" class="col-12 p-3 border btn btn-primary"><span class="fas fa-id-card"></span>
@@ -58,14 +65,14 @@
     </nav>
 
     <header id="home" class="container-fluid d-flex px-5 align-items-start justify-content-center flex-column">
-        <h1>Rishikesh Kumar</h1>
-        <p data-title="Coder, Developer, Student, Teacher">I am a</p>
+        <p class="display-1 fw-bolder">Rishikesh Kumar</p>
+        <p data-title="Coder, Developer, Student">I am a</p>
     </header>
 
     <section id="about" class="container p-5">
         <div class="row">
             <div class="col-12">
-                <h1>About Me</h1>
+                <h1 class="display-4 fw-bolder">About Me</h1>
             </div>
         </div>
         <ul class="list-group">
@@ -77,7 +84,8 @@
                     <li class="list-group-item">I am a 3 &#9733; (Max 4 &#9733;) coder at codechef with rating 1774 (Max
                         1827).</li>
                     <li class="list-group-item">I got a global rank of 89 in July Cook Off challenge 2021.</li>
-                    <li class="list-group-item">I got a global rank of 390 in FizzBuzz challenge 2021 held on 26th november.</li>
+                    <li class="list-group-item">I got a global rank of 390 in FizzBuzz challenge 2021 held on 26th
+                        november.</li>
                     <li class="list-group-item">Got 34th rank on CodeChef in starters 42 challenge.</li>
                 </ul>
             </li>
@@ -86,7 +94,8 @@
                 <ul class="list-group">
                     <li class="list-group-item">I can work with HTML, CSS, JavaScript, Bootstrap, React, Flask and
                         Django.</li>
-                    <li class="list-group-item">Created a full stack website Jan Swayam Kalyan Portal to apply and track any government scheme as a SIH22 solution.</li>
+                    <li class="list-group-item">Created a full stack website Jan Swayam Kalyan Portal to apply and track
+                        any government scheme as a SIH22 solution.</li>
                     <li class="list-group-item">Created a To do app to list out all the work of the day.</li>
                 </ul>
             </li>
@@ -94,13 +103,16 @@
                 <h2><span><i class="fas fa-gamepad"></i></span> Game Developer</h2>
                 <ul class="list-group">
                     <li class="list-group-item">I also have some basic experience in game development.</li>
-                    <li class="list-group-item">I learnt <strong>Lua</strong> programming language and <strong>Love2D</strong>  plateform for developing
+                    <li class="list-group-item">I learnt <strong>Lua</strong> programming language and
+                        <strong>Love2D</strong> plateform for developing
                         some simple games.</li>
-                    <li class="list-group-item">Currently I am working on game development with <strong>pygame</strong> library in <strong>python</strong>.</li>
-                    <li class="list-group-item">I have made some exciting games like <strong>flappy-bird, block-breaker, slide-puzzle, hot-air-balloon</strong></li>
+                    <li class="list-group-item">Currently I am working on game development with <strong>pygame</strong>
+                        library in <strong>python</strong>.</li>
+                    <li class="list-group-item">I have made some exciting games like <strong>flappy-bird, block-breaker,
+                            slide-puzzle, hot-air-balloon</strong></li>
                 </ul>
             </li>
-            
+
             <!-- <li class="list-group-item">
                 <h2><span><i class="fas fa-palette"></i></span> Graphic Designer</h2>
                 <ul class="list-group">
@@ -109,14 +121,65 @@
                     </li>
                 </ul>
             </li> -->
-            
+
+        </ul>
+    </section>
+
+    <section id="experience" class="container p-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="display-4 fw-bolder">Experience</h1>
+            </div>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <p class="h2">RMGX Technologies - Gurgao</p>
+                <p><span>Front-end developer</span> | <span>June 2022 - September 2022</span></p>
+                <ul class="list-group">
+                    <li class="list-group-item">Worked on a company website project using Next.js.</li>
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <p class="h2">GFG student chapter GGV</p>
+                <p><span>Technical lead</span> | <span>July 2022 - Ongoing</span></p>
+                <ul class="list-group">
+                    <li class="list-group-item">Given the interview with 180+ students and selected as technical lead.
+                    </li>
+                    <li class="list-group-item">Organized 3+ events and sessions</li>
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <p class="h2">Dimensionless Technologies - Navi Mumbai</p>
+                <p><span>Full Stack Web Developer</span> | <span>December 2021 – January 2022</span></p>
+                <ul class="list-group">
+                    <li class="list-group-item">Made an excel webpage using React and Bootstrap</li>
+                    <li class="list-group-item">Worked in OpenCV.js to implement image detection using the device
+                        camera.</li>
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <p class="h2">Codechef Chapter GGV</p>
+                <p><span>Executive Member</span> | <span>July 2021 - January 2022</span></p>
+                <ul class="list-group">
+                    <li class="list-group-item">Given interview with 80+ students and selected as executive member.</li>
+                    <li class="list-group-item">Taught DSA to junior students.</li>
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <p class="h2">Google Developer Club GGV</p>
+                <p><span>Web/app club Member</span> | <span>March 2021 - March 2022</span></p>
+                <ul class="list-group">
+                    <li class="list-group-item">Given interview with 100+ students and selected as member.</li>
+                    <li class="list-group-item">Made a website for our club</li>
+                </ul>
+            </li>
         </ul>
     </section>
 
     <section id="skills" class="container p-5">
         <div class="row">
             <div class="col-sm-12 col-md-6">
-                <h1>Skills</h1>
+                <h1 class="display-4 fw-bolder">Skills</h1>
             </div>
             <div class="col-sm-12 col-md-6 d-flex justify-content-end align-items-center">
                 <button type="button" class="btn btn-primary view-toggler">Toggle view</button>
@@ -174,7 +237,7 @@
             <div class="col-lg-6 col-12 skill-box">
                 <p class="p-0 m-0">Canva</p>
                 <div class="rect-box border rounded-pill" data-filled="65%"><span class="rounded-pill"></span></div> -->
-            </div>
+        </div>
         </div>
     </section>
 
@@ -187,26 +250,44 @@
     <section id="projects" class="container p-5">
         <div class="row">
             <div class="col-12">
-                <h1>My Projects</h1>
+                <h1 class="display-4 fw-bolder">My Projects</h1>
             </div>
         </div>
         <div class="row mt-5">
-            <a href="https://github.com/Rishikesh-kumar-7258/Block_breaker" target="_blank" class="col-sm-12 col-md-6"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=Block_breaker&theme=default"></a>
-            <a href="https://github.com/Rishikesh-kumar-7258/FlappyBird" target="_blank"  class="col-sm-12 col-md-6"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=FlappyBird&theme=default"></a>
-            <a href="https://github.com/Rishikesh-kumar-7258/SlidePuzzle" target="_blank"  class="col-sm-12 col-md-6"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=SlidePuzzle&theme=default"></a>
-            <a href="https://github.com/Rishikesh-kumar-7258/Tic-Tac-Toe" target="_blank"  class="col-sm-12 col-md-6"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=Tic-Tac-Toe&theme=default"></a>
-            <a href="https://github.com/Rishikesh-kumar-7258/moonshot-thinkers" target="_blank"  class="col-sm-12 col-md-6"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=moonshot-thinkers&theme=default"></a>
-            <a href="https://github.com/Rishikesh-kumar-7258/WebD-club-project" target="_blank"  class="col-sm-12 col-md-6"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=WebD-club-project&theme=default"></a>
-            <a href="https://github.com/Rishikesh-kumar-7258/HungrySnake" target="_blank"  class="col-sm-12 col-md-6"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=HungrySnake&theme=default"></a>
-            <a href="https://github.com/Rishikesh-kumar-7258/NoteProject" target="_blank"  class="col-sm-12 col-md-6"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=NoteProject&theme=default"></a>
-            <a href="https://github.com/Rishikesh-kumar-7258/Hot_Air_Balloon" target="_blank"  class="col-sm-12 col-md-6"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=Hot_Air_Balloon&theme=default"></a>
-            <a href="https://github.com/Rishikesh-kumar-7258/projects" target="_blank"  class="col-sm-12 col-md-6"><img src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=projects&theme=default"></a>
+            <a href="https://github.com/Rishikesh-kumar-7258/Block_breaker" target="_blank"
+                class="col-sm-12 col-md-6"><img
+                    src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=Block_breaker&theme=default"></a>
+            <a href="https://github.com/Rishikesh-kumar-7258/FlappyBird" target="_blank" class="col-sm-12 col-md-6"><img
+                    src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=FlappyBird&theme=default"></a>
+            <a href="https://github.com/Rishikesh-kumar-7258/SlidePuzzle" target="_blank"
+                class="col-sm-12 col-md-6"><img
+                    src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=SlidePuzzle&theme=default"></a>
+            <a href="https://github.com/Rishikesh-kumar-7258/Tic-Tac-Toe" target="_blank"
+                class="col-sm-12 col-md-6"><img
+                    src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=Tic-Tac-Toe&theme=default"></a>
+            <a href="https://github.com/Rishikesh-kumar-7258/moonshot-thinkers" target="_blank"
+                class="col-sm-12 col-md-6"><img
+                    src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=moonshot-thinkers&theme=default"></a>
+            <a href="https://github.com/Rishikesh-kumar-7258/WebD-club-project" target="_blank"
+                class="col-sm-12 col-md-6"><img
+                    src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=WebD-club-project&theme=default"></a>
+            <a href="https://github.com/Rishikesh-kumar-7258/HungrySnake" target="_blank"
+                class="col-sm-12 col-md-6"><img
+                    src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=HungrySnake&theme=default"></a>
+            <a href="https://github.com/Rishikesh-kumar-7258/NoteProject" target="_blank"
+                class="col-sm-12 col-md-6"><img
+                    src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=NoteProject&theme=default"></a>
+            <a href="https://github.com/Rishikesh-kumar-7258/Hot_Air_Balloon" target="_blank"
+                class="col-sm-12 col-md-6"><img
+                    src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=Hot_Air_Balloon&theme=default"></a>
+            <a href="https://github.com/Rishikesh-kumar-7258/projects" target="_blank" class="col-sm-12 col-md-6"><img
+                    src="https://github-readme-stats.vercel.app/api/pin/?username=Rishikesh-kumar-7258&repo=projects&theme=default"></a>
         </div>
     </section>
     <section id="contactus" class="container p-5">
         <div class="row">
             <div class="col-12">
-                <h1>Contact Me</h1>
+                <h1 class="display-4 fw-bolder">Contact Me</h1>
             </div>
             <!-- 
             <div class="row py-3">
@@ -224,11 +305,11 @@
                     </address>
                 </div> -->
 
-                <!-- Contact form -->
-                <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSeLl2bKRDmJi1I6zPfR-qE8O75uDm_-SxxemaKtZCbPjMriUg/viewform?embedded=true"
-                    width="640" height="709" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                <!-- <div class="col-sm-12 col-md-6">
+            <!-- Contact form -->
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSeLl2bKRDmJi1I6zPfR-qE8O75uDm_-SxxemaKtZCbPjMriUg/viewform?embedded=true"
+                width="640" height="709" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <!-- <div class="col-sm-12 col-md-6">
                     <h2 class="text-center">Feedback</h2>
                     <form>
                         <div class="form-floating mb-3">
@@ -250,7 +331,6 @@
                         <button type="submit" class="btn btn-primary mt-3">Submit</button>
                     </form>
                 </div> -->
-            </div>
         </div>
     </section>
 </body>
