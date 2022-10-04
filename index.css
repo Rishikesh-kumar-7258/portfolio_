@@ -1,21 +1,28 @@
 :root {
   --bg-color: white;
   --font-color: black;
+  --shadow-color: #00000017;
 }
 
 .dark-mode {
   --bg-color: black;
   --font-color: white;
+  --shadow-color: #ffffff9e;
 }
 
 .dark-mode-btn {
+  min-width: 50px;
+  min-height: 50px;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
+  right: 10px;
   cursor: pointer;
   z-index: 100;
   background-color: var(--bg-color);
   transition: all 0.5s ease;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 0 12px var(--shadow-color);
 }
 
 .fa-sun {
@@ -37,6 +44,7 @@ body {
   overflow-x: hidden;
   background-color: var(--bg-color);
   color: var(--font-color);
+  transition: all 0.5s ease-in-out;
 }
 
 .circle {
