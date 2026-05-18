@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rishikesh Kumar — Full Stack Developer & Competitive Programmer">
+    <meta name="description" content="Rishikesh Kumar - Full Stack Engineer & ML Engineer, M.Tech IIT Bombay">
     <title>Rishikesh Kumar | Portfolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,18 +27,28 @@
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#projects"   class="nav-link">Projects</a></li>
                 <li><a href="#contact"    class="nav-link">Contact</a></li>
-                <li><a href="Assets/My resume.pdf" class="nav-resume" target="_blank" rel="noopener">Resume</a></li>
+                <li class="nav-resume-wrap">
+                    <button class="nav-resume">
+                        Resume <i class="fas fa-chevron-down chevron"></i>
+                    </button>
+                    <div class="resume-dropdown">
+                        <a href="Assets/sde.pdf" target="_blank" rel="noopener">
+                            <i class="fas fa-code"></i> SDE / Full Stack
+                        </a>
+                        <a href="Assets/ml.pdf" target="_blank" rel="noopener">
+                            <i class="fas fa-brain"></i> ML / Data Science
+                        </a>
+                    </div>
+                </li>
             </ul>
 
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
-    <!-- ===== HERO SECTION ===== -->
+    <!-- ===== HERO ===== -->
     <section id="hero">
         <canvas id="hero-canvas"></canvas>
 
@@ -56,11 +66,11 @@
                 <a href="https://github.com/Rishikesh-kumar-7258" target="_blank" rel="noopener" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/rishikesh-kumar-b62b22201/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/rishikesh-kumar-profile" target="_blank" rel="noopener" aria-label="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://twitter.com/Rishike21037764" target="_blank" rel="noopener" aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
+                <a href="mailto:rishi7258prince@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
                 </a>
             </div>
         </div>
@@ -71,72 +81,431 @@
         </div>
     </section>
 
-    <!-- ===== ABOUT SECTION ===== -->
+    <!-- ===== ABOUT ===== -->
     <section id="about" class="section">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag">01 — About</span>
+                <span class="section-tag">01 - About</span>
                 <h2 class="section-title">About <span class="accent">Me</span></h2>
             </div>
-            <div class="placeholder reveal">
-                <i class="fas fa-user-circle placeholder-icon"></i>
-                <p>About section — coming soon</p>
+
+            <div class="about-grid">
+                <!-- Bio column -->
+                <div class="about-text reveal">
+                    <p class="about-bio">
+                        I'm Rishikesh. Currently doing my M.Tech at <strong>IIT Bombay</strong>,
+                        which is equal parts exciting and exhausting. I got into coding through competitive
+                        programming - the kind where you stay up debugging why your solution passes
+                        14 out of 15 test cases. That obsession is still very much alive.
+                    </p>
+                    <p class="about-bio">
+                        I also spent a semester as a TA for a Deep Learning course, which turned out to be
+                        one of my favourite things I've done here - there's something satisfying about watching
+                        someone finally get backpropagation at 11pm. When I'm not in front of a screen, I'm
+                        usually thinking about the same problem away from it.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-num">99.3<span class="stat-unit">%</span></span>
+                            <span class="stat-label">GATE 2024 Percentile</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">#32</span>
+                            <span class="stat-label">CodeChef World Rank</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">#1</span>
+                            <span class="stat-label">HackForCG Hackathon</span>
+                        </div>
+                    </div>
+
+                    <ul class="about-achievements">
+                        <li>99.30 percentile (2024) &amp; 99.13 percentile (2023) in GATE CSE</li>
+                        <li>World Rank 32 in CodeChef Starters 42 - Competitive DSA</li>
+                        <li>Rank 1 in HackForCG Hackathon - ML-based computer vision with OpenCV</li>
+                    </ul>
+
+                    <div class="about-cta">
+                        <a href="Assets/sde.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                            <i class="fas fa-download"></i> SDE Resume
+                        </a>
+                        <a href="Assets/ml.pdf" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                            <i class="fas fa-download"></i> ML Resume
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Education column -->
+                <div class="about-education reveal">
+                    <h3 class="edu-heading">Education</h3>
+
+                    <div class="edu-card glass-card">
+                        <span class="edu-degree">M.Tech - IEOR</span>
+                        <span class="edu-school">IIT Bombay</span>
+                        <span class="edu-year">July 2024 - July 2026</span>
+                    </div>
+
+                    <div class="edu-card glass-card">
+                        <span class="edu-degree">B.Tech - CSE</span>
+                        <span class="edu-school">Guru Ghasidas University</span>
+                        <span class="edu-year">July 2020 - July 2024</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== SKILLS SECTION ===== -->
+    <!-- ===== SKILLS ===== -->
     <section id="skills" class="section section-alt">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag">02 — Skills</span>
+                <span class="section-tag">02 - Skills</span>
                 <h2 class="section-title">Tech <span class="accent">Stack</span></h2>
             </div>
-            <div class="placeholder reveal">
-                <i class="fas fa-code placeholder-icon"></i>
-                <p>Skills section — coming soon</p>
+
+            <div class="skills-grid">
+                <div class="skill-card glass-card reveal">
+                    <div class="skill-card-icon"><i class="fas fa-code"></i></div>
+                    <h3 class="skill-card-title">Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">HTML / CSS</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">Lua</span>
+                    </div>
+                </div>
+
+                <div class="skill-card glass-card reveal">
+                    <div class="skill-card-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3 class="skill-card-title">Frameworks &amp; Libraries</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Django / DRF</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">HuggingFace</span>
+                        <span class="skill-tag">Scikit-Learn</span>
+                    </div>
+                </div>
+
+                <div class="skill-card glass-card reveal">
+                    <div class="skill-card-icon"><i class="fas fa-server"></i></div>
+                    <h3 class="skill-card-title">Systems &amp; Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Docker Compose</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">RabbitMQ</span>
+                        <span class="skill-tag">Celery</span>
+                        <span class="skill-tag">Ray</span>
+                        <span class="skill-tag">WebSockets</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">REST APIs</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== EXPERIENCE SECTION ===== -->
+    <!-- ===== EXPERIENCE ===== -->
     <section id="experience" class="section">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag">03 — Experience</span>
+                <span class="section-tag">03 - Experience</span>
                 <h2 class="section-title">Work <span class="accent">Experience</span></h2>
             </div>
-            <div class="placeholder reveal">
-                <i class="fas fa-briefcase placeholder-icon"></i>
-                <p>Experience section — coming soon</p>
+
+            <div class="timeline">
+
+                <div class="tl-item reveal">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card glass-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3 class="tl-role">Full-Stack Developer Intern</h3>
+                                <p class="tl-company">Vajra Labs, IIT Bombay | Powai, Maharashtra</p>
+                            </div>
+                            <span class="tl-date">Aug 2025 - Present</span>
+                        </div>
+                        <ul class="tl-bullets">
+                            <li>Contributed to 2+ projects developing the frontend of the company website and a sandbox-based malware analysis platform</li>
+                            <li>Spearheaded a 3+ member team, delivering the project on schedule by coordinating tasks and implementing Agile methodologies</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tl-item reveal">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card glass-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3 class="tl-role">Teaching Assistant</h3>
+                                <p class="tl-company">IE 643 - Deep Learning: Theory &amp; Practice | IIT Bombay</p>
+                            </div>
+                            <span class="tl-date">Jul 2025 - Nov 2025</span>
+                        </div>
+                        <ul class="tl-bullets">
+                            <li>Organised and led weekly programming sessions to reinforce core concepts in DL for 80+ students</li>
+                            <li>Managed and graded student copies and projects, providing detailed feedback on complex topics</li>
+                            <li>Facilitated project planning and conducted regular doubt sessions ensuring student success</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tl-item reveal">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card glass-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3 class="tl-role">Website Coordinator</h3>
+                                <p class="tl-company">IEOR Day | IIT Bombay</p>
+                            </div>
+                            <span class="tl-date">Jan 2025 - Mar 2025</span>
+                        </div>
+                        <ul class="tl-bullets">
+                            <li>Organised and coordinated the annual IEOR Day with a team of 30+ members to enhance event visibility</li>
+                            <li>Developed and maintained the event's official website with schedules, announcements and updates</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tl-item reveal">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card glass-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3 class="tl-role">Full-Stack Developer Intern</h3>
+                                <p class="tl-company">Presear Software Pvt. Ltd. | Bilaspur, Chhattisgarh</p>
+                            </div>
+                            <span class="tl-date">May 2023 - Jul 2023</span>
+                        </div>
+                        <ul class="tl-bullets">
+                            <li>Designed a full-stack application using React.js and Django following modular, component-based development practices</li>
+                            <li>Led a 2+ member team to translate client requirements into production-ready features and iterative product enhancements</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tl-item reveal">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card glass-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3 class="tl-role">Web Developer Intern</h3>
+                                <p class="tl-company">RMgX Technologies | Gurugram, Haryana</p>
+                            </div>
+                            <span class="tl-date">Jun 2022 - Aug 2022</span>
+                        </div>
+                        <ul class="tl-bullets">
+                            <li>Created and integrated 10+ fully responsive pages for the company website using Next.js</li>
+                            <li>Collaborated with the UI/UX team to translate design mockups into cohesive, intuitive frontend code</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- ===== PROJECTS SECTION ===== -->
+    <!-- ===== PROJECTS ===== -->
     <section id="projects" class="section section-alt">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag">04 — Projects</span>
+                <span class="section-tag">04 - Projects</span>
                 <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
             </div>
-            <div class="placeholder reveal">
-                <i class="fas fa-laptop-code placeholder-icon"></i>
-                <p>Projects section — coming soon</p>
+
+            <!-- Engineering Projects -->
+            <div class="proj-category">
+                <h3 class="proj-category-title"><span>Engineering</span></h3>
+                <div class="proj-grid">
+
+                    <div class="proj-card glass-card reveal">
+                        <div class="proj-card-top">
+                            <span class="proj-badge sde">Full Stack</span>
+                            <span class="proj-date">Aug - Dec 2025</span>
+                        </div>
+                        <h3 class="proj-title">Vajra Sandbox</h3>
+                        <p class="proj-subtitle">Malware Analysis &amp; Threat Detection Platform</p>
+                        <ul class="proj-bullets">
+                            <li>Launched a malware analysis platform for sample submission with static, dynamic, and memory analysis with report generation</li>
+                            <li>Engineered a scalable system with sandboxed multi-VM execution and asynchronous task pipeline for high-throughput analysis</li>
+                            <li>Built using Python, Django/DRF and Next.js/TypeScript with JWT auth, TOTP 2FA, CAPTCHA, and rate limiting</li>
+                        </ul>
+                        <div class="proj-tags">
+                            <span>Python</span><span>Django/DRF</span><span>Next.js</span>
+                            <span>TypeScript</span><span>Docker</span><span>Redis</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-card glass-card reveal">
+                        <div class="proj-card-top">
+                            <span class="proj-badge sde">Full Stack</span>
+                            <span class="proj-date">Dec 2025 - Present</span>
+                        </div>
+                        <h3 class="proj-title">VersatAI Lab Website</h3>
+                        <p class="proj-subtitle">Content Management Platform for Research Lab</p>
+                        <ul class="proj-bullets">
+                            <li>Created a platform to showcase research activities, student profiles, projects and events with collaboration and feedback system</li>
+                            <li>Built using Django/DRF for secure REST APIs and Next.js to power an SSR/SSG-based frontend</li>
+                            <li>Implemented JWT-based authentication, TOTP 2FA, equation-based CAPTCHA, and role-based access control</li>
+                        </ul>
+                        <div class="proj-tags">
+                            <span>Django/DRF</span><span>Next.js</span><span>PostgreSQL</span>
+                            <span>JWT</span><span>TOTP</span><span>RBAC</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-card glass-card reveal">
+                        <div class="proj-card-top">
+                            <span class="proj-badge sde">Frontend</span>
+                            <span class="proj-date">Dec 2022 - Jan 2023</span>
+                        </div>
+                        <h3 class="proj-title">
+                            <a href="https://github.com/Rishikesh-kumar-7258/sortingVisualizer" target="_blank" rel="noopener">
+                                Sorting &amp; Pathfinding Visualizers
+                                <i class="fas fa-external-link-alt proj-link-icon"></i>
+                            </a>
+                        </h3>
+                        <p class="proj-subtitle">Educational Algorithm Visualization Tool</p>
+                        <ul class="proj-bullets">
+                            <li>Built interactive visualizers demonstrating algorithm behavior through real-time execution</li>
+                            <li>Developed using HTML, CSS, and JS applying OOP principles, data structures, and graph algorithms</li>
+                        </ul>
+                        <div class="proj-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            <span>OOP</span><span>Graph Algorithms</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ML / Research Projects -->
+            <div class="proj-category">
+                <h3 class="proj-category-title"><span>ML / Research</span></h3>
+                <div class="proj-grid">
+
+                    <div class="proj-card glass-card reveal">
+                        <div class="proj-card-top">
+                            <span class="proj-badge thesis">MTP Thesis</span>
+                            <span class="proj-date">Jul - Nov 2025</span>
+                        </div>
+                        <h3 class="proj-title">Parameter Specific Literature Retrieval</h3>
+                        <p class="proj-subtitle">Biomedical NLP Pipeline | Prof. Balamurugan Palaniappan</p>
+                        <ul class="proj-bullets">
+                            <li>Streamlined a biomedical literature retrieval pipeline to search PubMed and extract parameter-specific clinical evidences</li>
+                            <li>Improved entity extraction F1-score to 90% by fine-tuning a PubMedBERT-based NER model on a manually annotated dataset</li>
+                            <li>Implemented a distributed ML pipeline with Ray, PyTorch and HuggingFace; deployed with Next.js/FastAPI</li>
+                        </ul>
+                        <div class="proj-tags">
+                            <span>PyTorch</span><span>HuggingFace</span><span>Ray</span>
+                            <span>FastAPI</span><span>Next.js</span><span>PubMedBERT</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-card glass-card reveal">
+                        <div class="proj-card-top">
+                            <span class="proj-badge ml">NLP</span>
+                            <span class="proj-date">Aug - Nov 2025</span>
+                        </div>
+                        <h3 class="proj-title">Explainable Depression Detection</h3>
+                        <p class="proj-subtitle">Social Media Analysis | DL NLP Course | Prof. Pushpak Bhattacharya</p>
+                        <ul class="proj-bullets">
+                            <li>Built an NLP pipeline for depression detection using double domain-adaptation and guided masking</li>
+                            <li>Designed an explainability pipeline combining Integrated Gradients with LLM-based teacher-student distillation</li>
+                            <li>Achieved F1 score of 0.7778 and extracted top-k words contributing most strongly to positive detection</li>
+                        </ul>
+                        <div class="proj-tags">
+                            <span>PyTorch</span><span>HuggingFace</span><span>NLP</span>
+                            <span>Transformers</span><span>Explainability</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-card glass-card reveal">
+                        <div class="proj-card-top">
+                            <span class="proj-badge ml">CV / RL</span>
+                            <span class="proj-date">Feb - Mar 2025</span>
+                        </div>
+                        <h3 class="proj-title">HeadBall2 Game Player</h3>
+                        <p class="proj-subtitle">Real-Time Mobile Game Automation</p>
+                        <ul class="proj-bullets">
+                            <li>Developed a real-time computer vision pipeline using OpenCV from live video streams at 30 FPS</li>
+                            <li>Designed a reinforcement learning system with WebSocket-based client-server communication at 50ms latency</li>
+                            <li>Built a mobile automation framework integrating ADB, v4l2 and Python for reliable device control</li>
+                        </ul>
+                        <div class="proj-tags">
+                            <span>OpenCV</span><span>Python</span><span>RL</span>
+                            <span>WebSockets</span><span>ADB</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-card glass-card reveal">
+                        <div class="proj-card-top">
+                            <span class="proj-badge pub">Published</span>
+                            <span class="proj-date">Jul 2024</span>
+                        </div>
+                        <h3 class="proj-title">
+                            <a href="https://doi.org/10.47839/ijc.23.4.3542" target="_blank" rel="noopener">
+                                Plant Disease Classification with SOTA DL
+                                <i class="fas fa-external-link-alt proj-link-icon"></i>
+                            </a>
+                        </h3>
+                        <p class="proj-subtitle">International Journal of Computing | DOI: 10.47839/ijc.23.4.3542</p>
+                        <ul class="proj-bullets">
+                            <li>Implemented and evaluated multiple CNN architectures on a dataset of 87,900+ leaf images across 38 classes</li>
+                            <li>Achieved up to 99.62% training accuracy and 97.31% validation accuracy across multiple plant diseases</li>
+                        </ul>
+                        <div class="proj-tags">
+                            <span>PyTorch</span><span>CNN</span><span>Deep Learning</span>
+                            <span>Computer Vision</span>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== CONTACT SECTION ===== -->
+    <!-- ===== CONTACT ===== -->
     <section id="contact" class="section">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag">05 — Contact</span>
+                <span class="section-tag">05 - Contact</span>
                 <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
             </div>
-            <div class="placeholder reveal">
-                <i class="fas fa-envelope placeholder-icon"></i>
-                <p>Contact section — coming soon</p>
+
+            <div class="contact-wrapper reveal">
+                <p class="contact-intro">
+                    Whether you're looking for a full-stack engineer, an ML practitioner, or
+                    just want to talk tech - I'd love to hear from you.
+                </p>
+
+                <a href="mailto:rishi7258prince@gmail.com" class="contact-email-link">
+                    rishi7258prince@gmail.com
+                </a>
+
+                <div class="contact-links">
+                    <a href="https://github.com/Rishikesh-kumar-7258" target="_blank" rel="noopener" class="contact-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/rishikesh-kumar-profile" target="_blank" rel="noopener" class="contact-link">
+                        <i class="fab fa-linkedin-in"></i> LinkedIn
+                    </a>
+                    <a href="tel:+919341421415" class="contact-link">
+                        <i class="fas fa-phone"></i> +91 93414 21415
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -147,13 +516,12 @@
             <p>Designed &amp; Built by <span class="accent">Rishikesh Kumar</span></p>
             <div class="footer-socials">
                 <a href="https://github.com/Rishikesh-kumar-7258" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/rishikesh-kumar-b62b22201/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://twitter.com/Rishike21037764" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/rishikesh-kumar-profile" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:rishi7258prince@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>

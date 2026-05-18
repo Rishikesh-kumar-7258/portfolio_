@@ -41,10 +41,10 @@
     const el = document.getElementById('typed-text');
     if (el) {
         const phrases = [
-            'Full Stack Developer',
-            'Competitive Programmer',
-            'Problem Solver',
-            'Software Engineer',
+            'Full Stack Engineer',
+            'ML Engineer',
+            'Data Scientist',
+            'M.Tech @ IIT Bombay',
         ];
         let pi = 0, ci = 0, deleting = false;
 
