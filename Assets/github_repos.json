@@ -1,0 +1,535 @@
+{
+  "fetched": "2026-05-22",
+  "accounts": [
+    {
+      "username": "Rishikesh-kumar-7258",
+      "url": "https://github.com/Rishikesh-kumar-7258",
+      "focus": "Full-stack, ML/AI, competitive programming, web projects",
+      "repos": [
+        {
+          "name": "Image_processing",
+          "description": "Image processing project for Zeroh Labs",
+          "language": "JavaScript",
+          "stars": 4,
+          "forks": 3,
+          "url": "https://github.com/Rishikesh-kumar-7258/Image_processing",
+          "topics": [],
+          "updated": "2025-08-17",
+          "category": "internship"
+        },
+        {
+          "name": "Blog_site",
+          "description": "Full-stack blogging site — React frontend, Django backend, MongoDB database",
+          "language": "Python",
+          "stars": 2,
+          "forks": 1,
+          "url": "https://github.com/Rishikesh-kumar-7258/Blog_site",
+          "topics": ["api", "django", "django-rest-framework", "reactjs"],
+          "updated": "2023-02-23",
+          "category": "fullstack"
+        },
+        {
+          "name": "HRDC_GGV",
+          "description": "University project for HRDC GGV",
+          "language": "Python",
+          "stars": 1,
+          "forks": 2,
+          "url": "https://github.com/Rishikesh-kumar-7258/HRDC_GGV",
+          "topics": [],
+          "updated": "2023-07-08",
+          "category": "fullstack"
+        },
+        {
+          "name": "Club_website",
+          "description": "Full-stack website for a typical club structure",
+          "language": "Python",
+          "stars": 0,
+          "forks": 1,
+          "url": "https://github.com/Rishikesh-kumar-7258/Club_website",
+          "topics": [],
+          "updated": "2023-01-23",
+          "category": "fullstack"
+        },
+        {
+          "name": "SKYRAS",
+          "description": "Solution to reach government scheme benefits to underprivileged people",
+          "language": "HTML",
+          "stars": 1,
+          "forks": 1,
+          "url": "https://github.com/Rishikesh-kumar-7258/SKYRAS",
+          "topics": [],
+          "updated": "2025-08-18",
+          "category": "fullstack"
+        },
+        {
+          "name": "go_backend",
+          "description": "Go backend service",
+          "language": "Go",
+          "stars": 0,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/go_backend",
+          "topics": [],
+          "updated": "2025-09-18",
+          "category": "backend"
+        },
+        {
+          "name": "Spring",
+          "description": "Java Spring framework project",
+          "language": "Java",
+          "stars": 1,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/Spring",
+          "topics": [],
+          "updated": "2023-12-04",
+          "category": "backend"
+        },
+        {
+          "name": "sortingVisualizer",
+          "description": "Interactive visualizer for sorting and pathfinding algorithms",
+          "language": "JavaScript",
+          "stars": 1,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/sortingVisualizer",
+          "topics": [],
+          "updated": "2024-12-08",
+          "category": "frontend",
+          "note": "featured in portfolio"
+        },
+        {
+          "name": "PathFinderVisualization",
+          "description": "Visualization of pathfinding algorithms in a maze",
+          "language": "JavaScript",
+          "stars": 0,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/PathFinderVisualization",
+          "topics": [],
+          "updated": "2025-08-17",
+          "category": "frontend"
+        },
+        {
+          "name": "VisualGraph",
+          "description": "Graph visualization tool",
+          "language": "JavaScript",
+          "stars": 0,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/VisualGraph",
+          "topics": [],
+          "updated": "2024-08-03",
+          "category": "frontend"
+        },
+        {
+          "name": "Whiteboard",
+          "description": "Whiteboard app to scribble and draw shapes",
+          "language": "JavaScript",
+          "stars": 0,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/Whiteboard",
+          "topics": [],
+          "updated": "2022-06-21",
+          "category": "frontend"
+        },
+        {
+          "name": "calculator",
+          "description": "HTML/CSS/JS/Bootstrap calculator with linear equation solver",
+          "language": "JavaScript",
+          "stars": 1,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/calculator",
+          "topics": ["bootstrap5", "calculator", "css", "html", "js"],
+          "updated": "2022-06-10",
+          "category": "frontend"
+        },
+        {
+          "name": "HungrySnake",
+          "description": "Snake game in HTML, CSS, and JS",
+          "language": "JavaScript",
+          "stars": 2,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/HungrySnake",
+          "topics": [],
+          "updated": "2021-09-18",
+          "category": "frontend"
+        },
+        {
+          "name": "Tic-Tac-Toe",
+          "description": "Tic Tac Toe with AI opponent using minimax algorithm",
+          "language": "JavaScript",
+          "stars": 2,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/Tic-Tac-Toe",
+          "topics": ["ai", "game", "gametheory", "html-css-javascript"],
+          "updated": "2025-08-17",
+          "category": "frontend"
+        },
+        {
+          "name": "Solar_System",
+          "description": "Solar system simulation using Three.js",
+          "language": "JavaScript",
+          "stars": 0,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/Solar_System",
+          "topics": ["threejs"],
+          "updated": "2022-06-14",
+          "category": "frontend"
+        },
+        {
+          "name": "MTP_experiments",
+          "description": "Experiments and notebooks for M.Tech thesis (biomedical NLP / PubMedBERT)",
+          "language": "Jupyter Notebook",
+          "stars": 0,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/MTP_experiments",
+          "topics": [],
+          "updated": "2025-08-28",
+          "category": "ml_ai"
+        },
+        {
+          "name": "ood-kernel-pca",
+          "description": "Kernel PCA for Out-of-Distribution Detection (NeurIPS 2024 reference)",
+          "language": "Python",
+          "stars": 0,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/ood-kernel-pca",
+          "topics": [],
+          "updated": "2025-04-07",
+          "category": "ml_ai",
+          "note": "related to course project"
+        },
+        {
+          "name": "ML-NLP-CS772-",
+          "description": "Notebooks and code for CS 772 Deep Learning for NLP course",
+          "language": "Jupyter Notebook",
+          "stars": 0,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/ML-NLP-CS772-",
+          "topics": [],
+          "updated": "2025-11-27",
+          "category": "ml_ai"
+        },
+        {
+          "name": "MachineLearningCPP",
+          "description": "ML algorithms implemented in C++",
+          "language": "C++",
+          "stars": 0,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/MachineLearningCPP",
+          "topics": [],
+          "updated": "2024-06-04",
+          "category": "ml_ai"
+        },
+        {
+          "name": "Network_security_praticals",
+          "description": "Cryptography algorithms: AES, DES, Caesar, Hill, Playfair, stream ciphers",
+          "language": "C++",
+          "stars": 0,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/Network_security_praticals",
+          "topics": ["aes", "block-cipher", "caesar-cipher", "des", "hill-cipher", "playfair-cipher"],
+          "updated": "2024-03-24",
+          "category": "security"
+        },
+        {
+          "name": "MinimalistApp",
+          "description": "Text-only Android launcher with focus profiles, usage limits, and unified search",
+          "language": "Kotlin",
+          "stars": 1,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/MinimalistApp",
+          "topics": [],
+          "updated": "2026-05-21",
+          "category": "mobile"
+        },
+        {
+          "name": "worldTimeApp",
+          "description": "Flutter app showing time across different regions using REST API",
+          "language": "Dart",
+          "stars": 0,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/worldTimeApp",
+          "topics": ["application", "flutter-app", "rest-api"],
+          "updated": "2022-09-14",
+          "category": "mobile"
+        },
+        {
+          "name": "Block_breaker",
+          "description": "Block breaker game built with Python/Pygame",
+          "language": "Python",
+          "stars": 3,
+          "forks": 1,
+          "url": "https://github.com/Rishikesh-kumar-7258/Block_breaker",
+          "topics": ["game", "pygame", "python"],
+          "updated": "2026-02-28",
+          "category": "game"
+        },
+        {
+          "name": "flappyBird",
+          "description": "Flappy Bird clone in Python/Pygame",
+          "language": "Python",
+          "stars": 2,
+          "forks": 2,
+          "url": "https://github.com/Rishikesh-kumar-7258/flappyBird",
+          "topics": ["beginner-friendly", "game-development", "pygame", "python"],
+          "updated": "2022-01-02",
+          "category": "game"
+        },
+        {
+          "name": "Hot_Air_Balloon",
+          "description": "Hot air balloon game in Python/Pygame",
+          "language": "Python",
+          "stars": 2,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/Hot_Air_Balloon",
+          "topics": ["game-development", "pygame", "python"],
+          "updated": "2021-10-10",
+          "category": "game"
+        },
+        {
+          "name": "SlidePuzzle",
+          "description": "Sliding block puzzle game in Python/Pygame",
+          "language": "Python",
+          "stars": 1,
+          "forks": 1,
+          "url": "https://github.com/Rishikesh-kumar-7258/SlidePuzzle",
+          "topics": ["games", "pygame", "python3"],
+          "updated": "2021-09-18",
+          "category": "game"
+        },
+        {
+          "name": "MemoryPuzzle",
+          "description": "Memory matching game in Python/Pygame",
+          "language": "Python",
+          "stars": 1,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/MemoryPuzzle",
+          "topics": [],
+          "updated": "2021-10-04",
+          "category": "game"
+        },
+        {
+          "name": "super-mario",
+          "description": "Super Mario clone in Python",
+          "language": "Python",
+          "stars": 1,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/super-mario",
+          "topics": [],
+          "updated": "2022-01-04",
+          "category": "game"
+        },
+        {
+          "name": "Pong_cs50",
+          "description": "Pong game from CS50 in Lua",
+          "language": "Lua",
+          "stars": 1,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/Pong_cs50",
+          "topics": [],
+          "updated": "2021-11-12",
+          "category": "game"
+        },
+        {
+          "name": "Final-Project-For-Google-Solutions-Challange",
+          "description": "Google Solutions Challenge final project",
+          "language": "HTML",
+          "stars": 2,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/Final-Project-For-Google-Solutions-Challange",
+          "topics": [],
+          "updated": "2021-11-12",
+          "category": "hackathon"
+        },
+        {
+          "name": "moonshot-thinkers",
+          "description": "Moonshot Thinkers project",
+          "language": "HTML",
+          "stars": 2,
+          "forks": 1,
+          "url": "https://github.com/Rishikesh-kumar-7258/moonshot-thinkers",
+          "topics": [],
+          "updated": "2021-09-28",
+          "category": "hackathon"
+        },
+        {
+          "name": "Angular_tutorial",
+          "description": "Angular framework learning project",
+          "language": "TypeScript",
+          "stars": 0,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/Angular_tutorial",
+          "topics": [],
+          "updated": "2023-12-08",
+          "category": "learning"
+        },
+        {
+          "name": "ComputerClass_C",
+          "description": "C language class notes and exercises from GGV",
+          "language": "C",
+          "stars": 3,
+          "forks": 2,
+          "url": "https://github.com/Rishikesh-kumar-7258/ComputerClass_C",
+          "topics": [],
+          "updated": "2025-11-19",
+          "category": "learning"
+        },
+        {
+          "name": "practice_cpp",
+          "description": "C++ practice code",
+          "language": "C++",
+          "stars": 1,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/practice_cpp",
+          "topics": [],
+          "updated": "2022-01-09",
+          "category": "learning"
+        },
+        {
+          "name": "Pytorch_Tutorial",
+          "description": "PyTorch learning notebooks",
+          "language": "HTML",
+          "stars": 0,
+          "forks": 0,
+          "url": "https://github.com/Rishikesh-kumar-7258/Pytorch_Tutorial",
+          "topics": [],
+          "updated": "2026-02-28",
+          "category": "learning"
+        }
+      ]
+    },
+    {
+      "username": "Game-prince",
+      "url": "https://github.com/Game-prince",
+      "focus": "Game development — Unity, Python/Pygame, Lua, C++",
+      "repos": [
+        {
+          "name": "pyphysics",
+          "description": "Physics library for Pygame",
+          "language": "Python",
+          "stars": 1,
+          "forks": 0,
+          "url": "https://github.com/Game-prince/pyphysics",
+          "topics": [],
+          "updated": "2021-11-16",
+          "category": "library"
+        },
+        {
+          "name": "runner_3d",
+          "description": "3D runner game built in Unity",
+          "language": "ShaderLab",
+          "stars": 1,
+          "forks": 0,
+          "url": "https://github.com/Game-prince/runner_3d",
+          "topics": [],
+          "updated": "2023-12-07",
+          "category": "game"
+        },
+        {
+          "name": "Speedy",
+          "description": "First game in Unity (C#)",
+          "language": "C#",
+          "stars": 1,
+          "forks": 0,
+          "url": "https://github.com/Game-prince/Speedy",
+          "topics": ["beginner", "csharp", "first-game", "gamedevelopment", "unity", "unity3d"],
+          "updated": "2021-11-02",
+          "category": "game"
+        },
+        {
+          "name": "Tetris",
+          "description": "Tetris block matching puzzle game in Python",
+          "language": "Python",
+          "stars": 1,
+          "forks": 0,
+          "url": "https://github.com/Game-prince/Tetris",
+          "topics": [],
+          "updated": "2021-12-01",
+          "category": "game"
+        },
+        {
+          "name": "JumpyBunny",
+          "description": "Unity game project",
+          "language": "C#",
+          "stars": 0,
+          "forks": 0,
+          "url": "https://github.com/Game-prince/JumpyBunny",
+          "topics": [],
+          "updated": "2022-10-17",
+          "category": "game"
+        },
+        {
+          "name": "ludo",
+          "description": "Simple Ludo board game in Lua",
+          "language": "Lua",
+          "stars": 0,
+          "forks": 0,
+          "url": "https://github.com/Game-prince/ludo",
+          "topics": [],
+          "updated": "2023-11-14",
+          "category": "game"
+        },
+        {
+          "name": "Super_mario",
+          "description": "Super Mario clone in Lua (learning project)",
+          "language": "Lua",
+          "stars": 0,
+          "forks": 0,
+          "url": "https://github.com/Game-prince/Super_mario",
+          "topics": [],
+          "updated": "2023-09-09",
+          "category": "game"
+        },
+        {
+          "name": "TheHunter",
+          "description": "Console-based text adventure game in C++",
+          "language": "C++",
+          "stars": 0,
+          "forks": 0,
+          "url": "https://github.com/Game-prince/TheHunter",
+          "topics": [],
+          "updated": "2024-03-15",
+          "category": "game"
+        },
+        {
+          "name": "Tic-Tac-Toe-console",
+          "description": "Console Tic Tac Toe in C++",
+          "language": "C++",
+          "stars": 0,
+          "forks": 0,
+          "url": "https://github.com/Game-prince/Tic-Tac-Toe-console",
+          "topics": [],
+          "updated": "2024-03-21",
+          "category": "game"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_public_repos": 68,
+    "Rishikesh-kumar-7258": 59,
+    "Game-prince": 9,
+    "categories": {
+      "game": 18,
+      "frontend": 9,
+      "ml_ai": 5,
+      "fullstack": 5,
+      "learning": 4,
+      "backend": 2,
+      "mobile": 2,
+      "security": 1,
+      "hackathon": 2,
+      "internship": 1,
+      "library": 1
+    },
+    "languages_used": ["Python", "JavaScript", "TypeScript", "C++", "C", "Java", "Go", "Kotlin", "Dart", "Lua", "C#", "ShaderLab", "Jupyter Notebook", "HTML", "SCSS", "EJS", "Assembly"],
+    "notable": [
+      "Image_processing — 4 stars (Zeroh Labs internship)",
+      "Block_breaker — 3 stars",
+      "ComputerClass_C — 3 stars",
+      "Blog_site — Django + React + MongoDB",
+      "ood-kernel-pca — Kernel PCA OOD detection (course project)",
+      "MTP_experiments — M.Tech thesis notebooks",
+      "MinimalistApp — Kotlin Android launcher (active 2026)",
+      "sortingVisualizer — featured in portfolio",
+      "Solar_System — Three.js simulation"
+    ]
+  }
+}

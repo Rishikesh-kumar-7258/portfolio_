@@ -53,6 +53,24 @@ body { font-family: 'Inter', sans-serif; line-height: 1.7; overflow-x: hidden; }
   -webkit-backdrop-filter: blur(12px);
 }
 
+/* ── Skill pills ────────────────────────────────────── */
+.skill-pill {
+  font-size: .78rem;
+  font-weight: 500;
+  color: #7878a0;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 9999px;
+  padding: .25rem .75rem;
+  transition: color .2s, border-color .2s, background .2s;
+  cursor: default;
+}
+.skill-pill:hover {
+  color: #7042f8;
+  border-color: rgba(112,66,248,.4);
+  background: rgba(112,66,248,.08);
+}
+
 /* ── Timeline vertical line ────────────────────────── */
 .tl-wrap { position: relative; padding-left: 32px; }
 .tl-wrap::before {
