@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishikesh Kumar | M.Tech IEOR, IIT Bombay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 14.5px;
+            line-height: 1.75;
+            color: #3b3b3b;
+            background: #292929;
+        }
+
+        a { color: #0071b3; text-decoration: none; }
+        a:hover { color: #018fe2; text-decoration: underline; }
+
+        /* ══════════════════════════════
+           HEADER  — matches #018fe2 navbar
+        ══════════════════════════════ */
+        .header {
+            background: #018fe2;
+            padding: 28px 40px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .header-text { flex: 1; }
+
+        .header-text h1 {
+            font-family: 'Roboto Condensed', Arial, sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+            margin-bottom: 3px;
+        }
+
+        .header-text .meta {
+            font-size: 0.93rem;
+            opacity: 0.92;
+            margin-bottom: 2px;
+        }
+
+        .header-text .meta a { color: #d6eeff; }
+        .header-text .meta a:hover { color: #fff; text-decoration: none; }
+
+        .header-pills {
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .header-pills a {
+            background: rgba(255,255,255,0.18);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.35);
+            border-radius: 3px;
+            padding: 3px 13px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .header-pills a:hover {
+            background: rgba(255,255,255,0.3);
+            text-decoration: none;
+        }
+
+        /* highlight chips — right side of header */
+        .header-chips {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            align-items: flex-end;
+            flex-shrink: 0;
+        }
+
+        .hchip {
+            background: rgba(255,255,255,0.18);
+            border: 1px solid rgba(255,255,255,0.35);
+            color: #fff;
+            border-radius: 3px;
+            padding: 4px 13px;
+            font-size: 0.79rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* ══════════════════════════════
+           BODY LAYOUT
+        ══════════════════════════════ */
+        .body-wrap {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        /* ── SIDEBAR ── */
+        .sidebar {
+            width: 270px;
+            flex-shrink: 0;
+            background: #EDF2F6;
+            border-right: 1px solid #cdd5df;
+            padding: 24px 18px;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sb-section { margin-bottom: 22px; }
+
+        .sb-title {
+            font-family: 'Roboto Condensed', Arial, sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: #0069ba;
+            border-bottom: 2px solid #018fe2;
+            padding-bottom: 4px;
+            margin-bottom: 10px;
+        }
+
+        .sb-card {
+            background: #fff;
+            border-left: 3px solid #018fe2;
+            padding: 9px 12px;
+            font-size: 0.87rem;
+            margin-bottom: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+        }
+
+        .sb-card strong {
+            display: block;
+            font-size: 0.73rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #0069ba;
+            margin-bottom: 2px;
+        }
+
+        .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+
+        .chip {
+            background: #fff;
+            color: #0071b3;
+            border: 1px solid #90c8f0;
+            border-radius: 3px;
+            padding: 2px 9px;
+            font-size: 0.77rem;
+            font-weight: 600;
+        }
+
+        .ta-list { list-style: none; padding: 0; }
+
+        .ta-list li {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            padding: 7px 0;
+            border-bottom: 1px solid #cdd5df;
+            font-size: 0.85rem;
+        }
+
+        .ta-list li:last-child { border-bottom: none; }
+
+        .ta-badge {
+            display: inline-block;
+            background: #018fe2;
+            color: #fff;
+            border-radius: 2px;
+            padding: 1px 7px;
+            font-size: 0.71rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+            width: fit-content;
+        }
+
+        .ta-period { font-size: 0.75rem; color: #666; }
+
+        /* ── MAIN ── */
+        .main {
+            flex: 1;
+            padding: 26px 34px 40px;
+            background: #ffffff;
+            min-width: 0;
+        }
+
+        .section { margin-bottom: 26px; }
+
+        .section-title {
+            font-family: 'Roboto Condensed', Arial, sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #0069ba;
+            border-bottom: 2px solid #018fe2;
+            padding-bottom: 4px;
+            margin-bottom: 13px;
+        }
+
+        /* research box */
+        .research-box {
+            background: #EDF2F6;
+            border-left: 4px solid #018fe2;
+            padding: 14px 18px;
+            font-size: 0.91rem;
+        }
+
+        .research-box .proj-title {
+            font-weight: 700;
+            color: #0069ba;
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .research-box .proj-meta {
+            font-size: 0.8rem;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        /* publication */
+        .pub-list { list-style: none; padding: 0; }
+
+        .pub-list li {
+            background: #EDF2F6;
+            border-left: 4px solid #fd9f1b;
+            border-radius: 0 6px 6px 0;
+            padding: 11px 16px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        /* projects — 4 columns on full width */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .project-card {
+            background: #fff;
+            border: 1px solid #dde4f0;
+            border-top: 3px solid #0057c2;
+            border-radius: 0 0 8px 8px;
+            padding: 12px 14px;
+            font-size: 0.87rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card .proj-name {
+            font-family: 'Roboto Condensed', Arial, sans-serif;
+            font-weight: 700;
+            color: #0069ba;
+            font-size: 0.97rem;
+            margin-bottom: 5px;
+        }
+
+        .project-card p { flex: 1; color: #3b3b3b; }
+
+        .project-card .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 9px;
+        }
+
+        .project-card .tag {
+            background: #d6eeff;
+            color: #0071b3;
+            border-radius: 2px;
+            padding: 1px 7px;
+            font-size: 0.71rem;
+            font-weight: 500;
+        }
+
+        /* courses — 4 columns */
+        .sem-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .sem-block {
+            background: #EDF2F6;
+            padding: 11px 14px;
+            border-top: 3px solid #018fe2;
+        }
+
+        .sem-block h4 {
+            font-family: 'Roboto Condensed', Arial, sans-serif;
+            font-size: 0.74rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #0069ba;
+            margin-bottom: 8px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #b0c4d8;
+        }
+
+        .sem-block ul { list-style: none; padding: 0; }
+
+        .sem-block ul li {
+            font-size: 0.83rem;
+            padding: 3px 0;
+            color: #3b3b3b;
+            border-bottom: 1px dashed #c5d3e0;
+        }
+
+        .sem-block ul li:last-child { border-bottom: none; }
+        .sem-block ul li a { color: #0071b3; }
+
+        /* ── FOOTER ── */
+        .footer {
+            background: #444444;
+            color: whitesmoke;
+            text-align: center;
+            font-size: 0.82rem;
+            padding: 14px 24px;
+        }
+
+        .footer a { color: whitesmoke; }
+        .footer a:hover { color: #018fe2; text-decoration: underline; }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) {
+            .body-wrap { flex-direction: column; }
+            .sidebar {
+                width: 100%;
+                position: static;
+                height: auto;
+                border-right: none;
+                border-bottom: 1px solid #cdd5df;
+            }
+            .project-grid, .sem-grid { grid-template-columns: 1fr 1fr; }
+            .header-chips { display: none; }
+        }
+
+        @media (max-width: 540px) {
+            .header { flex-direction: column; gap: 14px; padding: 18px; }
+            .project-grid, .sem-grid { grid-template-columns: 1fr; }
+            .main { padding: 18px 14px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- ════════ HEADER ════════ -->
+        <div class="header">
+            <div class="header-text">
+                <h1>Rishikesh Kumar</h1>
+                <p class="meta">M.Tech (2024 – 2026) &nbsp;·&nbsp;
+                    <a href="https://www.ieor.iitb.ac.in/">IEOR</a>,
+                    <a href="https://www.iitb.ac.in/">IIT Bombay</a>
+                </p>
+                <p class="meta">
+                    <a href="mailto:rishi7258prince@gmail.com" style="color:#a8cfff;">rishi7258prince@gmail.com</a>
+                </p>
+                <div class="header-pills">
+                    <a href="mailto:rishi7258prince@gmail.com">✉ Email</a>
+                    <a href="https://github.com/Rishikesh-kumar-7258" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/rishikesh-kumar-profile" target="_blank">LinkedIn</a>
+                    <a href="https://rishikesh-kumar-7258.github.io/portfolio_/" target="_blank">Portfolio</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ════════ BODY ════════ -->
+        <div class="body-wrap">
+
+            <!-- ── SIDEBAR ── -->
+            <aside class="sidebar">
+
+                <div class="sb-section">
+                    <div class="sb-title">Academic Background</div>
+                    <div class="sb-card">
+                        <strong>B.Tech — CSE</strong>
+                        <a href="https://www.ggu.ac.in/">Guru Ghasidas Vishwavidyalaya</a><br>
+                        Bilaspur, Chhattisgarh<br>
+                        2020 – 2024
+                    </div>
+                    <div class="sb-card">
+                        <strong>M.Tech — IEOR</strong>
+                        <a href="https://www.ieor.iitb.ac.in/">IIT Bombay</a><br>
+                        2024 – 2026
+                    </div>
+                </div>
+
+                <div class="sb-section">
+                    <div class="sb-title">Teaching Assistant</div>
+                    <ul class="ta-list">
+                        <li>
+                            <span class="ta-badge">IE 201</span>
+                            <a href="https://www.ieor.iitb.ac.in/acad/courses/ie201">AI &amp; ML Lab</a>
+                            <span class="ta-period">Jan – Apr 2026 &nbsp;·&nbsp; 40 students</span>
+                        </li>
+                        <li>
+                            <span class="ta-badge">IE 643</span>
+                            <a href="https://www.ieor.iitb.ac.in/acad/courses/ie643">Deep Learning: Theory &amp;
+                                Practice</a>
+                            <span class="ta-period">Jul – Nov 2025 &nbsp;·&nbsp; 80+ students</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sb-section">
+                    <div class="sb-title">Position of Responsibility</div>
+                    <div class="sb-card" style="border-left-color:#0057c2;">
+                        <strong>Website Coordinator</strong>
+                        IEOR Day, IIT Bombay<br>
+                        <span style="font-size:0.8rem;color:#555;">Jan – Mar 2025</span>
+                    </div>
+                </div>
+
+            </aside>
+
+            <!-- ── MAIN ── -->
+            <main class="main">
+
+                <!-- M.Tech Research Project -->
+                <div class="section">
+                    <div class="section-title">M.Tech Research Project</div>
+                    <div class="research-box">
+                        <div class="proj-title">Parameter Specific Literature Retrieval</div>
+                        <div class="proj-meta">
+                            Biomedical NLP &nbsp;|&nbsp; Guided by
+                            <a href="https://www.ieor.iitb.ac.in/balamurugan.palaniappan">Prof. Balamurugan
+                                Palaniappan</a>
+                            &nbsp;|&nbsp; Jul – Nov 2025
+                        </div>
+                        <p>Built a pipeline that queries PubMed and extracts parameter-specific clinical data from
+                            research abstracts. Improved entity extraction F1-score to 90% by fine-tuning a
+                            PubMedBERT-based NER model on a manually annotated dataset. Implemented a distributed
+                            ML pipeline using Ray, PyTorch, and HuggingFace; deployed with Next.js and FastAPI.</p>
+                    </div>
+                </div>
+
+                <!-- Publication -->
+                <div class="section">
+                    <div class="section-title">Publication</div>
+                    <ul class="pub-list">
+                        <li>
+                            Rishikesh Kumar,
+                            <a href="https://doi.org/10.47839/ijc.23.4.3542">
+                                Plant Disease Classification using State-of-the-Art Deep Learning Models,
+                            </a>
+                            <em>International Journal of Computing</em>, Vol. 23, No. 4, 2024.
+                            DOI: 10.47839/ijc.23.4.3542.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Selected Projects -->
+                <div class="section">
+                    <div class="section-title">Selected Projects</div>
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <div class="proj-name">The Third Eye: VIntel</div>
+                            <p>Multi-agent cybersecurity news platform with two-round LLM deliberation and Borda-count
+                                ranking. Course project for <a href="https://www.ieor.iitb.ac.in/acad/courses/ie624">IE
+                                    624</a> under Prof. Manjesh K. Hanawal.</p>
+                            <div class="tags">
+                                <span class="tag">IE 624</span><span class="tag">Go</span>
+                                <span class="tag">TypeScript</span><span class="tag">Rust</span>
+                                <span class="tag">LLM Agents</span>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="proj-name">Explainable Depression Detection</div>
+                            <p>NLP pipeline using double domain-adaptation and Integrated Gradients explainability. F1:
+                                0.7778. Course project for CS 772 under Prof. Pushpak Bhattacharyya.</p>
+                            <div class="tags">
+                                <span class="tag">CS 772</span><span class="tag">PyTorch</span>
+                                <span class="tag">HuggingFace</span><span class="tag">NLP</span>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="proj-name">Kernel PCA for OOD Detection</div>
+                            <p>AUROC 99.57%, FPR 1.73% on ResNet50 / Tiny-ImageNet-200. Course project for <a
+                                    href="https://www.ieor.iitb.ac.in/acad/courses/ie506">IE 506</a>.</p>
+                            <div class="tags">
+                                <span class="tag">IE 506</span><span class="tag">PyTorch</span>
+                                <span class="tag">Kernel PCA</span><span class="tag">OOD Detection</span>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="proj-name">Secrets of RLHF in LLMs: PPO</div>
+                            <p>Implemented PPO-max to improve RLHF training stability for LLMs; demonstrated gains over
+                                SFT baselines. Course project for <a
+                                    href="https://www.ieor.iitb.ac.in/acad/courses/ie620">IE 620</a>.</p>
+                            <div class="tags">
+                                <span class="tag">IE 620</span><span class="tag">PPO</span>
+                                <span class="tag">RLHF</span><span class="tag">HuggingFace</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Courses -->
+                <div class="section">
+                    <div class="section-title">Courses</div>
+                    <div class="sem-grid">
+
+                        <div class="sem-block">
+                            <h4>Autumn 2024</h4>
+                            <ul>
+                                <li><a href="https://www.ieor.iitb.ac.in/acad/courses/ie605">IE 605: Engineering
+                                        Statistics</a></li>
+                                <li><a href="https://www.ieor.iitb.ac.in/acad/courses/ie503">IE 503: Operations
+                                        Analysis</a></li>
+                                <li><a href="https://www.ieor.iitb.ac.in/acad/courses/ie621">IE 621: Probability &amp;
+                                        Stochastic Processes I</a></li>
+                                <li><a href="https://www.ieor.iitb.ac.in/acad/courses/ie609">IE 609: Mathematical
+                                        Optimisation Techniques</a></li>
+                                <li><a href="https://www.ieor.iitb.ac.in/acad/courses/ie507">IE 507: Modelling &amp;
+                                        Computations Lab</a></li>
+                                <li><a href="https://www.ieor.iitb.ac.in/acad/courses/ie643">IE 643: Deep Learning:
+                                        Theory &amp; Practice</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sem-block">
+                            <h4>Spring 2025</h4>
+                            <ul>
+                                <li><a href="https://www.ieor.iitb.ac.in/acad/courses/ie506">IE 506: ML: Principles
+                                        &amp; Techniques</a></li>
+                                <li><a href="https://www.ieor.iitb.ac.in/acad/courses/ie620">IE 620: Reinforcement
+                                        Learning Algorithms</a></li>
+                                <li><a href="https://www.ieor.iitb.ac.in/acad/courses/ie630">IE 630: Simulation
+                                        Modelling &amp; Analysis</a></li>
+                                <li><a href="https://www.ieor.iitb.ac.in/acad/courses/ie684">IE 684: IEOR Lab</a></li>
+                                <li><a href="https://www.cse.iitb.ac.in/~pb/cs772-spr-2025.html">CS 772: Deep Learning
+                                        for NLP</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sem-block">
+                            <h4>Autumn 2025</h4>
+                            <ul>
+                                <li>IE 685: M.Tech Research Project</li>
+                            </ul>
+                        </div>
+
+                        <div class="sem-block">
+                            <h4>Spring 2026</h4>
+                            <ul>
+                                <li><a href="https://www.ieor.iitb.ac.in/acad/courses/ie624">IE 624: Generative and
+                                        Agentic AI</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </main>
+
+        </div><!-- /body-wrap -->
+
+        <div class="footer">
+            <a href="https://www.ieor.iitb.ac.in/">Department of Industrial Engineering &amp; Operations Research</a>
+            &nbsp;|&nbsp; Indian Institute of Technology Bombay
+        </div>
+
+    </div>
+
+</body>
+
+</html>
