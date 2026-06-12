@@ -16,12 +16,45 @@
         navMenu.classList.toggle('open', open);
     });
 
-    document.querySelectorAll('.nav-link, .nav-resume').forEach((link) => {
+    document.querySelectorAll('.nav-link, .resume-dropdown a').forEach((link) => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('open');
             navMenu.classList.remove('open');
         });
     });
+
+    // ── Nav: resume dropdown (click toggle — hover alone fails on touch) ──────
+    const resumeWrap = document.querySelector('.nav-resume-wrap');
+    const resumeBtn  = document.querySelector('.nav-resume');
+
+    if (resumeWrap && resumeBtn) {
+        resumeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const open = resumeWrap.classList.toggle('open');
+            resumeBtn.setAttribute('aria-expanded', open);
+        });
+        document.addEventListener('click', (e) => {
+            if (!resumeWrap.contains(e.target)) {
+                resumeWrap.classList.remove('open');
+                resumeBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                resumeWrap.classList.remove('open');
+                resumeBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    // ── Scroll progress bar ───────────────────────────────────────────────────
+    const progressBar = document.getElementById('scroll-progress');
+    if (progressBar) {
+        window.addEventListener('scroll', () => {
+            const max = document.documentElement.scrollHeight - window.innerHeight;
+            progressBar.style.width = max > 0 ? `${(window.scrollY / max) * 100}%` : '0%';
+        }, { passive: true });
+    }
 
     // ── Active nav link on scroll ─────────────────────────────────────────────
     const sections = Array.from(document.querySelectorAll('section[id]'));
@@ -62,8 +95,46 @@
         setTimeout(tick, 1500);
     }
 
+    // ── Project filter tabs ───────────────────────────────────────────────────
+    const filterBtns = document.querySelectorAll('#project-filters .filter-btn');
+    const projectGroups = document.querySelectorAll('.project-group');
+
+    filterBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach((b) => b.classList.toggle('active', b === btn));
+            const filter = btn.dataset.filter;
+            projectGroups.forEach((group) => {
+                group.classList.toggle('hidden-group', filter !== 'all' && group.dataset.group !== filter);
+            });
+            // newly shown cards may still be in their pre-reveal state
+            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                ScrollTrigger.refresh();
+            }
+        });
+    });
+
+    // ── Copy email to clipboard ───────────────────────────────────────────────
+    const copyBtn = document.getElementById('copy-email-btn');
+    if (copyBtn && navigator.clipboard) {
+        const label = copyBtn.querySelector('.copy-label');
+        copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(copyBtn.dataset.email).then(() => {
+                copyBtn.classList.add('copied');
+                label.textContent = 'Copied!';
+                setTimeout(() => {
+                    copyBtn.classList.remove('copied');
+                    label.textContent = 'Copy';
+                }, 2000);
+            });
+        });
+    } else if (copyBtn) {
+        copyBtn.style.display = 'none';
+    }
+
     // ── GSAP scroll-reveal ────────────────────────────────────────────────────
-    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!reducedMotion && typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
         gsap.registerPlugin(ScrollTrigger);
 
         // Generic reveal for any element with class .reveal

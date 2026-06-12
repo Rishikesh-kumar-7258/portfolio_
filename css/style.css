@@ -110,9 +110,97 @@ body { font-family: 'Inter', sans-serif; line-height: 1.7; overflow-x: hidden; }
   box-shadow: 0 1px 0 rgba(112,66,248,.22);
 }
 
+/* ── Active nav link ────────────────────────────────── */
+.nav-link.active {
+  color: #f0f0f8;
+  background: rgba(112,66,248,.14);
+}
+
+/* ── Resume dropdown (hover on desktop, click everywhere) ── */
+.resume-dropdown {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity .2s ease, transform .2s ease;
+}
+@media (hover: hover) {
+  .nav-resume-wrap:hover .resume-dropdown {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  .nav-resume-wrap:hover .resume-chevron { transform: rotate(180deg); }
+}
+.nav-resume-wrap.open .resume-dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.nav-resume-wrap.open .resume-chevron { transform: rotate(180deg); }
+
+/* ── Project filter tabs ────────────────────────────── */
+.filter-btn {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: .82rem;
+  font-weight: 600;
+  color: #7878a0;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 9999px;
+  padding: .45rem 1.15rem;
+  cursor: pointer;
+  transition: color .2s, border-color .2s, background .2s, box-shadow .2s;
+}
+.filter-btn:hover {
+  color: #f0f0f8;
+  border-color: rgba(112,66,248,.45);
+  background: rgba(112,66,248,.08);
+}
+.filter-btn.active {
+  color: #fff;
+  border-color: transparent;
+  background: linear-gradient(135deg,#7042f8,#5228d8);
+  box-shadow: 0 4px 18px rgba(112,66,248,.3);
+}
+.project-group.hidden-group { display: none; }
+
+/* ── Copy email feedback ────────────────────────────── */
+#copy-email-btn.copied {
+  color: #00d4ff;
+  border-color: rgba(0,212,255,.5);
+}
+
+/* ── Visible keyboard focus ─────────────────────────── */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #00d4ff;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* ── Reduced motion ─────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-greeting, .hero-name, .hero-typed,
+  .hero-cta, .hero-socials, .hero-scroll {
+    animation: none;
+    opacity: 1;
+  }
+  .typed-cursor, .wheel { animation: none; }
+  .reveal { opacity: 1; transform: none; }
+  *, *::before, *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+}
+
 /* ── Mobile nav slide ───────────────────────────────── */
 @media (max-width: 767px) {
   #nav-menu {
+    /* overrides Tailwind's `hidden` (display:none), which otherwise keeps
+       the menu unrenderable on mobile — visibility is handled by the
+       transform/opacity transition below */
+    display: flex;
     position: fixed;
     top: 72px; left: 0; right: 0;
     flex-direction: column;
@@ -132,6 +220,23 @@ body { font-family: 'Inter', sans-serif; line-height: 1.7; overflow-x: hidden; }
   #nav-menu li   { width: 100%; }
   .nav-link      { display: block; padding: 12px 0; font-size: 1rem; }
   .nav-resume-wrap { margin: 8px 0 0; }
+
+  /* dropdown becomes an inline block inside the slide-down menu;
+     the #nav-menu prefix outranks Tailwind's utility classes, whose
+     CDN stylesheet loads after this file */
+  #nav-menu .resume-dropdown {
+    position: static;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    padding: 4px 0 0 8px;
+    transform: none;
+    display: none;
+    opacity: 1;
+    pointer-events: auto;
+    transition: none;
+  }
+  #nav-menu .nav-resume-wrap.open .resume-dropdown { display: block; }
 }
 
 /* ── Hamburger animation ────────────────────────────── */

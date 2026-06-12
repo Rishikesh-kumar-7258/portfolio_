@@ -67,14 +67,14 @@
                 <li><a href="#contact"
                         class="nav-link px-3.5 py-2 text-muted text-sm font-medium rounded-lg transition-colors hover:text-primary hover:bg-accent/10 no-underline">Contact</a>
                 </li>
-                <li class="nav-resume-wrap relative group ml-2">
-                    <button
+                <li class="nav-resume-wrap relative ml-2">
+                    <button aria-haspopup="true" aria-expanded="false" aria-controls="resume-dropdown"
                         class="nav-resume flex items-center gap-1.5 px-[18px] py-2 text-accent text-sm font-semibold border border-accent rounded-lg transition-all hover:bg-accent/10 hover:shadow-[0_0_24px_rgba(112,66,248,0.25)] cursor-pointer bg-transparent">
                         Resume <i
-                            class="fas fa-chevron-down text-[0.62rem] transition-transform duration-300 group-hover:rotate-180"></i>
+                            class="resume-chevron fas fa-chevron-down text-[0.62rem] transition-transform duration-300"></i>
                     </button>
-                    <div
-                        class="absolute top-[calc(100%+10px)] right-0 min-w-[190px] bg-[rgba(7,7,32,0.97)] backdrop-blur-xl border border-accent/20 rounded-xl p-2 opacity-0 pointer-events-none -translate-y-2 transition-all duration-200 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 z-10">
+                    <div id="resume-dropdown"
+                        class="resume-dropdown absolute top-[calc(100%+10px)] right-0 min-w-[190px] bg-[rgba(7,7,32,0.97)] backdrop-blur-xl border border-accent/20 rounded-xl p-2 z-10">
                         <a href="Assets/sde.pdf" target="_blank" rel="noopener"
                             class="flex items-center gap-2.5 px-3.5 py-2.5 text-muted text-[0.87rem] font-medium rounded-lg transition-colors hover:text-primary hover:bg-accent/10 no-underline">
                             <i class="fas fa-code w-4 text-center text-accent"></i> SDE / Full Stack
@@ -93,6 +93,9 @@
                 <span class="block w-6 h-[2px] bg-primary rounded-sm"></span>
                 <span class="block w-6 h-[2px] bg-primary rounded-sm"></span>
             </button>
+        </div>
+        <div id="scroll-progress"
+            class="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-accent to-accent2 transition-[width] duration-150 ease-out">
         </div>
     </nav>
 
@@ -384,7 +387,7 @@
                                 2025 - Present</span>
                         </div>
                         <ul class="arrow-list list-none p-0 space-y-2">
-                            <li class="text-[0.89rem] text-muted leading-relaxed">Contributed to 2+ projects developing
+                            <li class="text-[0.89rem] text-muted leading-relaxed">Contributed to 2 projects, developing
                                 the frontend of the company website and a sandbox-based malware analysis platform</li>
                             <li class="text-[0.89rem] text-muted leading-relaxed">Led a team of 3 - kept things on track
                                 with regular syncs and a shared task board</li>
@@ -547,7 +550,7 @@
                                 2025 - Nov 2025</span>
                         </div>
                         <ul class="arrow-list arrow-list--cyan list-none p-0 space-y-2">
-                            <li class="text-[0.89rem] text-muted leading-relaxed">Organised and led weekly programming
+                            <li class="text-[0.89rem] text-muted leading-relaxed">Organized and led weekly programming
                                 sessions to reinforce core concepts in DL for 80+ students</li>
                             <li class="text-[0.89rem] text-muted leading-relaxed">Managed and graded student copies and
                                 projects, providing detailed feedback on complex topics</li>
@@ -574,7 +577,7 @@
                                 2025 - Mar 2025</span>
                         </div>
                         <ul class="arrow-list arrow-list--cyan list-none p-0 space-y-2">
-                            <li class="text-[0.89rem] text-muted leading-relaxed">Helped organise IEOR Day with a
+                            <li class="text-[0.89rem] text-muted leading-relaxed">Helped organize IEOR Day with a
                                 30-member team - handled logistics, schedule, and coordination</li>
                             <li class="text-[0.89rem] text-muted leading-relaxed">Developed and maintained the event's
                                 official website with schedules, announcements and updates</li>
@@ -599,8 +602,17 @@
                 </h2>
             </div>
 
+            <!-- Filter tabs -->
+            <div id="project-filters" class="flex flex-wrap gap-2.5 mb-12 reveal" role="tablist"
+                aria-label="Filter projects by category">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="engineering">Engineering</button>
+                <button class="filter-btn" data-filter="ml">ML / Research</button>
+                <button class="filter-btn" data-filter="games">Games</button>
+            </div>
+
             <!-- Engineering -->
-            <div class="mb-14">
+            <div class="mb-14 project-group" data-group="engineering">
                 <div
                     class="fade-line mb-7 font-display text-[0.76rem] font-semibold tracking-[3px] uppercase text-muted reveal">
                     Engineering</div>
@@ -792,7 +804,7 @@
             </div>
 
             <!-- ML / Research -->
-            <div>
+            <div class="project-group" data-group="ml">
                 <div
                     class="fade-line mb-7 font-display text-[0.76rem] font-semibold tracking-[3px] uppercase text-muted reveal">
                     ML / Research</div>
@@ -870,13 +882,13 @@
                         <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">Explainable
                             Depression Detection</h3>
                         <p class="text-[0.82rem] text-muted leading-relaxed">Social Media Analysis | DL NLP Course |
-                            Prof. Pushpak Bhattacharya</p>
+                            Prof. Pushpak Bhattacharyya</p>
                         <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
                             <li class="text-[0.855rem] text-muted leading-relaxed">Built an NLP pipeline for depression
-                                detection using double domain-adaptation and guided masking</li>
+                                detection using double domain adaptation and guided masking</li>
                             <li class="text-[0.855rem] text-muted leading-relaxed">Designed an explainability pipeline
                                 combining Integrated Gradients with LLM-based teacher-student distillation</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Achieved F1 score of 0.7778 and
+                            <li class="text-[0.855rem] text-muted leading-relaxed">Achieved an F1 score of 0.78 and
                                 extracted top-k words contributing most strongly to positive detection</li>
                         </ul>
                         <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
@@ -903,7 +915,7 @@
                             <li class="text-[0.855rem] text-muted leading-relaxed">Developed a real-time computer vision
                                 pipeline using OpenCV from live video streams at 30 FPS</li>
                             <li class="text-[0.855rem] text-muted leading-relaxed">Designed a reinforcement learning
-                                system with WebSocket-based client-server communication at 50ms latency</li>
+                                system with WebSocket-based client-server communication at 50 ms end-to-end latency</li>
                             <li class="text-[0.855rem] text-muted leading-relaxed">Built a mobile automation framework
                                 integrating ADB, v4l2 and Python for reliable device control</li>
                         </ul>
@@ -995,8 +1007,8 @@
                         <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
                             <li class="text-[0.855rem] text-muted leading-relaxed">Implemented and evaluated multiple
                                 CNN architectures on a dataset of 87,900+ leaf images across 38 classes</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Achieved up to 99.62% training
-                                accuracy and 97.31% validation accuracy across multiple plant diseases</li>
+                            <li class="text-[0.855rem] text-muted leading-relaxed">Achieved up to 97.31% validation
+                                accuracy, showing robust generalization across multiple plant diseases</li>
                         </ul>
                         <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
                             <span
@@ -1013,7 +1025,7 @@
             </div>
 
             <!-- Games -->
-            <div class="mt-14">
+            <div class="mt-14 project-group" data-group="games">
                 <div
                     class="fade-line mb-7 font-display text-[0.76rem] font-semibold tracking-[3px] uppercase text-muted reveal">
                     Games</div>
@@ -1448,10 +1460,16 @@
                     cool you're building. I check mail pretty regularly.
                 </p>
 
-                <a href="mailto:rishi7258prince@gmail.com"
-                    class="font-display text-[1.2rem] font-semibold text-primary no-underline px-8 py-4 border border-accent/20 rounded-xl glass transition-all duration-300 hover:text-accent hover:border-accent/50 hover:bg-accent/[0.08] hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(112,66,248,0.15)] break-all">
-                    rishi7258prince@gmail.com
-                </a>
+                <div class="flex items-stretch gap-2 flex-wrap justify-center">
+                    <a href="mailto:rishi7258prince@gmail.com"
+                        class="font-display text-[1.2rem] font-semibold text-primary no-underline px-8 py-4 border border-accent/20 rounded-xl glass transition-all duration-300 hover:text-accent hover:border-accent/50 hover:bg-accent/[0.08] hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(112,66,248,0.15)] break-all">
+                        rishi7258prince@gmail.com
+                    </a>
+                    <button id="copy-email-btn" data-email="rishi7258prince@gmail.com" aria-label="Copy email address"
+                        class="relative flex items-center gap-2 px-5 border border-accent/20 rounded-xl glass text-muted text-[0.9rem] font-medium cursor-pointer bg-transparent transition-all duration-300 hover:text-accent hover:border-accent/50 hover:bg-accent/[0.08]">
+                        <i class="far fa-copy"></i><span class="copy-label">Copy</span>
+                    </button>
+                </div>
 
                 <div class="flex gap-3.5 flex-wrap justify-center">
                     <a href="https://github.com/Rishikesh-kumar-7258" target="_blank" rel="noopener"
