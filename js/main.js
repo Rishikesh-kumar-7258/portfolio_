@@ -74,10 +74,8 @@
     const el = document.getElementById('typed-text');
     if (el) {
         const phrases = [
-            'Full Stack Engineer',
+            'Software Development Engineer',
             'ML Engineer',
-            'Data Scientist',
-            'M.Tech @ IIT Bombay',
         ];
         let pi = 0, ci = 0, deleting = false;
 

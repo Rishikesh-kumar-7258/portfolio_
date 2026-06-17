@@ -4,8 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rishikesh Kumar - Full Stack Engineer & ML Engineer, M.Tech IIT Bombay">
-    <title>Rishikesh Kumar | Portfolio</title>
+    <meta name="description" content="Rishikesh Kumar — SDE & ML Engineer, M.Tech IIT Bombay. Building production systems and intelligent solutions.">
+    <meta property="og:title" content="Rishikesh Kumar | SDE & ML Engineer">
+    <meta property="og:description" content="M.Tech IIT Bombay · GATE 99.3% · CodeChef World Rank 32 · Building production-grade software and ML systems.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://rishikesh-kumar-7258.github.io/portfolio_/Assets/Images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rishikesh Kumar | SDE & ML Engineer">
+    <meta name="twitter:description" content="M.Tech IIT Bombay · SDE & ML Engineer building production systems and intelligent solutions.">
+    <title>Rishikesh Kumar | SDE & ML Engineer</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,29 +20,9 @@
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/tailwind-output.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="Assets/Images/logo.svg" type="image/x-icon">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        bg: '#030014',
-                        bgalt: '#070720',
-                        accent: '#7042f8',
-                        accent2: '#00d4ff',
-                        muted: '#7878a0',
-                        primary: '#f0f0f8',
-                    },
-                    fontFamily: {
-                        display: ['"Space Grotesk"', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
 </head>
 
 <body class="bg-bg text-primary">
@@ -100,7 +87,7 @@
     </nav>
 
     <!-- ===== HERO ===== -->
-    <section id="hero" class="relative h-screen min-h-[620px] flex items-center overflow-hidden">
+    <section id="hero" class="relative min-h-[620px] flex items-center overflow-hidden" style="height:calc(100vh - 80px)">
         <canvas id="hero-canvas" class="absolute inset-0 z-0"></canvas>
 
         <!-- gradient veil -->
@@ -115,10 +102,14 @@
                 class="hero-name grad-text font-display text-[clamp(3rem,8.5vw,6.5rem)] font-bold leading-[1.03] tracking-tight mb-5">
                 Rishikesh<br>Kumar</h1>
             <div
-                class="hero-typed font-display text-[clamp(1.1rem,2.2vw,1.5rem)] font-medium text-muted mb-10 min-h-[2em]">
+                class="hero-typed font-display text-[clamp(1.1rem,2.2vw,1.5rem)] font-medium text-muted mb-4 min-h-[2em]">
                 <span id="typed-text" class="text-accent"></span><span class="typed-cursor text-accent">|</span>
             </div>
-            <div class="hero-cta flex flex-wrap gap-3.5 mb-12">
+            <p class="hero-statement font-display text-[1.1rem] text-muted/90 leading-[1.7] mb-7 max-w-[520px]">
+                I build production-grade software and ML systems.<br class="hidden sm:block">
+                Looking for <strong class="text-primary font-semibold">SDE</strong>, <strong class="text-primary font-semibold">ML Engineering</strong>, or <strong class="text-primary font-semibold">hybrid</strong> roles.
+            </p>
+            <div class="hero-cta flex flex-wrap gap-3.5 mb-8">
                 <a href="#projects"
                     class="inline-flex items-center gap-2 px-7 py-3.5 font-display text-[0.95rem] font-semibold rounded-xl text-white no-underline transition-all duration-300 hover:-translate-y-0.5"
                     style="background: linear-gradient(135deg,#7042f8,#5228d8); box-shadow: 0 4px 24px rgba(112,66,248,0.3);"
@@ -142,12 +133,36 @@
             </div>
         </div>
 
-        <div
+        <!-- <div
             class="hero-scroll absolute bottom-7 left-1/2 -translate-x-1/2 z-[2] flex flex-col items-center gap-2 text-muted text-[0.7rem] tracking-[2px] uppercase">
             <div class="w-[22px] h-[36px] border-2 border-accent/45 rounded-xl flex justify-center pt-[5px]">
                 <div class="wheel w-[3px] h-[7px] bg-accent rounded-sm"></div>
             </div>
             <span>Scroll</span>
+        </div> -->
+    </section>
+
+    <!-- ===== HIGHLIGHTS STRIP ===== -->
+    <section id="highlights" class="relative z-[3]">
+        <div class="max-w-[1200px] mx-auto px-6 lg:px-20">
+            <div class="glass border border-accent/25 rounded-2xl p-7 md:p-9 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10" style="box-shadow: 0 0 40px rgba(112,66,248,0.08), inset 0 1px 0 rgba(255,255,255,0.04)">
+                <div class="flex flex-col items-center text-center gap-1.5">
+                    <span class="font-display text-[2.2rem] md:text-[2.6rem] font-bold text-accent leading-none tracking-tight">99.3<span class="text-[1.2rem]">%</span></span>
+                    <span class="text-[0.78rem] text-muted font-medium">GATE CSE 2024</span>
+                </div>
+                <div class="flex flex-col items-center text-center gap-1.5">
+                    <span class="font-display text-[2.2rem] md:text-[2.6rem] font-bold text-accent leading-none tracking-tight">#32</span>
+                    <span class="text-[0.78rem] text-muted font-medium">CodeChef World Rank</span>
+                </div>
+                <div class="flex flex-col items-center text-center gap-1.5">
+                    <span class="font-display text-[2.2rem] md:text-[2.6rem] font-bold text-accent leading-none tracking-tight">#1</span>
+                    <span class="text-[0.78rem] text-muted font-medium">HackForCG Hackathon</span>
+                </div>
+                <div class="flex flex-col items-center text-center gap-1.5">
+                    <span class="font-display text-[2.2rem] md:text-[2.6rem] font-bold text-accent2 leading-none"><i class="fas fa-scroll text-[1.8rem] md:text-[2.2rem]"></i></span>
+                    <span class="text-[0.78rem] text-muted font-medium">Published Research</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -168,48 +183,17 @@
                 <!-- Bio -->
                 <div class="reveal">
                     <p class="text-muted text-[1.05rem] leading-[1.85] mb-5">
-                        I'm Rishikesh. Currently doing my M.Tech at <strong class="text-primary font-semibold">IIT
-                            Bombay</strong>,
-                        which is equal parts exciting and exhausting. I got into coding through competitive
-                        programming - the kind where you stay up debugging why your solution passes
-                        14 out of 15 test cases. That obsession is still very much alive.
+                        I'm Rishikesh, an <strong class="text-primary font-semibold">SDE &amp; ML Engineer</strong>
+                        pursuing M.Tech at <strong class="text-primary font-semibold">IIT Bombay</strong>.
+                        I build production systems — from async malware analysis platforms with
+                        security-first architecture to NLP pipelines that extract clinical data
+                        from thousands of research abstracts. Competitive programming
+                        sharpened my fundamentals, and my research in deep learning has been
+                        <strong class="text-primary font-semibold">published internationally</strong>.
                     </p>
                     <p class="text-muted text-[1.05rem] leading-[1.85] mb-9">
-                        When I'm not in front of a screen, you'll find me playing <strong
-                            class="text-primary font-semibold">cricket</strong> or
-                        losing myself in a long game of <strong class="text-primary font-semibold">chess</strong>. I
-                        unwind with
-                        <strong class="text-primary font-semibold">anime</strong> and <strong
-                            class="text-primary font-semibold">manga</strong> -
-                        always chasing a good story - and I have a soft spot for
-                        <strong class="text-primary font-semibold">movies</strong> and the kind of
-                        <strong class="text-primary font-semibold">songs</strong> that stay with you long after they
-                        end.
+                        When I step away from the terminal: cricket, chess, anime, and music.
                     </p>
-
-                    <!-- <div class="flex gap-8 mb-8 flex-wrap">
-                        <div class="flex flex-col gap-1">
-                            <span class="font-display text-[2.2rem] font-bold text-accent leading-none">99.3<span class="text-[1.3rem]">%</span></span>
-                            <span class="text-[0.76rem] text-muted">GATE 2024 Percentile</span>
-                        </div>
-                        <div class="flex flex-col gap-1">
-                            <span class="font-display text-[2.2rem] font-bold text-accent leading-none">#32</span>
-                            <span class="text-[0.76rem] text-muted">CodeChef World Rank</span>
-                        </div>
-                        <div class="flex flex-col gap-1">
-                            <span class="font-display text-[2.2rem] font-bold text-accent leading-none">#1</span>
-                            <span class="text-[0.76rem] text-muted">HackForCG Hackathon</span>
-                        </div>
-                    </div> -->
-
-                    <ul class="arrow-list list-none p-0 space-y-2 mb-8">
-                        <li class="text-[0.9rem] text-muted leading-relaxed">99.30 percentile (2024) &amp; 99.13
-                            percentile (2023) in GATE CSE</li>
-                        <li class="text-[0.9rem] text-muted leading-relaxed">World Rank 32 in CodeChef Starters 42 -
-                            Competitive DSA</li>
-                        <li class="text-[0.9rem] text-muted leading-relaxed">Rank 1 in HackForCG Hackathon - ML-based
-                            computer vision with OpenCV</li>
-                    </ul>
 
                     <div class="flex gap-3 flex-wrap">
                         <a href="Assets/sde.pdf" target="_blank" rel="noopener"
@@ -387,89 +371,8 @@
                                 2025 - Present</span>
                         </div>
                         <ul class="arrow-list list-none p-0 space-y-2">
-                            <li class="text-[0.89rem] text-muted leading-relaxed">Contributed to 2 projects, developing
-                                the frontend of the company website and a sandbox-based malware analysis platform</li>
-                            <li class="text-[0.89rem] text-muted leading-relaxed">Led a team of 3 - kept things on track
-                                with regular syncs and a shared task board</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="relative mb-6 reveal">
-                    <div
-                        class="absolute -left-7 top-5 w-3 h-3 rounded-full bg-accent border-2 border-bg shadow-[0_0_12px_rgba(112,66,248,0.6)]">
-                    </div>
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)]">
-                        <div class="flex justify-between items-start gap-4 mb-3.5 flex-wrap">
-                            <div>
-                                <h3 class="font-display text-[1rem] font-semibold text-primary mb-1">Full-Stack
-                                    Developer Intern</h3>
-                                <p class="text-[0.87rem] text-accent2 font-medium">Presear Software Pvt. Ltd. |
-                                    Bilaspur, Chhattisgarh</p>
-                            </div>
-                            <span
-                                class="text-[0.78rem] text-muted bg-accent/[0.09] border border-accent/20 px-2.5 py-1 rounded-full shrink-0">May
-                                2023 - Jul 2023</span>
-                        </div>
-                        <ul class="arrow-list list-none p-0 space-y-2">
-                            <li class="text-[0.89rem] text-muted leading-relaxed">Designed a full-stack application
-                                using React.js and Django following modular, component-based development practices</li>
-                            <li class="text-[0.89rem] text-muted leading-relaxed">Worked with a 2-person team to ship
-                                features directly from client briefs, with fast iteration cycles</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="relative mb-6 reveal">
-                    <div
-                        class="absolute -left-7 top-5 w-3 h-3 rounded-full bg-accent border-2 border-bg shadow-[0_0_12px_rgba(112,66,248,0.6)]">
-                    </div>
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)]">
-                        <div class="flex justify-between items-start gap-4 mb-3.5 flex-wrap">
-                            <div>
-                                <h3 class="font-display text-[1rem] font-semibold text-primary mb-1">Full-Stack
-                                    Developer Intern</h3>
-                                <p class="text-[0.87rem] text-accent2 font-medium">Guru Ghasidas University | Bilaspur,
-                                    Chhattisgarh</p>
-                            </div>
-                            <span
-                                class="text-[0.78rem] text-muted bg-accent/[0.09] border border-accent/20 px-2.5 py-1 rounded-full shrink-0">May
-                                2023 - Jul 2023</span>
-                        </div>
-                        <ul class="arrow-list list-none p-0 space-y-2">
-                            <li class="text-[0.89rem] text-muted leading-relaxed">Worked in a team to renew the
-                                university website, contributing across frontend, backend, database, and deployment</li>
-                            <li class="text-[0.89rem] text-muted leading-relaxed">Built an intuitive room booking
-                                interface for the guest house, shifting the process fully online and streamlining
-                                reservations</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="relative mb-6 reveal">
-                    <div
-                        class="absolute -left-7 top-5 w-3 h-3 rounded-full bg-accent border-2 border-bg shadow-[0_0_12px_rgba(112,66,248,0.6)]">
-                    </div>
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)]">
-                        <div class="flex justify-between items-start gap-4 mb-3.5 flex-wrap">
-                            <div>
-                                <h3 class="font-display text-[1rem] font-semibold text-primary mb-1">Web Developer
-                                    Intern</h3>
-                                <p class="text-[0.87rem] text-accent2 font-medium">RMgX Technologies | Gurugram, Haryana
-                                </p>
-                            </div>
-                            <span
-                                class="text-[0.78rem] text-muted bg-accent/[0.09] border border-accent/20 px-2.5 py-1 rounded-full shrink-0">Jun
-                                2022 - Aug 2022</span>
-                        </div>
-                        <ul class="arrow-list list-none p-0 space-y-2">
-                            <li class="text-[0.89rem] text-muted leading-relaxed">Created and integrated 10+ fully
-                                responsive pages for the company website using Next.js</li>
-                            <li class="text-[0.89rem] text-muted leading-relaxed">Worked with the design team to turn
-                                Figma mockups into working Next.js pages</li>
+                            <li class="text-[0.89rem] text-muted leading-relaxed">Built a sandbox-based malware analysis platform handling 200+ daily sample submissions with automated static, dynamic, and memory analysis reports</li>
+                            <li class="text-[0.89rem] text-muted leading-relaxed">Led a 3-person team using sprint-based workflows and code reviews, shipping features on a 2-week release cadence</li>
                         </ul>
                     </div>
                 </div>
@@ -492,47 +395,18 @@
                                 2021 - Jan 2022</span>
                         </div>
                         <ul class="arrow-list list-none p-0 space-y-2">
-                            <li class="text-[0.89rem] text-muted leading-relaxed">Built an image processing pipeline
-                                using Node.js, OpenCV.js, and Google Vision API to scan and auto-identify medicines from
-                                batch images</li>
-                            <li class="text-[0.89rem] text-muted leading-relaxed">Designed a dynamic Excel-compatible
-                                system that auto-populated medicine inventory and allowed users to export results</li>
+                            <li class="text-[0.89rem] text-muted leading-relaxed">Built an image processing pipeline using Node.js, OpenCV.js, and Google Vision API that automated medicine identification from batch photos, replacing manual data entry</li>
+                            <li class="text-[0.89rem] text-muted leading-relaxed">Designed an auto-populated Excel-compatible inventory system that reduced medicine cataloging time from hours to minutes per batch</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Academic & Leadership -->
+                <!-- Academic -->
                 <div
                     class="fade-line fade-line--cyan mb-6 font-display text-[0.74rem] font-semibold tracking-[3px] uppercase text-accent2 reveal">
-                    Academic &amp; Leadership</div>
+                    Academic</div>
 
-                <div class="relative mb-6 reveal">
-                    <div
-                        class="absolute -left-7 top-5 w-3 h-3 rounded-full bg-accent2 border-2 border-bg shadow-[0_0_12px_rgba(0,212,255,0.55)]">
-                    </div>
-                    <div
-                        class="glass border border-accent2/15 rounded-2xl p-6 transition-all duration-300 hover:border-accent2/45 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,212,255,0.1)]">
-                        <div class="flex justify-between items-start gap-4 mb-3.5 flex-wrap">
-                            <div>
-                                <h3 class="font-display text-[1rem] font-semibold text-primary mb-1">Teaching Assistant
-                                </h3>
-                                <p class="text-[0.87rem] text-accent2 font-medium">IE 201 - AI &amp; ML Lab | IIT
-                                    Bombay</p>
-                            </div>
-                            <span
-                                class="text-[0.78rem] text-accent2 bg-accent2/[0.08] border border-accent2/20 px-2.5 py-1 rounded-full shrink-0">Jan
-                                2026 - Apr 2026</span>
-                        </div>
-                        <ul class="arrow-list arrow-list--cyan list-none p-0 space-y-2">
-                            <li class="text-[0.89rem] text-muted leading-relaxed">Designed lab experiments, set and
-                                graded exams, and evaluated submissions for 40 B.Tech 2nd-year IEOR students</li>
-                            <li class="text-[0.89rem] text-muted leading-relaxed">Conducted doubt sessions and guided
-                                students through AI/ML concepts and hands-on lab work</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="relative mb-6 reveal">
+                <div class="relative reveal">
                     <div
                         class="absolute -left-7 top-5 w-3 h-3 rounded-full bg-accent2 border-2 border-bg shadow-[0_0_12px_rgba(0,212,255,0.55)]">
                     </div>
@@ -560,36 +434,18 @@
                     </div>
                 </div>
 
-                <div class="relative reveal">
-                    <div
-                        class="absolute -left-7 top-5 w-3 h-3 rounded-full bg-accent2 border-2 border-bg shadow-[0_0_12px_rgba(0,212,255,0.55)]">
-                    </div>
-                    <div
-                        class="glass border border-accent2/15 rounded-2xl p-6 transition-all duration-300 hover:border-accent2/45 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,212,255,0.1)]">
-                        <div class="flex justify-between items-start gap-4 mb-3.5 flex-wrap">
-                            <div>
-                                <h3 class="font-display text-[1rem] font-semibold text-primary mb-1">Website Coordinator
-                                </h3>
-                                <p class="text-[0.87rem] text-accent2 font-medium">IEOR Day | IIT Bombay</p>
-                            </div>
-                            <span
-                                class="text-[0.78rem] text-accent2 bg-accent2/[0.08] border border-accent2/20 px-2.5 py-1 rounded-full shrink-0">Jan
-                                2025 - Mar 2025</span>
-                        </div>
-                        <ul class="arrow-list arrow-list--cyan list-none p-0 space-y-2">
-                            <li class="text-[0.89rem] text-muted leading-relaxed">Helped organize IEOR Day with a
-                                30-member team - handled logistics, schedule, and coordination</li>
-                            <li class="text-[0.89rem] text-muted leading-relaxed">Developed and maintained the event's
-                                official website with schedules, announcements and updates</li>
-                        </ul>
-                    </div>
-                </div>
+            </div>
 
+            <div class="text-center mt-10 reveal">
+                <a href="experience.html"
+                    class="inline-flex items-center gap-2 px-8 py-3.5 font-display text-[0.95rem] font-semibold rounded-xl text-primary border border-accent/22 bg-transparent no-underline transition-all duration-300 hover:bg-accent/[0.06] hover:border-accent/50 hover:-translate-y-0.5">
+                    View All Experience <i class="fas fa-arrow-right text-[0.8rem]"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- ===== PROJECTS ===== -->
+    <!-- ===== PROJECTS (Featured) ===== -->
     <section id="projects" class="py-20 lg:py-28"
         style="background:linear-gradient(180deg,transparent,rgba(7,7,32,0.6) 50%,transparent)">
         <div class="max-w-[1200px] mx-auto px-6 lg:px-20">
@@ -602,24 +458,19 @@
                 </h2>
             </div>
 
-            <!-- Filter tabs -->
-            <div id="project-filters" class="flex flex-wrap gap-2.5 mb-12 reveal" role="tablist"
-                aria-label="Filter projects by category">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="engineering">Engineering</button>
-                <button class="filter-btn" data-filter="ml">ML / Research</button>
-                <button class="filter-btn" data-filter="games">Games</button>
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-            <!-- Engineering -->
-            <div class="mb-14 project-group" data-group="engineering">
+                <!-- 1. Vajra Sandbox -->
                 <div
-                    class="fade-line mb-7 font-display text-[0.76rem] font-semibold tracking-[3px] uppercase text-muted reveal">
-                    Engineering</div>
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-5">
-
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
+                    class="glass border border-accent/20 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
+                    <!-- Visual placeholder -->
+                    <div class="relative w-full h-44 bg-gradient-to-br from-accent/10 to-accent2/5 flex items-center justify-center border-b border-accent/10">
+                        <div class="text-center px-4">
+                            <i class="fas fa-shield-alt text-3xl text-accent/40 mb-2"></i>
+                            <p class="text-[0.72rem] text-muted/60 italic">Add screenshot: dashboard + analysis report</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col gap-2.5 flex-1">
                         <div class="flex justify-between items-center">
                             <span
                                 class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">Full
@@ -632,186 +483,27 @@
                             Platform</p>
                         <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
                             <li class="text-[0.855rem] text-muted leading-relaxed">Launched a malware analysis platform
-                                for sample submission with static, dynamic, and memory analysis with report generation
-                            </li>
+                                handling 200+ daily submissions with static, dynamic, and memory analysis and automated PDF report generation</li>
                             <li class="text-[0.855rem] text-muted leading-relaxed">Each sample runs in an isolated VM;
-                                submissions process async via Celery so high volumes don't create a bottleneck</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built using Python, Django/DRF and
-                                Next.js/TypeScript with JWT auth, TOTP 2FA, CAPTCHA, and rate limiting</li>
+                                async Celery processing ensures zero bottlenecks under high volumes</li>
+                            <li class="text-[0.855rem] text-muted leading-relaxed">Security-first: JWT auth, TOTP 2FA, equation-based CAPTCHA, and rate limiting</li>
                         </ul>
                         <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Python</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Django/DRF</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Next.js</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">TypeScript</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Docker</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Redis</span>
+                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Python</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Django/DRF</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Next.js</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">TypeScript</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Docker</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Redis</span>
                         </div>
                     </div>
-
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                        <div class="flex justify-between items-center">
-                            <span
-                                class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">Android</span>
-                            <span class="text-[0.78rem] text-muted">2026</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
-                            <a href="https://github.com/Rishikesh-kumar-7258/MinimalistApp" target="_blank"
-                                rel="noopener"
-                                class="text-primary no-underline transition-colors hover:text-accent">
-                                Minimalist App <i
-                                    class="fas fa-external-link-alt text-[0.62rem] opacity-60 ml-1"></i>
-                            </a>
-                        </h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Text-only Android home screen launcher</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built a distraction-free Android
-                                launcher with no icons or wallpaper — everything rendered as plain text</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Features focus profiles, per-app
-                                usage limits, and unified search across apps, contacts, and settings</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Kotlin</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Android</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Jetpack</span>
-                        </div>
-                    </div>
-
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                        <div class="flex justify-between items-center">
-                            <span
-                                class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">Full
-                                Stack</span>
-                            <span class="text-[0.78rem] text-muted">Dec 2025 - Present</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">VersatAI Lab
-                            Website</h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Lab site with profiles, event listings, and
-                            JWT/TOTP-secured admin</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Created a platform to showcase
-                                research activities, student profiles, projects and events with collaboration and
-                                feedback system</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built using Django/DRF for secure
-                                REST APIs and Next.js to power an SSR/SSG-based frontend</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Implemented JWT-based authentication,
-                                TOTP 2FA, equation-based CAPTCHA, and role-based access control</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Django/DRF</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Next.js</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PostgreSQL</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">JWT</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">TOTP</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">RBAC</span>
-                        </div>
-                    </div>
-
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                        <div class="flex justify-between items-center">
-                            <span
-                                class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">Frontend</span>
-                            <span class="text-[0.78rem] text-muted">Dec 2022 - Jan 2023</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
-                            <a href="https://github.com/Rishikesh-kumar-7258/sortingVisualizer" target="_blank"
-                                rel="noopener" class="text-primary no-underline transition-colors hover:text-accent">
-                                Sorting &amp; Pathfinding Visualizers <i
-                                    class="fas fa-external-link-alt text-[0.62rem] opacity-60 ml-1"></i>
-                            </a>
-                        </h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Educational Algorithm Visualization Tool
-                        </p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built interactive visualizers
-                                demonstrating algorithm behavior through real-time execution</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Developed using HTML, CSS, and JS
-                                applying OOP principles, data structures, and graph algorithms</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">HTML</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">CSS</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">JavaScript</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Graph
-                                Algorithms</span>
-                        </div>
-                    </div>
-
-
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                        <div class="flex justify-between items-center">
-                            <span
-                                class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">Optimization</span>
-                            <span class="text-[0.78rem] text-muted">Jul - Nov 2024</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">Swarm Robotics
-                            Optimization</h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Mathematical Optimization Techniques |
-                            Course Project</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Collaborated with a team of four to
-                                develop an optimization model for drone deployment in disaster-affected areas</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Formulated mathematical constraints
-                                for coverage, deployment, and drone selection using grid-based coverage metrics</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Python</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">MILP</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Gurobi</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Swarm
-                                Robotics</span>
-                        </div>
-                    </div>
-
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                        <div class="flex justify-between items-center">
-                            <span
-                                class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-amber-400 bg-amber-400/10 border border-amber-400/25">Simulation</span>
-                            <span class="text-[0.78rem] text-muted">Jan - Apr 2024</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">Dark Store
-                            Operations Optimization</h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">IE 630 | Course Project</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built a Discrete-Event Simulation of
-                                dark store workflows to model demand fluctuations, workforce utilization, and inventory
-                                cycles</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Ran scenario-based experiments on
-                                staffing and replenishment, deriving strategies for dynamic workforce allocation and
-                                predictive inventory control</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Python</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">SimPy</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">DES</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Data
-                                Analysis</span>
-                        </div>
-                    </div>
-
                 </div>
-            </div>
 
-            <!-- ML / Research -->
-            <div class="project-group" data-group="ml">
+                <!-- 2. VIntel Platform -->
                 <div
-                    class="fade-line mb-7 font-display text-[0.76rem] font-semibold tracking-[3px] uppercase text-muted reveal">
-                    ML / Research</div>
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-5">
-
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
+                    class="glass border border-accent/20 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
+                    <div class="relative w-full h-44 bg-gradient-to-br from-violet-500/10 to-accent/5 flex items-center justify-center border-b border-accent/10">
+                        <div class="text-center px-4">
+                            <i class="fas fa-robot text-3xl text-violet-400/40 mb-2"></i>
+                            <p class="text-[0.72rem] text-muted/60 italic">Add screenshot: agent pipeline + news feed UI</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col gap-2.5 flex-1">
                         <div class="flex justify-between items-center">
                             <span
                                 class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-violet-400 bg-violet-400/10 border border-violet-400/25">Agentic
@@ -820,30 +512,29 @@
                         </div>
                         <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">The Third Eye:
                             VIntel Platform</h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">IE 624 - Generative &amp; Agentic AI |
-                            Course Project | Prof. Manjesh K. Hanawal</p>
+                        <p class="text-[0.82rem] text-muted leading-relaxed">Multi-Agent Cybersecurity Intelligence Platform</p>
                         <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
                             <li class="text-[0.855rem] text-muted leading-relaxed">Built a multi-agent cybersecurity
-                                news platform with a two-round LLM editorial deliberation model and Borda-count
-                                cross-story ranking to overcome grade inflation</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Designed a polyglot microservice
-                                architecture (Go + TypeScript + Rust + React) with a persistent memory layer and an
-                                open A2A protocol for external agents</li>
+                                news platform with two-round LLM editorial deliberation and Borda-count ranking</li>
+                            <li class="text-[0.855rem] text-muted leading-relaxed">Polyglot microservice architecture
+                                (Go + TypeScript + Rust + React) with persistent memory layer and A2A protocol</li>
                         </ul>
                         <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Go</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">TypeScript</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Rust</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">React</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">LLM
-                                Agents</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PostgreSQL</span>
+                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Go</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">TypeScript</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Rust</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">React</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">LLM Agents</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PostgreSQL</span>
                         </div>
                     </div>
+                </div>
 
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
+                <!-- 3. MTP Thesis -->
+                <div
+                    class="glass border border-accent/20 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
+                    <div class="relative w-full h-44 bg-gradient-to-br from-accent2/10 to-accent/5 flex items-center justify-center border-b border-accent/10">
+                        <div class="text-center px-4">
+                            <i class="fas fa-dna text-3xl text-accent2/40 mb-2"></i>
+                            <p class="text-[0.72rem] text-muted/60 italic">Add screenshot: NER results + pipeline diagram</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col gap-2.5 flex-1">
                         <div class="flex justify-between items-center">
                             <span
                                 class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-violet-400 bg-violet-400/10 border border-violet-400/25">MTP
@@ -855,25 +546,26 @@
                         <p class="text-[0.82rem] text-muted leading-relaxed">Biomedical NLP Pipeline | Prof. Balamurugan
                             Palaniappan</p>
                         <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built a pipeline that queries PubMed
-                                and pulls out parameter-specific clinical data from research abstracts</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Improved entity extraction F1-score
-                                to 90% by fine-tuning a PubMedBERT-based NER model on a manually annotated dataset</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Implemented a distributed ML pipeline
-                                with Ray, PyTorch and HuggingFace; deployed with Next.js/FastAPI</li>
+                            <li class="text-[0.855rem] text-muted leading-relaxed">Built a pipeline querying PubMed to extract parameter-specific clinical data from 87K+ research abstracts</li>
+                            <li class="text-[0.855rem] text-muted leading-relaxed">Fine-tuned PubMedBERT NER model achieving 90% F1-score on manually annotated dataset</li>
+                            <li class="text-[0.855rem] text-muted leading-relaxed">Distributed ML pipeline with Ray, PyTorch, HuggingFace; deployed via Next.js/FastAPI</li>
                         </ul>
                         <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PyTorch</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">HuggingFace</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Ray</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">FastAPI</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PubMedBERT</span>
+                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PyTorch</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">HuggingFace</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Ray</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">FastAPI</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PubMedBERT</span>
                         </div>
                     </div>
+                </div>
 
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
+                <!-- 4. Explainable Depression Detection -->
+                <div
+                    class="glass border border-accent/20 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
+                    <div class="relative w-full h-44 bg-gradient-to-br from-accent2/10 to-violet-500/5 flex items-center justify-center border-b border-accent/10">
+                        <div class="text-center px-4">
+                            <i class="fas fa-brain text-3xl text-accent2/40 mb-2"></i>
+                            <p class="text-[0.72rem] text-muted/60 italic">Add visual: Integrated Gradients heatmap</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col gap-2.5 flex-1">
                         <div class="flex justify-between items-center">
                             <span
                                 class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">NLP</span>
@@ -881,564 +573,45 @@
                         </div>
                         <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">Explainable
                             Depression Detection</h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Social Media Analysis | DL NLP Course |
-                            Prof. Pushpak Bhattacharyya</p>
+                        <p class="text-[0.82rem] text-muted leading-relaxed">Social Media NLP | Prof. Pushpak Bhattacharyya</p>
                         <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built an NLP pipeline for depression
-                                detection using double domain adaptation and guided masking</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Designed an explainability pipeline
-                                combining Integrated Gradients with LLM-based teacher-student distillation</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Achieved an F1 score of 0.78 and
-                                extracted top-k words contributing most strongly to positive detection</li>
+                            <li class="text-[0.855rem] text-muted leading-relaxed">NLP pipeline for depression
+                                detection using double domain adaptation and guided masking — 0.78 F1</li>
+                            <li class="text-[0.855rem] text-muted leading-relaxed">Explainability pipeline combining Integrated Gradients with LLM-based teacher-student distillation</li>
                         </ul>
                         <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PyTorch</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">HuggingFace</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">NLP</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Transformers</span>
+                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PyTorch</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">HuggingFace</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">NLP</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Transformers</span>
                         </div>
                     </div>
-
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                        <div class="flex justify-between items-center">
-                            <span
-                                class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">CV
-                                / RL</span>
-                            <span class="text-[0.78rem] text-muted">Feb - Mar 2025</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">HeadBall2 Game
-                            Player</h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Real-Time Mobile Game Automation</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Developed a real-time computer vision
-                                pipeline using OpenCV from live video streams at 30 FPS</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Designed a reinforcement learning
-                                system with WebSocket-based client-server communication at 50 ms end-to-end latency</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built a mobile automation framework
-                                integrating ADB, v4l2 and Python for reliable device control</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">OpenCV</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Python</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">RL</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">WebSockets</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">ADB</span>
-                        </div>
-                    </div>
-
-
-
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                        <div class="flex justify-between items-center">
-                            <span
-                                class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">ML</span>
-                            <span class="text-[0.78rem] text-muted">Jan - Apr 2025</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">Kernel PCA for
-                            OOD Detection</h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">ML Principles &amp; Techniques | Course
-                            Project</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Implemented Kernel PCA with a
-                                2-member team for out-of-distribution detection in DL models, benchmarking against
-                                KNN</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Achieved AUROC of 99.57% and FPR of
-                                1.73% on ResNet50 evaluated on Tiny-ImageNet-200</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Python</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PyTorch</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Kernel
-                                PCA</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">OOD
-                                Detection</span>
-                        </div>
-                    </div>
-
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                        <div class="flex justify-between items-center">
-                            <span
-                                class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">RL
-                                /
-                                NLP</span>
-                            <span class="text-[0.78rem] text-muted">Jan - Apr 2025</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">Secrets of RLHF
-                            in LLMs: PPO</h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Reinforcement Learning Algorithms | Course
-                            Project</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Studied core RLHF mathematics and
-                                implemented PPO-max to improve training stability for LLM fine-tuning</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built a demo that successfully
-                                fine-tuned an LLM, showing measurable gains over SFT baselines</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Python</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PPO</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">RLHF</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">HuggingFace</span>
-                        </div>
-                    </div>
-
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                        <div class="flex justify-between items-center">
-                            <span
-                                class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-amber-400 bg-amber-400/10 border border-amber-400/25">Published</span>
-                            <span class="text-[0.78rem] text-muted">Jul 2024</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
-                            <a href="https://doi.org/10.47839/ijc.23.4.3542" target="_blank" rel="noopener"
-                                class="text-primary no-underline transition-colors hover:text-accent">
-                                Plant Disease Classification with SOTA DL <i
-                                    class="fas fa-external-link-alt text-[0.62rem] opacity-60 ml-1"></i>
-                            </a>
-                        </h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">International Journal of Computing | DOI:
-                            10.47839/ijc.23.4.3542</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Implemented and evaluated multiple
-                                CNN architectures on a dataset of 87,900+ leaf images across 38 classes</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Achieved up to 97.31% validation
-                                accuracy, showing robust generalization across multiple plant diseases</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PyTorch</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">CNN</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Deep
-                                Learning</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Computer
-                                Vision</span>
-                        </div>
-                    </div>
-
                 </div>
+
             </div>
 
-            <!-- Games -->
-            <div class="mt-14 project-group" data-group="games">
-                <div
-                    class="fade-line mb-7 font-display text-[0.76rem] font-semibold tracking-[3px] uppercase text-muted reveal">
-                    Games</div>
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                        <div class="flex justify-between items-center">
-                            <span
-                                class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">Web
-                                · AI</span>
-                            <span class="text-[0.78rem] text-muted">2021</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
-                            <a href="https://github.com/Rishikesh-kumar-7258/Tic-Tac-Toe" target="_blank" rel="noopener"
-                                class="text-primary no-underline transition-colors hover:text-accent">
-                                Tic Tac Toe <i class="fas fa-external-link-alt text-[0.62rem] opacity-60 ml-1"></i>
-                            </a>
-                        </h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Browser game with AI opponent</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Implemented a minimax-based AI
-                                opponent that plays optimally — unbeatable when set to hard mode</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built entirely in vanilla HTML,
-                                CSS, and JS with no external libraries</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">JavaScript</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">HTML/CSS</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Minimax</span>
-                        </div>
-                    </div>
-
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                        <div class="flex justify-between items-center">
-                            <span
-                                class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">Unity
-                                · 3D</span>
-                            <span class="text-[0.78rem] text-muted">2023</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
-                            <a href="https://github.com/Game-prince/runner_3d" target="_blank" rel="noopener"
-                                class="text-primary no-underline transition-colors hover:text-accent">
-                                Runner 3D <i class="fas fa-external-link-alt text-[0.62rem] opacity-60 ml-1"></i>
-                            </a>
-                        </h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Endless 3D runner built in Unity</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Developed a 3D runner game in
-                                Unity with custom shaders, obstacle generation, and increasing difficulty</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">First project using ShaderLab
-                                and Unity's physics engine for smooth 3D movement and collisions</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Unity</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">C#</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">ShaderLab</span>
-                        </div>
-                    </div>
-
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                        <div class="flex justify-between items-center">
-                            <span
-                                class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">Pygame
-                                · Arcade</span>
-                            <span class="text-[0.78rem] text-muted">2022</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
-                            <a href="https://github.com/Rishikesh-kumar-7258/Block_breaker" target="_blank"
-                                rel="noopener" class="text-primary no-underline transition-colors hover:text-accent">
-                                Block Breaker <i class="fas fa-external-link-alt text-[0.62rem] opacity-60 ml-1"></i>
-                            </a>
-                        </h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Classic brick-breaking arcade game</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built a full arcade game with
-                                ball physics, paddle control, level progression, and score tracking</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Implemented collision detection,
-                                power-ups, and dynamic difficulty scaling across levels</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Python</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Pygame</span>
-                        </div>
-                    </div>
-
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                        <div class="flex justify-between items-center">
-                            <span
-                                class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-amber-400 bg-amber-400/10 border border-amber-400/25">Lua
-                                · Board</span>
-                            <span class="text-[0.78rem] text-muted">2023</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
-                            <a href="https://github.com/Game-prince/ludo" target="_blank" rel="noopener"
-                                class="text-primary no-underline transition-colors hover:text-accent">
-                                Ludo <i class="fas fa-external-link-alt text-[0.62rem] opacity-60 ml-1"></i>
-                            </a>
-                        </h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Digital Ludo board game in Lua /
-                            LÖVE2D</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Implemented complete Ludo rules
-                                — turn management, dice rolls, token movement, and win detection</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Explored Lua's game scripting
-                                capabilities and the LÖVE2D framework for 2D rendering</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Lua</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">LÖVE2D</span>
-                        </div>
-                    </div>
-
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                        <div class="flex justify-between items-center">
-                            <span
-                                class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">C++
-                                · Console</span>
-                            <span class="text-[0.78rem] text-muted">2024</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
-                            <a href="https://github.com/Game-prince/TheHunter" target="_blank" rel="noopener"
-                                class="text-primary no-underline transition-colors hover:text-accent">
-                                The Hunter <i class="fas fa-external-link-alt text-[0.62rem] opacity-60 ml-1"></i>
-                            </a>
-                        </h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Console text adventure in C++</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Designed a branching narrative
-                                adventure with inventory, combat, and multiple story outcomes</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built using OOP in C++ — game
-                                state, entities, and events modelled as classes</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">C++</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">OOP</span>
-                        </div>
-                    </div>
-
-                    <div
-                        class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-2.5 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                        <div class="flex justify-between items-center">
-                            <span
-                                class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">Pygame
-                                · Puzzle</span>
-                            <span class="text-[0.78rem] text-muted">2021</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
-                            <a href="https://github.com/Game-prince/Tetris" target="_blank" rel="noopener"
-                                class="text-primary no-underline transition-colors hover:text-accent">
-                                Tetris <i class="fas fa-external-link-alt text-[0.62rem] opacity-60 ml-1"></i>
-                            </a>
-                        </h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Classic Tetris puzzle game in Python</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Implemented piece generation,
-                                rotation, line clearing, and increasing speed with score progression</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Handled grid state, collision
-                                detection, and rendering using Pygame's surface and event system</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Python</span><span
-                                class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Pygame</span>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="text-center mt-10 reveal">
+                <a href="projects.html"
+                    class="inline-flex items-center gap-2 px-8 py-3.5 font-display text-[0.95rem] font-semibold rounded-xl text-primary border border-accent/22 bg-transparent no-underline transition-all duration-300 hover:bg-accent/[0.06] hover:border-accent/50 hover:-translate-y-0.5">
+                    View All Projects <i class="fas fa-arrow-right text-[0.8rem]"></i>
+                </a>
             </div>
 
         </div>
     </section>
 
-    <!-- ===== COURSES ===== -->
-    <section id="courses" class="py-20 lg:py-28">
+    <!-- ===== COURSEWORK (Brief) ===== -->
+    <section id="courses" class="py-16">
         <div class="max-w-[1200px] mx-auto px-6 lg:px-20">
-
-            <div class="mb-12 lg:mb-16 reveal">
-                <span class="block text-[0.78rem] font-medium tracking-[3px] uppercase text-accent2 mb-3">05 -
-                    Courses</span>
-                <h2 class="font-display text-[clamp(2rem,5vw,3.4rem)] font-bold tracking-tight leading-[1.1]">Relevant
-                    <span class="text-accent">Coursework</span>
-                </h2>
+            <div class="glass border border-accent/20 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 reveal">
+                <div>
+                    <h2 class="font-display text-[1.2rem] font-bold text-primary mb-2">Relevant Coursework</h2>
+                    <p class="text-[0.9rem] text-muted leading-relaxed max-w-[480px]">
+                        Deep Learning, Reinforcement Learning, NLP, Generative &amp; Agentic AI, ML Principles, Operations Research, DSA, and more — from M.Tech at IIT Bombay and B.Tech at GGU.
+                    </p>
+                </div>
+                <a href="courses.html"
+                    class="inline-flex items-center gap-2 px-6 py-3 font-display text-[0.9rem] font-semibold rounded-xl text-primary border border-accent/22 bg-transparent no-underline transition-all duration-300 hover:bg-accent/[0.06] hover:border-accent/50 hover:-translate-y-0.5 shrink-0">
+                    View Full Coursework <i class="fas fa-arrow-right text-[0.8rem]"></i>
+                </a>
             </div>
-
-            <!-- M.Tech Divider -->
-            <div class="mb-8 reveal">
-                <div class="flex items-center gap-4">
-                    <div class="h-px flex-1 bg-accent/15"></div>
-                    <span class="font-display text-[0.78rem] font-semibold tracking-[3px] uppercase text-muted">M.Tech ·
-                        IEOR · IIT Bombay</span>
-                    <div class="h-px flex-1 bg-accent/15"></div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-5">
-
-                <!-- Core IEOR -->
-                <div
-                    class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-3 transition-all duration-300 hover:border-accent/40 reveal">
-                    <div class="flex items-center gap-2.5 mb-1">
-                        <span
-                            class="w-2 h-2 rounded-full bg-accent shrink-0 shadow-[0_0_8px_rgba(112,66,248,0.7)]"></span>
-                        <h3 class="font-display text-[0.8rem] font-bold tracking-[2px] uppercase text-accent">Core
-                            IEOR</h3>
-                    </div>
-                    <ul class="list-none p-0 m-0 space-y-2">
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Engineering Statistics <span
-                                class="text-[0.75rem] text-accent/70 ml-1">IE 605</span></li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Operations Analysis <span
-                                class="text-[0.75rem] text-accent/70 ml-1">IE 503</span></li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Probability &amp; Stochastic Processes I
-                            <span class="text-[0.75rem] text-accent/70 ml-1">IE 621</span>
-                        </li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Mathematical Optimization Techniques
-                            <span class="text-[0.75rem] text-accent/70 ml-1">IE 609</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Machine Learning -->
-                <div
-                    class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-3 transition-all duration-300 hover:border-accent/40 reveal">
-                    <div class="flex items-center gap-2.5 mb-1">
-                        <span
-                            class="w-2 h-2 rounded-full bg-accent shrink-0 shadow-[0_0_8px_rgba(112,66,248,0.7)]"></span>
-                        <h3 class="font-display text-[0.8rem] font-bold tracking-[2px] uppercase text-accent">Machine
-                            Learning</h3>
-                    </div>
-                    <ul class="list-none p-0 m-0 space-y-2">
-                        <li class="text-[0.855rem] text-muted leading-relaxed">ML: Principles &amp; Techniques
-                            <span class="text-[0.75rem] text-accent/70 ml-1">IE 506</span>
-                        </li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Reinforcement Learning Algorithms
-                            <span class="text-[0.75rem] text-accent/70 ml-1">IE 620</span>
-                        </li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Generative &amp; Agentic AI
-                            <span class="text-[0.75rem] text-accent/70 ml-1">IE 624</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Deep Learning -->
-                <div
-                    class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-3 transition-all duration-300 hover:border-accent/40 reveal">
-                    <div class="flex items-center gap-2.5 mb-1">
-                        <span
-                            class="w-2 h-2 rounded-full bg-accent2 shrink-0 shadow-[0_0_8px_rgba(0,212,255,0.6)]"></span>
-                        <h3 class="font-display text-[0.8rem] font-bold tracking-[2px] uppercase text-accent2">Deep
-                            Learning</h3>
-                    </div>
-                    <ul class="list-none p-0 m-0 space-y-2">
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Deep Learning: Theory &amp;
-                            Practice <span class="text-[0.72rem] text-accent2/70 ml-1">IE 643 · TA</span>
-                        </li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">DL for Natural Language Processing
-                            <span class="text-[0.75rem] text-accent2/70 ml-1">CS 772</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Labs -->
-                <div
-                    class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-3 transition-all duration-300 hover:border-accent/40 reveal">
-                    <div class="flex items-center gap-2.5 mb-1">
-                        <span
-                            class="w-2 h-2 rounded-full bg-accent2 shrink-0 shadow-[0_0_8px_rgba(0,212,255,0.6)]"></span>
-                        <h3 class="font-display text-[0.8rem] font-bold tracking-[2px] uppercase text-accent2">Labs
-                            &amp; Simulation</h3>
-                    </div>
-                    <ul class="list-none p-0 m-0 space-y-2">
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Modelling &amp; Computations Lab
-                            <span class="text-[0.75rem] text-accent2/70 ml-1">IE 507</span>
-                        </li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Simulation Modelling &amp; Analysis
-                            <span class="text-[0.75rem] text-accent2/70 ml-1">IE 630</span>
-                        </li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">IEOR Lab
-                            <span class="text-[0.75rem] text-accent2/70 ml-1">IE 684</span>
-                        </li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">AI &amp; ML Lab <span
-                                class="text-[0.72rem] text-accent2/70 ml-1">IE 201 · TA</span></li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <!-- B.Tech Divider -->
-            <div class="mt-14 mb-8 reveal">
-                <div class="flex items-center gap-4">
-                    <div class="h-px flex-1 bg-accent/15"></div>
-                    <span class="font-display text-[0.78rem] font-semibold tracking-[3px] uppercase text-muted">B.Tech ·
-                        CSE · Guru Ghasidas University</span>
-                    <div class="h-px flex-1 bg-accent/15"></div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-5">
-
-                <!-- Core CS -->
-                <div
-                    class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-3 transition-all duration-300 hover:border-accent/40 reveal">
-                    <div class="flex items-center gap-2.5 mb-1">
-                        <span
-                            class="w-2 h-2 rounded-full bg-accent shrink-0 shadow-[0_0_8px_rgba(112,66,248,0.7)]"></span>
-                        <h3 class="font-display text-[0.8rem] font-bold tracking-[2px] uppercase text-accent">Core CS
-                        </h3>
-                    </div>
-                    <ul class="list-none p-0 m-0 space-y-2">
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Data Structures &amp; Algorithms <span
-                                class="text-[0.75rem] text-accent/70 ml-1">CS204TPC06</span></li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Operating System <span
-                                class="text-[0.75rem] text-accent/70 ml-1">CS204TPC05</span></li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Computer Organization &amp; Architecture
-                            <span class="text-[0.75rem] text-accent/70 ml-1">CS203TPC03</span>
-                        </li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Design &amp; Analysis of Algorithms <span
-                                class="text-[0.75rem] text-accent/70 ml-1">CS206TPC11</span></li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Compiler Design <span
-                                class="text-[0.75rem] text-accent/70 ml-1">CS207TPC14</span></li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Formal Language &amp; Automata Theory
-                            <span class="text-[0.75rem] text-accent/70 ml-1">CS205TPC09</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- AI / ML / Data -->
-                <div
-                    class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-3 transition-all duration-300 hover:border-accent/40 reveal">
-                    <div class="flex items-center gap-2.5 mb-1">
-                        <span
-                            class="w-2 h-2 rounded-full bg-accent shrink-0 shadow-[0_0_8px_rgba(112,66,248,0.7)]"></span>
-                        <h3 class="font-display text-[0.8rem] font-bold tracking-[2px] uppercase text-accent">AI / ML /
-                            Data</h3>
-                    </div>
-                    <ul class="list-none p-0 m-0 space-y-2">
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Machine Learning <span
-                                class="text-[0.75rem] text-accent/70 ml-1">IT207TOE01</span></li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Artificial Intelligence <span
-                                class="text-[0.75rem] text-accent/70 ml-1">CS206TPE07</span></li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Soft Computing <span
-                                class="text-[0.75rem] text-accent/70 ml-1">IT208TOE01</span></li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Data Mining <span
-                                class="text-[0.75rem] text-accent/70 ml-1">CS207TPE11</span></li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Digital Image Processing <span
-                                class="text-[0.75rem] text-accent/70 ml-1">CS206TPC13</span></li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">RDBMS <span
-                                class="text-[0.75rem] text-accent/70 ml-1">CS205TPC08</span></li>
-                    </ul>
-                </div>
-
-                <!-- Networks & Systems -->
-                <div
-                    class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-3 transition-all duration-300 hover:border-accent/40 reveal">
-                    <div class="flex items-center gap-2.5 mb-1">
-                        <span
-                            class="w-2 h-2 rounded-full bg-accent2 shrink-0 shadow-[0_0_8px_rgba(0,212,255,0.6)]"></span>
-                        <h3 class="font-display text-[0.8rem] font-bold tracking-[2px] uppercase text-accent2">Networks
-                            &amp; Systems</h3>
-                    </div>
-                    <ul class="list-none p-0 m-0 space-y-2">
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Computer Networks <span
-                                class="text-[0.75rem] text-accent2/70 ml-1">CS203TPC02</span></li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">TCP/IP Internetworking <span
-                                class="text-[0.75rem] text-accent2/70 ml-1">CS207TPE09</span></li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Network Security <span
-                                class="text-[0.75rem] text-accent2/70 ml-1">CS208TPE13</span></li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Parallel Computing <span
-                                class="text-[0.75rem] text-accent2/70 ml-1">CS205TPC10</span></li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Microprocessor &amp; Interfaces <span
-                                class="text-[0.75rem] text-accent2/70 ml-1">CS205TES05</span></li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Wireless Sensor Networks <span
-                                class="text-[0.75rem] text-accent2/70 ml-1">CS208TOE11</span></li>
-                    </ul>
-                </div>
-
-                <!-- Programming & Math -->
-                <div
-                    class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-3 transition-all duration-300 hover:border-accent/40 reveal">
-                    <div class="flex items-center gap-2.5 mb-1">
-                        <span
-                            class="w-2 h-2 rounded-full bg-accent2 shrink-0 shadow-[0_0_8px_rgba(0,212,255,0.6)]"></span>
-                        <h3 class="font-display text-[0.8rem] font-bold tracking-[2px] uppercase text-accent2">
-                            Programming &amp; Math</h3>
-                    </div>
-                    <ul class="list-none p-0 m-0 space-y-2">
-                        <li class="text-[0.855rem] text-muted leading-relaxed">C++ &amp; Python (IT Workshop) <span
-                                class="text-[0.75rem] text-accent2/70 ml-1">CS203TPC01</span></li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Java <span
-                                class="text-[0.75rem] text-accent2/70 ml-1">CS206TPC12</span></li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Software Engineering <span
-                                class="text-[0.75rem] text-accent2/70 ml-1">CS205TPE01</span></li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Mathematics I / II / III <span
-                                class="text-[0.75rem] text-accent2/70 ml-1">MA201TBS01 · MA202TBS03 · CS203TBS05</span>
-                        </li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Discrete Mathematics <span
-                                class="text-[0.75rem] text-accent2/70 ml-1">CS204TPC04</span></li>
-                        <li class="text-[0.855rem] text-muted leading-relaxed">Digital Logic &amp; Design <span
-                                class="text-[0.75rem] text-accent2/70 ml-1">CS203TES06</span></li>
-                    </ul>
-                </div>
-
-            </div>
-
         </div>
     </section>
 
@@ -1447,7 +620,7 @@
         <div class="max-w-[1200px] mx-auto px-6 lg:px-20">
 
             <div class="mb-12 lg:mb-16 reveal">
-                <span class="block text-[0.78rem] font-medium tracking-[3px] uppercase text-accent2 mb-3">06 -
+                <span class="block text-[0.78rem] font-medium tracking-[3px] uppercase text-accent2 mb-3">05 -
                     Contact</span>
                 <h2 class="font-display text-[clamp(2rem,5vw,3.4rem)] font-bold tracking-tight leading-[1.1]">Get In
                     <span class="text-accent">Touch</span>
@@ -1456,8 +629,10 @@
 
             <div class="max-w-[600px] mx-auto text-center flex flex-col items-center gap-8 reveal">
                 <p class="text-[1.05rem] text-muted leading-[1.85]">
-                    Open to internships, research collabs, or just talking about something
-                    cool you're building. I check mail pretty regularly.
+                    Actively seeking <strong class="text-primary font-semibold">SDE</strong>,
+                    <strong class="text-primary font-semibold">ML Engineering</strong>, or
+                    <strong class="text-primary font-semibold">hybrid</strong> roles where I can
+                    build production systems with intelligent capabilities. Let's talk.
                 </p>
 
                 <div class="flex items-stretch gap-2 flex-wrap justify-center">
@@ -1478,9 +653,6 @@
                     <a href="https://www.linkedin.com/in/rishikesh-kumar-profile" target="_blank" rel="noopener"
                         class="flex items-center gap-2 px-6 py-3 border border-accent/20 rounded-xl text-muted text-[0.9rem] font-medium glass no-underline transition-all duration-300 hover:text-primary hover:border-accent/40 hover:bg-accent/[0.08] hover:-translate-y-0.5"><i
                             class="fab fa-linkedin-in"></i> LinkedIn</a>
-                    <a href="tel:+919341421415"
-                        class="flex items-center gap-2 px-6 py-3 border border-accent/20 rounded-xl text-muted text-[0.9rem] font-medium glass no-underline transition-all duration-300 hover:text-primary hover:border-accent/40 hover:bg-accent/[0.08] hover:-translate-y-0.5"><i
-                            class="fas fa-phone"></i> +91 93414 21415</a>
                 </div>
             </div>
         </div>

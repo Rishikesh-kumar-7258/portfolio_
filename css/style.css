@@ -31,7 +31,8 @@ body { font-family: 'Inter', sans-serif; line-height: 1.7; overflow-x: hidden; }
 .hero-typed    { opacity: 0; animation: fade-up .7s ease  .7s forwards; }
 .hero-cta      { opacity: 0; animation: fade-up .7s ease  .9s forwards; }
 .hero-socials  { opacity: 0; animation: fade-up .7s ease 1.1s forwards; }
-.hero-scroll   { opacity: 0; animation: fade-up  1s ease 1.6s forwards; }
+.hero-statement{ opacity: 0; animation: fade-up .7s ease 1.1s forwards; }
+.hero-scroll   { opacity: 0; animation: fade-up  1s ease 1.8s forwards; }
 .typed-cursor  { animation: blink 1s step-end infinite; }
 .wheel         { animation: scroll-wheel 2s ease infinite; }
 
@@ -182,7 +183,7 @@ button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .hero-greeting, .hero-name, .hero-typed,
-  .hero-cta, .hero-socials, .hero-scroll {
+  .hero-statement, .hero-cta, .hero-socials, .hero-scroll {
     animation: none;
     opacity: 1;
   }

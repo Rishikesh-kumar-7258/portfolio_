@@ -1,3 +1,5 @@
 index.css.map
 index.scss
 .claude
+node_modules
+css/tailwind-input.css
