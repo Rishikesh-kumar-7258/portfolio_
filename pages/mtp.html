@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="M.Tech thesis by Rishikesh Kumar — Parameter-Specific Literature Retrieval & a Knowledge-Graph QA engine for kidney diseases. Results and evaluation.">
+    <meta property="og:title" content="MTP Thesis — Parameter-Specific Literature Retrieval | Rishikesh Kumar">
+    <meta property="og:description"
+        content="A two-phase biomedical NLP project: generalized NER/Seq2Tree retrieval and a provenance-tracked knowledge-graph question answering engine.">
+    <meta property="og:type" content="website">
+    <title>MTP Thesis — Results & Evaluation | Rishikesh Kumar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/tailwind-output.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../Assets/Images/logo.svg" type="image/x-icon">
+</head>
+
+<body class="bg-bg text-primary">
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="navbar" class="fixed inset-x-0 top-0 z-[900] h-[72px] transition-all duration-300 scrolled">
+        <div class="max-w-[1200px] mx-auto px-6 lg:px-20 h-full flex items-center justify-between">
+            <a href="../index.html" class="font-display text-2xl font-bold text-primary tracking-tight no-underline">
+                RK<span class="text-accent">.</span>
+            </a>
+            <ul class="hidden md:flex items-center gap-1 list-none m-0 p-0">
+                <li><a href="../index.html#about"
+                        class="nav-link px-3.5 py-2 text-muted text-sm font-medium rounded-lg transition-colors hover:text-primary hover:bg-accent/10 no-underline">About</a>
+                </li>
+                <li><a href="../index.html#skills"
+                        class="nav-link px-3.5 py-2 text-muted text-sm font-medium rounded-lg transition-colors hover:text-primary hover:bg-accent/10 no-underline">Skills</a>
+                </li>
+                <li><a href="../index.html#experience"
+                        class="nav-link px-3.5 py-2 text-muted text-sm font-medium rounded-lg transition-colors hover:text-primary hover:bg-accent/10 no-underline">Experience</a>
+                </li>
+                <li><a href="projects.html"
+                        class="nav-link active px-3.5 py-2 text-muted text-sm font-medium rounded-lg transition-colors hover:text-primary hover:bg-accent/10 no-underline">Projects</a>
+                </li>
+                <li><a href="../index.html#contact"
+                        class="nav-link px-3.5 py-2 text-muted text-sm font-medium rounded-lg transition-colors hover:text-primary hover:bg-accent/10 no-underline">Contact</a>
+                </li>
+            </ul>
+            <a href="projects.html"
+                class="md:hidden flex items-center gap-2 text-muted text-sm font-medium no-underline hover:text-primary">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="pt-32 pb-12">
+        <div class="max-w-[1100px] mx-auto px-6 lg:px-20">
+            <div class="reveal">
+                <a href="projects.html"
+                    class="inline-flex items-center gap-2 text-muted text-[0.85rem] font-medium no-underline hover:text-accent transition-colors mb-5">
+                    <i class="fas fa-arrow-left text-[0.7rem]"></i> Back to Projects
+                </a>
+                <div class="flex flex-wrap items-center gap-3 mb-4">
+                    <span
+                        class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-violet-400 bg-violet-400/10 border border-violet-400/25">M.Tech
+                        Thesis</span>
+                    <span class="text-[0.78rem] text-muted">IIT Bombay · IEOR · 2024–2026</span>
+                </div>
+                <h1 class="font-display text-[clamp(1.9rem,4.5vw,3rem)] font-bold tracking-tight leading-[1.12]">
+                    Parameter-Specific Literature Retrieval
+                    <span class="text-accent">for Kidney Diseases</span>
+                </h1>
+                <p class="text-[0.95rem] text-muted leading-relaxed max-w-[760px] mt-4">
+                    A two-phase biomedical NLP project that takes a clinician from the flood of kidney-disease
+                    literature to an <span class="text-primary">evidence-backed clinical answer</span>. Phase&nbsp;1
+                    generalizes a parameter-specific retrieval system across 24 diseases; Phase&nbsp;2 re-targets the
+                    same extraction machinery into a provenance-tracked <span class="text-primary">knowledge graph</span>
+                    with a question-answering engine that cites the papers behind every claim.
+                </p>
+                <p class="text-[0.82rem] text-muted leading-relaxed mt-3">
+                    Supervisor: Prof. Balamurugan Palaniappan · Roll No. 24M1520
+                </p>
+                <div class="flex flex-wrap gap-3 mt-6">
+                    <a href="../Assets/mtp_thesis.pdf" target="_blank" rel="noopener"
+                        class="inline-flex items-center gap-2 px-6 py-3 font-display text-[0.9rem] font-semibold rounded-xl text-primary border border-accent/30 bg-accent/[0.08] no-underline transition-all duration-300 hover:bg-accent/[0.14] hover:border-accent/60 hover:-translate-y-0.5">
+                        <i class="fas fa-file-pdf"></i> Read the Thesis
+                    </a>
+                    <a href="#results"
+                        class="inline-flex items-center gap-2 px-6 py-3 font-display text-[0.9rem] font-semibold rounded-xl text-primary border border-accent/22 bg-transparent no-underline transition-all duration-300 hover:bg-accent/[0.06] hover:border-accent/50 hover:-translate-y-0.5">
+                        Jump to Results <i class="fas fa-arrow-down text-[0.8rem]"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HEADLINE STATS ===== -->
+    <section class="pb-6">
+        <div class="max-w-[1100px] mx-auto px-6 lg:px-20">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="glass border border-accent/20 rounded-2xl p-5 text-center reveal">
+                    <div class="font-display text-[1.7rem] font-bold text-accent2">0.964</div>
+                    <p class="text-[0.78rem] text-muted mt-1 leading-snug">NephroSearch NDCG<br>(vs 0.898 Google, 0.867
+                        PubMed)</p>
+                </div>
+                <div class="glass border border-accent/20 rounded-2xl p-5 text-center reveal">
+                    <div class="font-display text-[1.7rem] font-bold text-accent2">0.83</div>
+                    <p class="text-[0.78rem] text-muted mt-1 leading-snug">Ensemble NER micro-F1<br>across 11 entity
+                        types</p>
+                </div>
+                <div class="glass border border-accent/20 rounded-2xl p-5 text-center reveal">
+                    <div class="font-display text-[1.7rem] font-bold text-accent2">88%</div>
+                    <p class="text-[0.78rem] text-muted mt-1 leading-snug">QA answer rate<br>(V2 engine, up from 70%)</p>
+                </div>
+                <div class="glass border border-accent/20 rounded-2xl p-5 text-center reveal">
+                    <div class="font-display text-[1.7rem] font-bold text-accent2">100%</div>
+                    <p class="text-[0.78rem] text-muted mt-1 leading-snug">Provenance coverage<br>every edge cites its
+                        source</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== THE TWO PHASES ===== -->
+    <section class="py-12">
+        <div class="max-w-[1100px] mx-auto px-6 lg:px-20">
+            <div class="fade-line mb-7 font-display text-[0.76rem] font-semibold tracking-[3px] uppercase text-muted reveal">
+                The Two-Phase Arc</div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+
+                <!-- Phase 1 -->
+                <div class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-3 reveal">
+                    <div class="flex items-center gap-3">
+                        <span
+                            class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">Phase
+                            1</span>
+                        <span class="text-[0.78rem] text-muted">Retrieval</span>
+                    </div>
+                    <h3 class="font-display text-[1.1rem] font-semibold text-primary leading-snug">Generalized NER &amp;
+                        Structured Extraction</h3>
+                    <p class="text-[0.85rem] text-muted leading-relaxed">
+                        Generalized the project's extraction machinery from a single disease and four parameters to
+                        <span class="text-primary">24 kidney-related diseases and 10 clinical parameters</span>.
+                    </p>
+                    <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
+                        <li class="text-[0.85rem] text-muted leading-relaxed">Fetched ~160,000 PubMed abstracts (~7K per
+                            disease) and built an annotated corpus with Label Studio.</li>
+                        <li class="text-[0.85rem] text-muted leading-relaxed">Fine-tuned a <span
+                                class="text-primary">PubMedBERT</span> NER model (spaCy, 9 iterative rounds) to extract
+                            Age, GFR, Proteinuria, Creatinine, BUN, BP, Hematuria, Weight, Calcium &amp; Cholesterol.</li>
+                        <li class="text-[0.85rem] text-muted leading-relaxed">Fine-tuned a <span
+                                class="text-primary">BART Seq2Tree</span> model that converts free-text measurements into
+                            structured XML (magnitude, unit, comparator).</li>
+                        <li class="text-[0.85rem] text-muted leading-relaxed">Powers the <span
+                                class="text-primary">NephroSearch</span> web platform and the <span
+                                class="text-primary">NephroTagger</span> Chrome extension.</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="glass border border-accent/20 rounded-2xl p-6 flex flex-col gap-3 reveal">
+                    <div class="flex items-center gap-3">
+                        <span
+                            class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">Phase
+                            2</span>
+                        <span class="text-[0.78rem] text-muted">Reasoning · ClinicalMind&nbsp;KG</span>
+                    </div>
+                    <h3 class="font-display text-[1.1rem] font-semibold text-primary leading-snug">Knowledge-Graph
+                        Question Answering</h3>
+                    <p class="text-[0.85rem] text-muted leading-relaxed">
+                        Re-targeted the same extraction stack from a ranked list to a <span class="text-primary">Neo4j
+                            knowledge graph</span> queried with natural-language clinical questions.
+                    </p>
+                    <ul class="arrow-list arrow-list--cyan list-none p-0 space-y-1.5 flex-1">
+                        <li class="text-[0.85rem] text-muted leading-relaxed">Composable, hot-swappable pipeline:
+                            document parsing → ensemble NER → normalization → relation extraction → KG writer.</li>
+                        <li class="text-[0.85rem] text-muted leading-relaxed">Ensemble NER (<span
+                                class="text-primary">BioBERT + clinical DeBERTa + zero-shot GLiNER</span>) covering 13 KG
+                            entity types; UMLS-linked normalization to collapse synonyms.</li>
+                        <li class="text-[0.85rem] text-muted leading-relaxed"><span class="text-primary">REBEL</span>
+                            relation extraction with a context-aware re-mapping stage that recovers clinical edges from
+                            structural labels.</li>
+                        <li class="text-[0.85rem] text-muted leading-relaxed">Two-generation QA engine — entity
+                            resolution, type-aware routing, LLM-generated Cypher fallback, and an explainable step log —
+                            served through a Streamlit app.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESULTS & EVALUATION ===== -->
+    <section id="results" class="py-12 scroll-mt-24">
+        <div class="max-w-[1100px] mx-auto px-6 lg:px-20">
+            <div class="mb-8 reveal">
+                <h2 class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight">
+                    Results &amp; <span class="text-accent">Evaluation</span>
+                </h2>
+                <p class="text-[0.9rem] text-muted leading-relaxed max-w-[760px] mt-3">
+                    Rather than one opaque score, the system is measured stage by stage — NER, relation extraction,
+                    graph construction, and question answering — and then end to end. The Phase&nbsp;2 graph and QA
+                    results below are reported on a curated 500-abstract demonstration graph spanning all 24 diseases.
+                </p>
+            </div>
+
+            <!-- Phase 1: NDCG -->
+            <div class="glass border border-accent/20 rounded-2xl p-6 mb-5 reveal">
+                <h3 class="font-display text-[1.05rem] font-semibold text-primary mb-1">Phase 1 — Ranking Quality
+                    (NDCG)</h3>
+                <p class="text-[0.82rem] text-muted leading-relaxed mb-4">A parameter-aware ranker places the genuinely
+                    relevant trials higher than keyword engines can. The NER model reaches high-0.9 per-parameter F1 and
+                    the Seq2Tree model scores in the high-0.9 range across BLEU, ROUGE and METEOR.</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-[0.85rem] border-collapse">
+                        <thead>
+                            <tr class="text-muted">
+                                <th class="font-semibold py-2.5 px-3 border-b border-accent/20">System</th>
+                                <th class="font-semibold py-2.5 px-3 border-b border-accent/20">Mean NDCG</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2 px-3 border-b border-white/[0.06] text-primary">NephroSearch (ours)</td>
+                                <td class="py-2 px-3 border-b border-white/[0.06] text-accent2 font-semibold">0.9639</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-3 border-b border-white/[0.06] text-muted">Google</td>
+                                <td class="py-2 px-3 border-b border-white/[0.06] text-muted">0.8978</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-3 text-muted">PubMed</td>
+                                <td class="py-2 px-3 text-muted">0.8669</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+
+                <!-- Ensemble NER per-type -->
+                <div class="glass border border-accent/20 rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[1.05rem] font-semibold text-primary mb-1">Phase 2 — Ensemble NER</h3>
+                    <p class="text-[0.82rem] text-muted leading-relaxed mb-4">Per-type precision / recall / F1 on a
+                        labelled sample. Specialised types score highest; zero-shot types pay the expected price.</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-[0.82rem] border-collapse">
+                            <thead>
+                                <tr class="text-muted">
+                                    <th class="font-semibold py-2 px-3 border-b border-accent/20">Entity type</th>
+                                    <th class="font-semibold py-2 px-3 border-b border-accent/20">P</th>
+                                    <th class="font-semibold py-2 px-3 border-b border-accent/20">R</th>
+                                    <th class="font-semibold py-2 px-3 border-b border-accent/20">F1</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-muted">
+                                <tr><td class="py-1.5 px-3 border-b border-white/[0.06] text-primary">Disease</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.91</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.93</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.92</td></tr>
+                                <tr><td class="py-1.5 px-3 border-b border-white/[0.06] text-primary">Drug</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.89</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.90</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.89</td></tr>
+                                <tr><td class="py-1.5 px-3 border-b border-white/[0.06] text-primary">LabParameter</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.83</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.79</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.81</td></tr>
+                                <tr><td class="py-1.5 px-3 border-b border-white/[0.06] text-primary">Symptom</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.80</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.82</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.81</td></tr>
+                                <tr><td class="py-1.5 px-3 border-b border-white/[0.06] text-primary">Biomarker</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.78</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.74</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.76</td></tr>
+                                <tr><td class="py-1.5 px-3 border-b border-white/[0.06] text-primary">SideEffect</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.72</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.69</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.70</td></tr>
+                                <tr><td class="py-1.5 px-3 border-b border-white/[0.06] text-primary">MechanismOfAction</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.68</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.60</td><td class="py-1.5 px-3 border-b border-white/[0.06]">0.64</td></tr>
+                                <tr><td class="py-2 px-3 text-primary font-semibold">Micro-average</td><td class="py-2 px-3 text-accent2 font-semibold">0.82</td><td class="py-2 px-3 text-accent2 font-semibold">0.84</td><td class="py-2 px-3 text-accent2 font-semibold">0.83</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Relation extraction re-mapping -->
+                <div class="glass border border-accent/20 rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[1.05rem] font-semibold text-primary mb-1">Phase 2 — Context-Aware
+                        Re-Mapping</h3>
+                    <p class="text-[0.82rem] text-muted leading-relaxed mb-4">REBEL reliably finds the related pair but
+                        labels it with Wikidata-style terms. Using known entity types recovers more than half of the
+                        otherwise-discarded clinical edges — no retraining.</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-[0.82rem] border-collapse">
+                            <tbody class="text-muted">
+                                <tr><td class="py-2 px-3 border-b border-white/[0.06]">Triplets reviewed</td><td class="py-2 px-3 border-b border-white/[0.06] text-primary text-right">150</td></tr>
+                                <tr><td class="py-2 px-3 border-b border-white/[0.06]">Entity pair correct</td><td class="py-2 px-3 border-b border-white/[0.06] text-primary text-right">78%</td></tr>
+                                <tr><td class="py-2 px-3 border-b border-white/[0.06]">Relation label correct (raw REBEL)</td><td class="py-2 px-3 border-b border-white/[0.06] text-right">41%</td></tr>
+                                <tr><td class="py-2 px-3 border-b border-white/[0.06]">Structural labels recovered</td><td class="py-2 px-3 border-b border-white/[0.06] text-primary text-right">27 / 38</td></tr>
+                                <tr><td class="py-2 px-3 text-primary font-semibold">Relation label correct (re-mapped)</td><td class="py-2 px-3 text-accent2 font-semibold text-right">63%</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- KG statistics -->
+                <div class="glass border border-accent/20 rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[1.05rem] font-semibold text-primary mb-1">Phase 2 — Knowledge Graph</h3>
+                    <p class="text-[0.82rem] text-muted leading-relaxed mb-4">Built from 500 abstracts with UMLS
+                        normalization. Every factual edge carries the identifiers of the papers that support it.</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-[0.82rem] border-collapse">
+                            <tbody class="text-muted">
+                                <tr><td class="py-2 px-3 border-b border-white/[0.06]">Nodes / Edges</td><td class="py-2 px-3 border-b border-white/[0.06] text-primary text-right">1268 / 1312</td></tr>
+                                <tr><td class="py-2 px-3 border-b border-white/[0.06]">Most common edge (TREATS)</td><td class="py-2 px-3 border-b border-white/[0.06] text-primary text-right">612</td></tr>
+                                <tr><td class="py-2 px-3 border-b border-white/[0.06]">Provenance coverage</td><td class="py-2 px-3 border-b border-white/[0.06] text-accent2 font-semibold text-right">100%</td></tr>
+                                <tr><td class="py-2 px-3">UMLS dedup (Disease nodes)</td><td class="py-2 px-3 text-primary text-right">142 → 119 (−16%)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- QA coverage -->
+                <div class="glass border border-accent/20 rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[1.05rem] font-semibold text-primary mb-1">Phase 2 — QA Engine (V1 vs
+                        V2)</h3>
+                    <p class="text-[0.82rem] text-muted leading-relaxed mb-4">On a 60-question test set. V2 adds entity
+                        resolution against the graph, type-aware routing and a fallback chain — lifting the answer rate
+                        by 18 points.</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-[0.82rem] border-collapse">
+                            <thead>
+                                <tr class="text-muted">
+                                    <th class="font-semibold py-2 px-3 border-b border-accent/20">Measure</th>
+                                    <th class="font-semibold py-2 px-3 border-b border-accent/20 text-right">V1</th>
+                                    <th class="font-semibold py-2 px-3 border-b border-accent/20 text-right">V2</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-muted">
+                                <tr><td class="py-2 px-3 border-b border-white/[0.06]">Answer rate</td><td class="py-2 px-3 border-b border-white/[0.06] text-right">70%</td><td class="py-2 px-3 border-b border-white/[0.06] text-accent2 font-semibold text-right">88%</td></tr>
+                                <tr><td class="py-2 px-3 border-b border-white/[0.06]">Intent classification</td><td class="py-2 px-3 border-b border-white/[0.06] text-right" colspan="2">90%</td></tr>
+                                <tr><td class="py-2 px-3">Entity resolution</td><td class="py-2 px-3 text-right" colspan="2">85%</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KG-QA vs raw LLM -->
+            <div class="glass border border-accent/20 rounded-2xl p-6 mt-5 reveal">
+                <h3 class="font-display text-[1.05rem] font-semibold text-primary mb-1">Phase 2 — Grounded QA vs. a Raw
+                    LLM</h3>
+                <p class="text-[0.82rem] text-muted leading-relaxed mb-4">On 30 questions (5-point rubric). The decisive
+                    difference is evidence: the graph engine cites real, traceable papers on essentially every answer;
+                    the raw model rarely cites anything, and sometimes cites papers that do not exist.</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-[0.85rem] border-collapse">
+                        <thead>
+                            <tr class="text-muted">
+                                <th class="font-semibold py-2.5 px-3 border-b border-accent/20">Criterion</th>
+                                <th class="font-semibold py-2.5 px-3 border-b border-accent/20 text-right">KG-QA (V2)</th>
+                                <th class="font-semibold py-2.5 px-3 border-b border-accent/20 text-right">Raw LLM</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-muted">
+                            <tr><td class="py-2 px-3 border-b border-white/[0.06]">Relevance</td><td class="py-2 px-3 border-b border-white/[0.06] text-right">4.2</td><td class="py-2 px-3 border-b border-white/[0.06] text-right">4.0</td></tr>
+                            <tr><td class="py-2 px-3 border-b border-white/[0.06]">Specificity</td><td class="py-2 px-3 border-b border-white/[0.06] text-right">4.0</td><td class="py-2 px-3 border-b border-white/[0.06] text-right">3.4</td></tr>
+                            <tr><td class="py-2 px-3 text-primary font-semibold">Citable evidence present</td><td class="py-2 px-3 text-accent2 font-semibold text-right">4.6</td><td class="py-2 px-3 text-right">1.2</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <p class="text-[0.78rem] text-muted/70 italic leading-relaxed mt-5 reveal">
+                Scope note: the Phase&nbsp;2 graph is a demonstration-scale graph (500 abstracts) and the answer-quality
+                rubric was scored by a single annotator; formal clinical validation and full-corpus ingestion are
+                identified as future work in the thesis.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== TECH STACK ===== -->
+    <section class="pb-20">
+        <div class="max-w-[1100px] mx-auto px-6 lg:px-20">
+            <div class="fade-line mb-6 font-display text-[0.76rem] font-semibold tracking-[3px] uppercase text-muted reveal">
+                Stack</div>
+            <div class="flex flex-wrap gap-2 reveal">
+                <span class="text-[0.78rem] px-3 py-1 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PyTorch</span>
+                <span class="text-[0.78rem] px-3 py-1 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">HuggingFace</span>
+                <span class="text-[0.78rem] px-3 py-1 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PubMedBERT</span>
+                <span class="text-[0.78rem] px-3 py-1 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">BART / Seq2Tree</span>
+                <span class="text-[0.78rem] px-3 py-1 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">GLiNER</span>
+                <span class="text-[0.78rem] px-3 py-1 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">REBEL</span>
+                <span class="text-[0.78rem] px-3 py-1 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">spaCy / scispaCy</span>
+                <span class="text-[0.78rem] px-3 py-1 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Neo4j / Cypher</span>
+                <span class="text-[0.78rem] px-3 py-1 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">UMLS</span>
+                <span class="text-[0.78rem] px-3 py-1 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Ollama / OpenAI API</span>
+                <span class="text-[0.78rem] px-3 py-1 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Streamlit</span>
+                <span class="text-[0.78rem] px-3 py-1 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">FastAPI</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="border-t border-accent/[0.22] py-8">
+        <div class="max-w-[1200px] mx-auto px-6 lg:px-20 flex items-center justify-between flex-wrap gap-4">
+            <p class="text-[0.88rem] text-muted">Designed &amp; Built by <span class="text-accent">Rishikesh
+                    Kumar</span></p>
+            <div class="flex gap-[18px]">
+                <a href="https://github.com/Rishikesh-kumar-7258" target="_blank" rel="noopener"
+                    class="text-muted text-base no-underline transition-colors hover:text-accent"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rishikesh-kumar-profile" target="_blank" rel="noopener"
+                    class="text-muted text-base no-underline transition-colors hover:text-accent"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:rishi7258prince@gmail.com"
+                    class="text-muted text-base no-underline transition-colors hover:text-accent"><i
+                        class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+    (function () {
+        'use strict';
+        var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!reducedMotion && typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.utils.toArray('.reveal').forEach(function (el) {
+                gsap.to(el, { scrollTrigger: { trigger: el, start: 'top 90%', toggleActions: 'play none none none' }, y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' });
+            });
+        } else {
+            document.querySelectorAll('.reveal').forEach(function (el) { el.style.opacity = '1'; el.style.transform = 'none'; });
+        }
+    }());
+    </script>
+</body>
+
+</html>

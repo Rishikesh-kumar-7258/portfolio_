@@ -459,7 +459,7 @@
             </div>
 
             <div class="text-center mt-10 reveal">
-                <a href="experience.html"
+                <a href="pages/experience.html"
                     class="inline-flex items-center gap-2 px-8 py-3.5 font-display text-[0.95rem] font-semibold rounded-xl text-primary border border-accent/22 bg-transparent no-underline transition-all duration-300 hover:bg-accent/[0.06] hover:border-accent/50 hover:-translate-y-0.5">
                     View All Experience <i class="fas fa-arrow-right text-[0.8rem]"></i>
                 </a>
@@ -578,12 +578,12 @@
                 <!-- 3. MTP Thesis -->
                 <div
                     class="glass border border-accent/20 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                    <div class="relative w-full h-44 bg-gradient-to-br from-accent2/10 to-accent/5 flex items-center justify-center border-b border-accent/10">
+                    <a href="pages/mtp.html" class="relative w-full h-44 bg-gradient-to-br from-accent2/10 to-accent/5 flex items-center justify-center border-b border-accent/10 no-underline group">
                         <div class="text-center px-4">
-                            <i class="fas fa-dna text-3xl text-accent2/40 mb-2"></i>
-                            <p class="text-[0.72rem] text-muted/60 italic">Add screenshot: NER results + pipeline diagram</p>
+                            <i class="fas fa-dna text-3xl text-accent2/40 mb-2 transition-colors group-hover:text-accent2/70"></i>
+                            <p class="text-[0.78rem] text-muted/70 transition-colors group-hover:text-accent2">View results &amp; evaluation <i class="fas fa-arrow-right text-[0.65rem]"></i></p>
                         </div>
-                    </div>
+                    </a>
                     <div class="p-6 flex flex-col gap-2.5 flex-1">
                         <div class="flex justify-between items-center">
                             <span
@@ -591,17 +591,19 @@
                                 Thesis</span>
                             <span class="text-[0.78rem] text-muted">Jul - Nov 2025</span>
                         </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">Parameter
-                            Specific Literature Retrieval</h3>
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
+                            <a href="pages/mtp.html" class="text-primary no-underline transition-colors hover:text-accent">Parameter Specific Literature Retrieval <i class="fas fa-arrow-right text-[0.62rem] opacity-60 ml-1"></i></a>
+                        </h3>
                         <p class="text-[0.82rem] text-muted leading-relaxed">Biomedical NLP Pipeline | Prof. Balamurugan
                             Palaniappan</p>
                         <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
                             <li class="text-[0.855rem] text-muted leading-relaxed">Built a pipeline querying PubMed to extract parameter-specific clinical data from 87K+ research abstracts</li>
                             <li class="text-[0.855rem] text-muted leading-relaxed">Fine-tuned PubMedBERT NER model achieving 90% F1-score on manually annotated dataset</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Distributed ML pipeline with Ray, PyTorch, HuggingFace; deployed via Next.js/FastAPI</li>
+                            <li class="text-[0.855rem] text-muted leading-relaxed">Built a provenance-tracked Neo4j knowledge graph + QA engine: 88% answer rate, every claim cited</li>
                         </ul>
+                        <a href="pages/mtp.html" class="text-[0.8rem] font-semibold text-accent2 no-underline hover:text-accent transition-colors">View results &amp; evaluation <i class="fas fa-arrow-right text-[0.7rem]"></i></a>
                         <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PyTorch</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">HuggingFace</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Ray</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">FastAPI</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PubMedBERT</span>
+                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PyTorch</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">HuggingFace</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Neo4j</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">REBEL</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PubMedBERT</span>
                         </div>
                     </div>
                 </div>
@@ -638,7 +640,7 @@
             </div>
 
             <div class="text-center mt-10 reveal">
-                <a href="projects.html"
+                <a href="pages/projects.html"
                     class="inline-flex items-center gap-2 px-8 py-3.5 font-display text-[0.95rem] font-semibold rounded-xl text-primary border border-accent/22 bg-transparent no-underline transition-all duration-300 hover:bg-accent/[0.06] hover:border-accent/50 hover:-translate-y-0.5">
                     View All Projects <i class="fas fa-arrow-right text-[0.8rem]"></i>
                 </a>
@@ -657,7 +659,7 @@
                         Deep Learning, Reinforcement Learning, NLP, Generative &amp; Agentic AI, ML Principles, Operations Research, DSA, and more — from M.Tech at IIT Bombay and B.Tech at GGU.
                     </p>
                 </div>
-                <a href="courses.html"
+                <a href="pages/courses.html"
                     class="inline-flex items-center gap-2 px-6 py-3 font-display text-[0.9rem] font-semibold rounded-xl text-primary border border-accent/22 bg-transparent no-underline transition-all duration-300 hover:bg-accent/[0.06] hover:border-accent/50 hover:-translate-y-0.5 shrink-0">
                     View Full Coursework <i class="fas fa-arrow-right text-[0.8rem]"></i>
                 </a>
