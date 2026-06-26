@@ -3,25 +3,29 @@
 
     // ── Nav: scroll glass effect ───────────────────────────────────────────────
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        navbar.classList.toggle('scrolled', window.scrollY > 50);
-    }, { passive: true });
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        }, { passive: true });
+    }
 
     // ── Nav: hamburger toggle ─────────────────────────────────────────────────
     const hamburger = document.getElementById('hamburger');
     const navMenu   = document.getElementById('nav-menu');
 
-    hamburger.addEventListener('click', () => {
-        const open = hamburger.classList.toggle('open');
-        navMenu.classList.toggle('open', open);
-    });
-
-    document.querySelectorAll('.nav-link, .resume-dropdown a').forEach((link) => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('open');
-            navMenu.classList.remove('open');
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            const open = hamburger.classList.toggle('open');
+            navMenu.classList.toggle('open', open);
         });
-    });
+
+        document.querySelectorAll('.nav-link, .resume-dropdown a').forEach((link) => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                navMenu.classList.remove('open');
+            });
+        });
+    }
 
     // ── Nav: resume dropdown (click toggle — hover alone fails on touch) ──────
     const resumeWrap = document.querySelector('.nav-resume-wrap');
@@ -58,17 +62,18 @@
 
     // ── Active nav link on scroll ─────────────────────────────────────────────
     const sections = Array.from(document.querySelectorAll('section[id]'));
-    const navLinks = document.querySelectorAll('.nav-link');
 
     function updateActive() {
         const mid = window.scrollY + window.innerHeight / 3;
         sections.forEach((sec) => {
             const inView = mid >= sec.offsetTop && mid < sec.offsetTop + sec.offsetHeight;
-            const link = document.querySelector(`.nav-link[href="#${sec.id}"]`);
+            const link = document.querySelector('.nav-link[href="#' + sec.id + '"]');
             if (link) link.classList.toggle('active', inView);
         });
     }
-    window.addEventListener('scroll', updateActive, { passive: true });
+    if (sections.length) {
+        window.addEventListener('scroll', updateActive, { passive: true });
+    }
 
     // ── Typing animation ──────────────────────────────────────────────────────
     const el = document.getElementById('typed-text');
@@ -104,7 +109,6 @@
             projectGroups.forEach((group) => {
                 group.classList.toggle('hidden-group', filter !== 'all' && group.dataset.group !== filter);
             });
-            // newly shown cards may still be in their pre-reveal state
             if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
                 ScrollTrigger.refresh();
             }
@@ -129,14 +133,44 @@
         copyBtn.style.display = 'none';
     }
 
-    // ── GSAP scroll-reveal ────────────────────────────────────────────────────
+    // ── Cursor glow effect ────────────────────────────────────────────────────
+    if (window.matchMedia('(hover: hover)').matches) {
+        const glow = document.createElement('div');
+        glow.className = 'cursor-glow';
+        document.body.appendChild(glow);
+        document.addEventListener('mousemove', (e) => {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+        }, { passive: true });
+    }
+
+    // ── GSAP scroll animations ───────────────────────────────────────────────
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (!reducedMotion && typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
         gsap.registerPlugin(ScrollTrigger);
 
-        // Generic reveal for any element with class .reveal
+        // Staggered card reveals — group by parent grid
+        gsap.utils.toArray('.grid').forEach((grid) => {
+            var cards = grid.querySelectorAll('.reveal');
+            if (!cards.length) return;
+            gsap.from(cards, {
+                scrollTrigger: { trigger: grid, start: 'top 85%' },
+                y: 40, opacity: 0, duration: 0.7,
+                stagger: 0.12, ease: 'power3.out',
+                onComplete: function() {
+                    cards.forEach(function(c) {
+                        c.style.opacity = '1';
+                        c.style.transform = 'none';
+                        c.classList.remove('reveal');
+                    });
+                }
+            });
+        });
+
+        // Solo reveals (not inside grids)
         gsap.utils.toArray('.reveal').forEach((el) => {
+            if (el.closest('.grid')) return;
             gsap.to(el, {
                 scrollTrigger: {
                     trigger: el,
@@ -149,8 +183,63 @@
                 ease: 'power3.out',
             });
         });
+
+        // Section heading parallax — slide in from left
+        gsap.utils.toArray('section h2').forEach((h2) => {
+            gsap.from(h2, {
+                scrollTrigger: { trigger: h2, start: 'top 90%' },
+                x: -30, opacity: 0, duration: 0.8, ease: 'power2.out',
+            });
+        });
+
+        // Counter animation for highlight stats
+        document.querySelectorAll('[data-count]').forEach((el) => {
+            var target = el.dataset.count;
+            var prefix = el.dataset.prefix || '';
+            var suffix = el.dataset.suffix || '';
+            var isFloat = target.includes('.');
+
+            gsap.from(el, {
+                scrollTrigger: { trigger: el, start: 'top 90%' },
+                textContent: 0,
+                duration: 1.5,
+                ease: 'power2.out',
+                snap: isFloat ? { textContent: 0.1 } : { textContent: 1 },
+                onUpdate: function() {
+                    var val = isFloat ? parseFloat(el.textContent).toFixed(1) : Math.round(parseFloat(el.textContent));
+                    el.textContent = prefix + val + suffix;
+                },
+                onComplete: function() {
+                    el.textContent = prefix + target + suffix;
+                }
+            });
+        });
+
+        // Timeline dot pulse on scroll
+        gsap.utils.toArray('.tl-wrap .rounded-full').forEach((dot) => {
+            gsap.to(dot, {
+                scrollTrigger: { trigger: dot, start: 'top 85%' },
+                keyframes: [
+                    { boxShadow: '0 0 0 0 rgba(112,66,248,0.5)', duration: 0 },
+                    { boxShadow: '0 0 0 12px rgba(112,66,248,0)', duration: 0.6 },
+                    { boxShadow: '0 0 12px rgba(112,66,248,0.6)', duration: 0.3 },
+                ],
+                ease: 'power2.out',
+            });
+        });
+
+        // Ambient section backgrounds — animate glow position
+        document.querySelectorAll('[data-ambient]').forEach((section) => {
+            gsap.to(section, {
+                '--glow-x': '65%',
+                '--glow-y': '35%',
+                duration: 10,
+                repeat: -1,
+                yoyo: true,
+                ease: 'sine.inOut',
+            });
+        });
     } else {
-        // Fallback: just make everything visible if GSAP didn't load
         document.querySelectorAll('.reveal').forEach((el) => {
             el.style.opacity = '1';
             el.style.transform = 'none';

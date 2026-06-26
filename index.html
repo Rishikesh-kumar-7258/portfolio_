@@ -29,7 +29,7 @@
 
     <!-- ===== NAVIGATION ===== -->
     <nav id="navbar" class="fixed inset-x-0 top-0 z-[900] h-[72px] transition-all duration-300">
-        <div class="max-w-[1200px] mx-auto px-6 lg:px-20 h-full flex items-center justify-between">
+        <div class="max-w-site mx-auto px-6 lg:px-12 h-full flex items-center justify-between">
 
             <a href="#hero" class="font-display text-2xl font-bold text-primary tracking-tight no-underline">
                 RK<span class="text-accent">.</span>
@@ -95,11 +95,11 @@
             style="background: radial-gradient(ellipse 60% 80% at 70% 50%, rgba(112,66,248,0.07) 0%, transparent 70%), radial-gradient(ellipse 40% 60% at 30% 50%, rgba(0,212,255,0.05) 0%, transparent 60%), linear-gradient(to right, rgba(3,0,20,0.65) 40%, rgba(3,0,20,0.1) 100%)">
         </div>
 
-        <div class="relative z-[2] w-full max-w-[calc(1200px+160px)] mx-auto px-6 lg:px-20 pt-[72px]">
+        <div class="relative z-[2] w-full max-w-wide mx-auto px-6 lg:px-12 pt-[72px]">
             <p class="hero-greeting block text-[0.82rem] font-normal tracking-[4px] uppercase text-accent2 mb-3.5">Hi,
                 I'm</p>
             <h1
-                class="hero-name grad-text font-display text-[clamp(3rem,8.5vw,6.5rem)] font-bold leading-[1.03] tracking-tight mb-5">
+                class="hero-name grad-text-hero font-display text-[clamp(3rem,8.5vw,6.5rem)] font-bold leading-[1.03] tracking-tight mb-5">
                 Rishikesh<br>Kumar</h1>
             <div
                 class="hero-typed font-display text-[clamp(1.1rem,2.2vw,1.5rem)] font-medium text-muted mb-4 min-h-[2em]">
@@ -144,18 +144,18 @@
 
     <!-- ===== HIGHLIGHTS STRIP ===== -->
     <section id="highlights" class="relative z-[3]">
-        <div class="max-w-[1200px] mx-auto px-6 lg:px-20">
+        <div class="max-w-wide mx-auto px-6 lg:px-12">
             <div class="glass border border-accent/25 rounded-2xl p-7 md:p-9 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10" style="box-shadow: 0 0 40px rgba(112,66,248,0.08), inset 0 1px 0 rgba(255,255,255,0.04)">
                 <div class="flex flex-col items-center text-center gap-1.5">
-                    <span class="font-display text-[2.2rem] md:text-[2.6rem] font-bold text-accent leading-none tracking-tight">99.3<span class="text-[1.2rem]">%</span></span>
+                    <span class="font-display text-[2.2rem] md:text-[2.6rem] font-bold text-accent leading-none tracking-tight" data-count="99.3" data-suffix="%">99.3%</span>
                     <span class="text-[0.78rem] text-muted font-medium">GATE CSE 2024</span>
                 </div>
                 <div class="flex flex-col items-center text-center gap-1.5">
-                    <span class="font-display text-[2.2rem] md:text-[2.6rem] font-bold text-accent leading-none tracking-tight">#32</span>
+                    <span class="font-display text-[2.2rem] md:text-[2.6rem] font-bold text-accent leading-none tracking-tight" data-count="32" data-prefix="#">#32</span>
                     <span class="text-[0.78rem] text-muted font-medium">CodeChef Contest World Rank</span>
                 </div>
                 <div class="flex flex-col items-center text-center gap-1.5">
-                    <span class="font-display text-[2.2rem] md:text-[2.6rem] font-bold text-accent leading-none tracking-tight">#1</span>
+                    <span class="font-display text-[2.2rem] md:text-[2.6rem] font-bold text-accent leading-none tracking-tight" data-count="1" data-prefix="#">#1</span>
                     <span class="text-[0.78rem] text-muted font-medium">HackForCG Hackathon</span>
                 </div>
                 <div class="flex flex-col items-center text-center gap-1.5">
@@ -166,14 +166,16 @@
         </div>
     </section>
 
+    <div class="section-divider my-0"></div>
+
     <!-- ===== ABOUT ===== -->
-    <section id="about" class="py-20 lg:py-28">
-        <div class="max-w-[1200px] mx-auto px-6 lg:px-20">
+    <section id="about" class="py-20 lg:py-28 section-glow" data-ambient="purple">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
 
             <div class="mb-12 lg:mb-16 reveal">
                 <span class="block text-[0.78rem] font-medium tracking-[3px] uppercase text-accent2 mb-3">01 -
                     About</span>
-                <h2 class="font-display text-[clamp(2rem,5vw,3.4rem)] font-bold tracking-tight leading-[1.1]">About
+                <h2 class="font-display text-[clamp(2rem,5vw,3.4rem)] font-bold tracking-tight leading-[1.1] grad-text-section">About
                     <span class="text-accent">Me</span>
                 </h2>
             </div>
@@ -213,7 +215,7 @@
                     <h3 class="font-display text-[1rem] font-semibold text-primary mb-5 tracking-tight">Education</h3>
 
                     <div
-                        class="glass border border-accent/20 rounded-2xl p-6 mb-4 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)]">
+                        class="card-elevated rounded-2xl p-6 mb-4">
                         <span class="block font-display text-[1rem] font-semibold text-primary mb-1">M.Tech -
                             IEOR</span>
                         <span class="block text-[0.9rem] text-accent2 font-medium mb-1">IIT Bombay</span>
@@ -221,7 +223,7 @@
                     </div>
 
                     <div
-                        class="glass border border-accent/20 rounded-2xl p-6 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)]">
+                        class="card-elevated rounded-2xl p-6">
                         <span class="block font-display text-[1rem] font-semibold text-primary mb-1">B.Tech - CSE</span>
                         <span class="block text-[0.9rem] text-accent2 font-medium mb-1">Guru Ghasidas University</span>
                         <span class="block text-[0.8rem] text-muted">July 2020 - July 2024</span>
@@ -231,15 +233,16 @@
         </div>
     </section>
 
+    <div class="section-divider"></div>
+
     <!-- ===== SKILLS ===== -->
-    <section id="skills" class="py-20 lg:py-28"
-        style="background:linear-gradient(180deg,transparent,rgba(7,7,32,0.6) 50%,transparent)">
-        <div class="max-w-[1200px] mx-auto px-6 lg:px-20">
+    <section id="skills" class="py-20 lg:py-28 mesh-bg-purple" data-ambient="cyan">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
 
             <div class="mb-12 lg:mb-16 reveal">
                 <span class="block text-[0.78rem] font-medium tracking-[3px] uppercase text-accent2 mb-3">02 -
                     Skills</span>
-                <h2 class="font-display text-[clamp(2rem,5vw,3.4rem)] font-bold tracking-tight leading-[1.1]">Tech <span
+                <h2 class="font-display text-[clamp(2rem,5vw,3.4rem)] font-bold tracking-tight leading-[1.1] grad-text-section">Tech <span
                         class="text-accent">Stack</span></h2>
             </div>
 
@@ -247,7 +250,7 @@
 
                 <!-- Languages -->
                 <div
-                    class="glass border border-accent/20 rounded-2xl p-7 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
+                    class="card-elevated rounded-2xl p-7 reveal">
                     <div
                         class="w-11 h-11 flex items-center justify-center rounded-xl bg-accent/[0.14] text-accent text-[1.15rem] mb-4">
                         <i class="fas fa-code"></i>
@@ -269,7 +272,7 @@
 
                 <!-- Frameworks & Libraries -->
                 <div
-                    class="glass border border-accent/20 rounded-2xl p-7 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
+                    class="card-elevated rounded-2xl p-7 reveal">
                     <div
                         class="w-11 h-11 flex items-center justify-center rounded-xl bg-accent/[0.14] text-accent text-[1.15rem] mb-4">
                         <i class="fas fa-layer-group"></i>
@@ -290,7 +293,7 @@
 
                 <!-- ML / AI -->
                 <div
-                    class="glass border border-accent/20 rounded-2xl p-7 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
+                    class="card-elevated rounded-2xl p-7 reveal">
                     <div
                         class="w-11 h-11 flex items-center justify-center rounded-xl bg-accent/[0.14] text-accent text-[1.15rem] mb-4">
                         <i class="fas fa-brain"></i>
@@ -310,7 +313,7 @@
 
                 <!-- Systems & Tools -->
                 <div
-                    class="glass border border-accent/20 rounded-2xl p-7 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
+                    class="card-elevated rounded-2xl p-7 reveal">
                     <div
                         class="w-11 h-11 flex items-center justify-center rounded-xl bg-accent/[0.14] text-accent text-[1.15rem] mb-4">
                         <i class="fas fa-server"></i>
@@ -335,14 +338,16 @@
         </div>
     </section>
 
+    <div class="section-divider"></div>
+
     <!-- ===== EXPERIENCE ===== -->
-    <section id="experience" class="py-20 lg:py-28">
-        <div class="max-w-[1200px] mx-auto px-6 lg:px-20">
+    <section id="experience" class="py-20 lg:py-28 section-glow" data-ambient="purple">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
 
             <div class="mb-12 lg:mb-16 reveal">
                 <span class="block text-[0.78rem] font-medium tracking-[3px] uppercase text-accent2 mb-3">03 -
                     Experience</span>
-                <h2 class="font-display text-[clamp(2rem,5vw,3.4rem)] font-bold tracking-tight leading-[1.1]">Work <span
+                <h2 class="font-display text-[clamp(2rem,5vw,3.4rem)] font-bold tracking-tight leading-[1.1] grad-text-section">Work <span
                         class="text-accent">Experience</span></h2>
             </div>
 
@@ -358,11 +363,12 @@
                         class="absolute -left-7 top-5 w-3 h-3 rounded-full bg-accent border-2 border-bg shadow-[0_0_12px_rgba(112,66,248,0.6)]">
                     </div>
                     <div
-                        class="glass border border-accent/20 rounded-2xl p-6 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)]">
+                        class="card-elevated rounded-2xl p-6">
                         <div class="flex justify-between items-start gap-4 mb-3.5 flex-wrap">
                             <div>
-                                <h3 class="font-display text-[1rem] font-semibold text-primary mb-1">Full-Stack
-                                    Developer Intern</h3>
+                                <h3 class="font-display text-[1rem] font-semibold text-primary mb-1">
+                                    <a href="pages/experience/vajra-labs.html" class="text-primary no-underline transition-colors hover:text-accent">Full-Stack Developer Intern <i class="fas fa-arrow-right text-[0.62rem] opacity-60 ml-1"></i></a>
+                                </h3>
                                 <p class="text-[0.87rem] text-accent2 font-medium">Vajra Labs, IIT Bombay | Powai,
                                     Maharashtra</p>
                             </div>
@@ -374,6 +380,7 @@
                             <li class="text-[0.89rem] text-muted leading-relaxed">Built a sandbox-based malware analysis platform handling 200+ daily sample submissions with automated static, dynamic, and memory analysis reports</li>
                             <li class="text-[0.89rem] text-muted leading-relaxed">Led a 3-person team using sprint-based workflows and code reviews, shipping features on a 2-week release cadence</li>
                         </ul>
+                        <a href="pages/experience/vajra-labs.html" class="text-[0.8rem] font-semibold text-accent2 no-underline hover:text-accent transition-colors mt-2">View details <i class="fas fa-arrow-right text-[0.7rem]"></i></a>
                     </div>
                 </div>
 
@@ -382,10 +389,12 @@
                         class="absolute -left-7 top-5 w-3 h-3 rounded-full bg-accent border-2 border-bg shadow-[0_0_12px_rgba(112,66,248,0.6)]">
                     </div>
                     <div
-                        class="glass border border-accent/20 rounded-2xl p-6 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)]">
+                        class="card-elevated rounded-2xl p-6">
                         <div class="flex justify-between items-start gap-4 mb-3.5 flex-wrap">
                             <div>
-                                <h3 class="font-display text-[1rem] font-semibold text-primary mb-1">Full-Stack Software Development Intern</h3>
+                                <h3 class="font-display text-[1rem] font-semibold text-primary mb-1">
+                                    <a href="pages/experience/jumps-automation.html" class="text-primary no-underline transition-colors hover:text-accent">Full-Stack Software Development Intern <i class="fas fa-arrow-right text-[0.62rem] opacity-60 ml-1"></i></a>
+                                </h3>
                                 <p class="text-[0.87rem] text-accent2 font-medium">Jumps Automation | Remote</p>
                             </div>
                             <span
@@ -396,6 +405,7 @@
                             <li class="text-[0.89rem] text-muted leading-relaxed">Built CyberAegis — a gamified cybersecurity training platform with 7 microservices, 41 interactive simulators, and 128+ REST API endpoints serving a React 18 SPA</li>
                             <li class="text-[0.89rem] text-muted leading-relaxed">Engineered event-driven architecture with RabbitMQ, Redis-cached leaderboards, and 261+ integration tests; load-tested for 5,000 concurrent users</li>
                         </ul>
+                        <a href="pages/experience/jumps-automation.html" class="text-[0.8rem] font-semibold text-accent2 no-underline hover:text-accent transition-colors mt-2">View details <i class="fas fa-arrow-right text-[0.7rem]"></i></a>
                     </div>
                 </div>
 
@@ -404,10 +414,11 @@
                         class="absolute -left-7 top-5 w-3 h-3 rounded-full bg-accent border-2 border-bg shadow-[0_0_12px_rgba(112,66,248,0.6)]">
                     </div>
                     <div
-                        class="glass border border-accent/20 rounded-2xl p-6 transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)]">
+                        class="card-elevated rounded-2xl p-6">
                         <div class="flex justify-between items-start gap-4 mb-3.5 flex-wrap">
                             <div>
-                                <h3 class="font-display text-[1rem] font-semibold text-primary mb-1">Full Stack Intern
+                                <h3 class="font-display text-[1rem] font-semibold text-primary mb-1">
+                                    <a href="pages/experience/dimensionless-tech.html" class="text-primary no-underline transition-colors hover:text-accent">Full Stack Intern <i class="fas fa-arrow-right text-[0.62rem] opacity-60 ml-1"></i></a>
                                 </h3>
                                 <p class="text-[0.87rem] text-accent2 font-medium">Dimensionless Technologies | Navi
                                     Mumbai, Maharashtra</p>
@@ -420,6 +431,7 @@
                             <li class="text-[0.89rem] text-muted leading-relaxed">Built an image processing pipeline using Node.js, OpenCV.js, and Google Vision API that automated medicine identification from batch photos, replacing manual data entry</li>
                             <li class="text-[0.89rem] text-muted leading-relaxed">Designed an auto-populated Excel-compatible inventory system that reduced medicine cataloging time from hours to minutes per batch</li>
                         </ul>
+                        <a href="pages/experience/dimensionless-tech.html" class="text-[0.8rem] font-semibold text-accent2 no-underline hover:text-accent transition-colors mt-2">View details <i class="fas fa-arrow-right text-[0.7rem]"></i></a>
                     </div>
                 </div>
 
@@ -433,7 +445,7 @@
                         class="absolute -left-7 top-5 w-3 h-3 rounded-full bg-accent2 border-2 border-bg shadow-[0_0_12px_rgba(0,212,255,0.55)]">
                     </div>
                     <div
-                        class="glass border border-accent2/15 rounded-2xl p-6 transition-all duration-300 hover:border-accent2/45 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,212,255,0.1)]">
+                        class="card-elevated rounded-2xl p-6 !border-accent2/15 hover:!border-accent2/45">
                         <div class="flex justify-between items-start gap-4 mb-3.5 flex-wrap">
                             <div>
                                 <h3 class="font-display text-[1rem] font-semibold text-primary mb-1">Teaching Assistant
@@ -467,31 +479,31 @@
         </div>
     </section>
 
+    <div class="section-divider"></div>
+
     <!-- ===== PROJECTS (Featured) ===== -->
-    <section id="projects" class="py-20 lg:py-28"
-        style="background:linear-gradient(180deg,transparent,rgba(7,7,32,0.6) 50%,transparent)">
-        <div class="max-w-[1200px] mx-auto px-6 lg:px-20">
+    <section id="projects" class="py-20 lg:py-28 mesh-bg-cyan" data-ambient="cyan">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
 
             <div class="mb-12 lg:mb-16 reveal">
                 <span class="block text-[0.78rem] font-medium tracking-[3px] uppercase text-accent2 mb-3">04 -
                     Projects</span>
-                <h2 class="font-display text-[clamp(2rem,5vw,3.4rem)] font-bold tracking-tight leading-[1.1]">Featured
+                <h2 class="font-display text-[clamp(2rem,5vw,3.4rem)] font-bold tracking-tight leading-[1.1] grad-text-section">Featured
                     <span class="text-accent">Projects</span>
                 </h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
 
                 <!-- 1. Vajra Sandbox -->
                 <div
-                    class="glass border border-accent/20 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                    <!-- Visual placeholder -->
-                    <div class="relative w-full h-44 bg-gradient-to-br from-accent/10 to-accent2/5 flex items-center justify-center border-b border-accent/10">
+                    class="card-featured rounded-2xl overflow-hidden flex flex-col reveal">
+                    <a href="pages/projects/vajra-sandbox.html" class="relative w-full h-44 bg-gradient-to-br from-accent/10 to-accent2/5 flex items-center justify-center border-b border-accent/10 no-underline group">
                         <div class="text-center px-4">
-                            <i class="fas fa-shield-alt text-3xl text-accent/40 mb-2"></i>
-                            <p class="text-[0.72rem] text-muted/60 italic">Add screenshot: dashboard + analysis report</p>
+                            <i class="fas fa-shield-alt text-3xl text-accent/40 mb-2 transition-colors group-hover:text-accent/70"></i>
+                            <p class="text-[0.78rem] text-muted/70 transition-colors group-hover:text-accent">View details <i class="fas fa-arrow-right text-[0.65rem]"></i></p>
                         </div>
-                    </div>
+                    </a>
                     <div class="p-6 flex flex-col gap-2.5 flex-1">
                         <div class="flex justify-between items-center">
                             <span
@@ -499,7 +511,8 @@
                                 Stack</span>
                             <span class="text-[0.78rem] text-muted">Aug - Dec 2025</span>
                         </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">Vajra Sandbox
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
+                            <a href="pages/projects/vajra-sandbox.html" class="text-primary no-underline transition-colors hover:text-accent">Vajra Sandbox <i class="fas fa-arrow-right text-[0.62rem] opacity-60 ml-1"></i></a>
                         </h3>
                         <p class="text-[0.82rem] text-muted leading-relaxed">Malware Analysis &amp; Threat Detection
                             Platform</p>
@@ -518,13 +531,13 @@
 
                 <!-- 2. CyberAegis -->
                 <div
-                    class="glass border border-accent/20 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                    <div class="relative w-full h-44 bg-gradient-to-br from-accent/10 to-accent2/5 flex items-center justify-center border-b border-accent/10">
+                    class="card-featured rounded-2xl overflow-hidden flex flex-col reveal">
+                    <a href="pages/projects/cyberaegis.html" class="relative w-full h-44 bg-gradient-to-br from-accent/10 to-accent2/5 flex items-center justify-center border-b border-accent/10 no-underline group">
                         <div class="text-center px-4">
-                            <i class="fas fa-gamepad text-3xl text-accent/40 mb-2"></i>
-                            <p class="text-[0.72rem] text-muted/60 italic">Add screenshot: simulator + gamification dashboard</p>
+                            <i class="fas fa-gamepad text-3xl text-accent/40 mb-2 transition-colors group-hover:text-accent/70"></i>
+                            <p class="text-[0.78rem] text-muted/70 transition-colors group-hover:text-accent">View details <i class="fas fa-arrow-right text-[0.65rem]"></i></p>
                         </div>
-                    </div>
+                    </a>
                     <div class="p-6 flex flex-col gap-2.5 flex-1">
                         <div class="flex justify-between items-center">
                             <span
@@ -532,7 +545,9 @@
                                 Stack</span>
                             <span class="text-[0.78rem] text-muted">May - Jun 2026</span>
                         </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">CyberAegis</h3>
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
+                            <a href="pages/projects/cyberaegis.html" class="text-primary no-underline transition-colors hover:text-accent">CyberAegis <i class="fas fa-arrow-right text-[0.62rem] opacity-60 ml-1"></i></a>
+                        </h3>
                         <p class="text-[0.82rem] text-muted leading-relaxed">Gamified Cybersecurity Awareness &amp; Training Platform</p>
                         <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
                             <li class="text-[0.855rem] text-muted leading-relaxed">7 microservices, 41 interactive cybersecurity simulators, and event-driven architecture with RabbitMQ powering a gamification engine</li>
@@ -546,13 +561,13 @@
 
                 <!-- 3. VIntel Platform -->
                 <div
-                    class="glass border border-accent/20 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                    <div class="relative w-full h-44 bg-gradient-to-br from-violet-500/10 to-accent/5 flex items-center justify-center border-b border-accent/10">
+                    class="card-featured rounded-2xl overflow-hidden flex flex-col reveal">
+                    <a href="pages/projects/vintel-platform.html" class="relative w-full h-44 bg-gradient-to-br from-violet-500/10 to-accent/5 flex items-center justify-center border-b border-accent/10 no-underline group">
                         <div class="text-center px-4">
-                            <i class="fas fa-robot text-3xl text-violet-400/40 mb-2"></i>
-                            <p class="text-[0.72rem] text-muted/60 italic">Add screenshot: agent pipeline + news feed UI</p>
+                            <i class="fas fa-robot text-3xl text-violet-400/40 mb-2 transition-colors group-hover:text-violet-400/70"></i>
+                            <p class="text-[0.78rem] text-muted/70 transition-colors group-hover:text-violet-400">View details <i class="fas fa-arrow-right text-[0.65rem]"></i></p>
                         </div>
-                    </div>
+                    </a>
                     <div class="p-6 flex flex-col gap-2.5 flex-1">
                         <div class="flex justify-between items-center">
                             <span
@@ -560,8 +575,9 @@
                                 AI</span>
                             <span class="text-[0.78rem] text-muted">Jan - May 2026</span>
                         </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">The Third Eye:
-                            VIntel Platform</h3>
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
+                            <a href="pages/projects/vintel-platform.html" class="text-primary no-underline transition-colors hover:text-accent">The Third Eye: VIntel Platform <i class="fas fa-arrow-right text-[0.62rem] opacity-60 ml-1"></i></a>
+                        </h3>
                         <p class="text-[0.82rem] text-muted leading-relaxed">Multi-Agent Cybersecurity Intelligence Platform</p>
                         <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
                             <li class="text-[0.855rem] text-muted leading-relaxed">Built a multi-agent cybersecurity
@@ -575,10 +591,10 @@
                     </div>
                 </div>
 
-                <!-- 3. MTP Thesis -->
+                <!-- 4. MTP Thesis -->
                 <div
-                    class="glass border border-accent/20 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                    <a href="pages/mtp.html" class="relative w-full h-44 bg-gradient-to-br from-accent2/10 to-accent/5 flex items-center justify-center border-b border-accent/10 no-underline group">
+                    class="card-featured rounded-2xl overflow-hidden flex flex-col reveal">
+                    <a href="pages/projects/mtp.html" class="relative w-full h-44 bg-gradient-to-br from-accent2/10 to-accent/5 flex items-center justify-center border-b border-accent/10 no-underline group">
                         <div class="text-center px-4">
                             <i class="fas fa-dna text-3xl text-accent2/40 mb-2 transition-colors group-hover:text-accent2/70"></i>
                             <p class="text-[0.78rem] text-muted/70 transition-colors group-hover:text-accent2">View results &amp; evaluation <i class="fas fa-arrow-right text-[0.65rem]"></i></p>
@@ -592,7 +608,7 @@
                             <span class="text-[0.78rem] text-muted">Jul - Nov 2025</span>
                         </div>
                         <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
-                            <a href="pages/mtp.html" class="text-primary no-underline transition-colors hover:text-accent">Parameter Specific Literature Retrieval <i class="fas fa-arrow-right text-[0.62rem] opacity-60 ml-1"></i></a>
+                            <a href="pages/projects/mtp.html" class="text-primary no-underline transition-colors hover:text-accent">Parameter Specific Literature Retrieval <i class="fas fa-arrow-right text-[0.62rem] opacity-60 ml-1"></i></a>
                         </h3>
                         <p class="text-[0.82rem] text-muted leading-relaxed">Biomedical NLP Pipeline | Prof. Balamurugan
                             Palaniappan</p>
@@ -601,30 +617,31 @@
                             <li class="text-[0.855rem] text-muted leading-relaxed">Fine-tuned PubMedBERT NER model achieving 90% F1-score on manually annotated dataset</li>
                             <li class="text-[0.855rem] text-muted leading-relaxed">Built a provenance-tracked Neo4j knowledge graph + QA engine: 88% answer rate, every claim cited</li>
                         </ul>
-                        <a href="pages/mtp.html" class="text-[0.8rem] font-semibold text-accent2 no-underline hover:text-accent transition-colors">View results &amp; evaluation <i class="fas fa-arrow-right text-[0.7rem]"></i></a>
+                        <a href="pages/projects/mtp.html" class="text-[0.8rem] font-semibold text-accent2 no-underline hover:text-accent transition-colors">View results &amp; evaluation <i class="fas fa-arrow-right text-[0.7rem]"></i></a>
                         <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
                             <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PyTorch</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">HuggingFace</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Neo4j</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">REBEL</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PubMedBERT</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- 4. Explainable Depression Detection -->
+                <!-- 5. Explainable Depression Detection -->
                 <div
-                    class="glass border border-accent/20 rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:border-accent/50 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(112,66,248,0.12)] reveal">
-                    <div class="relative w-full h-44 bg-gradient-to-br from-accent2/10 to-violet-500/5 flex items-center justify-center border-b border-accent/10">
+                    class="card-featured rounded-2xl overflow-hidden flex flex-col reveal">
+                    <a href="pages/projects/depression-detection.html" class="relative w-full h-44 bg-gradient-to-br from-accent2/10 to-violet-500/5 flex items-center justify-center border-b border-accent/10 no-underline group">
                         <div class="text-center px-4">
-                            <i class="fas fa-brain text-3xl text-accent2/40 mb-2"></i>
-                            <p class="text-[0.72rem] text-muted/60 italic">Add visual: Integrated Gradients heatmap</p>
+                            <i class="fas fa-brain text-3xl text-accent2/40 mb-2 transition-colors group-hover:text-accent2/70"></i>
+                            <p class="text-[0.78rem] text-muted/70 transition-colors group-hover:text-accent2">View details <i class="fas fa-arrow-right text-[0.65rem]"></i></p>
                         </div>
-                    </div>
+                    </a>
                     <div class="p-6 flex flex-col gap-2.5 flex-1">
                         <div class="flex justify-between items-center">
                             <span
                                 class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">NLP</span>
                             <span class="text-[0.78rem] text-muted">Aug - Nov 2025</span>
                         </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">Explainable
-                            Depression Detection</h3>
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
+                            <a href="pages/projects/depression-detection.html" class="text-primary no-underline transition-colors hover:text-accent">Explainable Depression Detection <i class="fas fa-arrow-right text-[0.62rem] opacity-60 ml-1"></i></a>
+                        </h3>
                         <p class="text-[0.82rem] text-muted leading-relaxed">Social Media NLP | Prof. Pushpak Bhattacharyya</p>
                         <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
                             <li class="text-[0.855rem] text-muted leading-relaxed">NLP pipeline for depression
@@ -649,10 +666,12 @@
         </div>
     </section>
 
+    <div class="section-divider"></div>
+
     <!-- ===== COURSEWORK (Brief) ===== -->
     <section id="courses" class="py-16">
-        <div class="max-w-[1200px] mx-auto px-6 lg:px-20">
-            <div class="glass border border-accent/20 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 reveal">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="card-elevated rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 reveal">
                 <div>
                     <h2 class="font-display text-[1.2rem] font-bold text-primary mb-2">Relevant Coursework</h2>
                     <p class="text-[0.9rem] text-muted leading-relaxed max-w-[480px]">
@@ -667,14 +686,16 @@
         </div>
     </section>
 
+    <div class="section-divider"></div>
+
     <!-- ===== CONTACT ===== -->
-    <section id="contact" class="py-20 lg:py-28">
-        <div class="max-w-[1200px] mx-auto px-6 lg:px-20">
+    <section id="contact" class="py-20 lg:py-28 mesh-bg-cyan">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
 
             <div class="mb-12 lg:mb-16 reveal">
                 <span class="block text-[0.78rem] font-medium tracking-[3px] uppercase text-accent2 mb-3">05 -
                     Contact</span>
-                <h2 class="font-display text-[clamp(2rem,5vw,3.4rem)] font-bold tracking-tight leading-[1.1]">Get In
+                <h2 class="font-display text-[clamp(2rem,5vw,3.4rem)] font-bold tracking-tight leading-[1.1] grad-text-section">Get In
                     <span class="text-accent">Touch</span>
                 </h2>
             </div>
@@ -712,7 +733,7 @@
 
     <!-- ===== FOOTER ===== -->
     <footer class="border-t border-accent/[0.22] py-8">
-        <div class="max-w-[1200px] mx-auto px-6 lg:px-20 flex items-center justify-between flex-wrap gap-4">
+        <div class="max-w-site mx-auto px-6 lg:px-12 flex items-center justify-between flex-wrap gap-4">
             <p class="text-[0.88rem] text-muted">Designed &amp; Built by <span class="text-accent">Rishikesh
                     Kumar</span></p>
             <div class="flex gap-[18px]">

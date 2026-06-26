@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="base-path" content="../..">
+    <meta name="nav-active" content="projects">
+    <meta name="description"
+        content="Vajra Sandbox — a malware analysis and threat detection platform built at Vajra Labs, IIT Bombay. VM-isolated analysis, async Celery workers, and automated PDF reports.">
+    <title>Vajra Sandbox | Rishikesh Kumar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/tailwind-output.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" href="../../Assets/Images/logo.svg" type="image/x-icon">
+</head>
+
+<body class="bg-bg text-primary">
+    <div id="nav-placeholder"></div>
+
+    <!-- ===== HERO ===== -->
+    <section class="pt-32 pb-12 mesh-bg-purple">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="reveal">
+                <a href="../projects.html"
+                    class="inline-flex items-center gap-2 text-muted text-[0.85rem] font-medium no-underline hover:text-accent transition-colors mb-5">
+                    <i class="fas fa-arrow-left text-[0.7rem]"></i> Back to Projects
+                </a>
+                <div class="flex flex-wrap items-center gap-3 mb-4">
+                    <span
+                        class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">Full
+                        Stack</span>
+                    <span class="text-[0.78rem] text-muted">Aug &ndash; Dec 2025</span>
+                </div>
+                <h1
+                    class="font-display text-[clamp(1.9rem,4.5vw,3rem)] font-bold tracking-tight leading-[1.12] grad-text-hero">
+                    Vajra Sandbox
+                </h1>
+                <p class="text-[0.95rem] text-muted leading-relaxed max-w-[760px] mt-4">
+                    A production-grade malware analysis and threat detection platform built during an internship at
+                    <span class="text-primary">Vajra Labs, IIT Bombay</span>. The platform enables security researchers
+                    to upload suspicious files, which are then analyzed through static, dynamic, and memory analysis
+                    pipelines running inside isolated virtual machines. Every submission produces an automated PDF report
+                    with detailed findings, while a hardened authentication layer keeps the system locked down.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HEADLINE STATS ===== -->
+    <section class="py-10">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card-elevated rounded-2xl p-5 text-center reveal">
+                    <div class="font-display text-[1.7rem] font-bold text-accent2">200+</div>
+                    <p class="text-[0.78rem] text-muted mt-1 leading-snug">Daily submissions<br>processed</p>
+                </div>
+                <div class="card-elevated rounded-2xl p-5 text-center reveal">
+                    <div class="font-display text-[1.7rem] font-bold text-accent2">VM</div>
+                    <p class="text-[0.78rem] text-muted mt-1 leading-snug">Isolated analysis<br>per sample</p>
+                </div>
+                <div class="card-elevated rounded-2xl p-5 text-center reveal">
+                    <div class="font-display text-[1.7rem] font-bold text-accent2">2FA</div>
+                    <p class="text-[0.78rem] text-muted mt-1 leading-snug">JWT + TOTP<br>authentication</p>
+                </div>
+                <div class="card-elevated rounded-2xl p-5 text-center reveal">
+                    <div class="font-display text-[1.7rem] font-bold text-accent2">3</div>
+                    <p class="text-[0.78rem] text-muted mt-1 leading-snug">Person team<br>sprint-based workflow</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== OVERVIEW ===== -->
+    <section class="py-14">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="mb-8 reveal">
+                <h2
+                    class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight grad-text-section">
+                    Overview
+                </h2>
+            </div>
+            <div class="card-featured rounded-2xl p-8 reveal">
+                <p class="text-[0.9rem] text-muted leading-relaxed mb-4">
+                    Vajra Sandbox was developed during an internship at Vajra Labs, a cybersecurity research lab at IIT
+                    Bombay. The platform addresses the need for an accessible, high-throughput malware analysis tool that
+                    security researchers can use to quickly triage suspicious files without setting up complex local
+                    environments.
+                </p>
+                <p class="text-[0.9rem] text-muted leading-relaxed mb-4">
+                    When a user uploads a sample, it enters a processing pipeline orchestrated by <span
+                        class="text-primary">Celery</span> workers backed by <span class="text-primary">Redis</span> as
+                    the message broker. Each sample is dispatched to an isolated virtual machine where three parallel
+                    analysis tracks run: <span class="text-primary">static analysis</span> (file headers, strings,
+                    imports), <span class="text-primary">dynamic analysis</span> (behavioral monitoring in a sandboxed
+                    execution environment), and <span class="text-primary">memory analysis</span> (process dumps and
+                    memory forensics).
+                </p>
+                <p class="text-[0.9rem] text-muted leading-relaxed">
+                    The results converge into an automated PDF report that analysts can share with their teams. The
+                    entire platform is containerized with Docker, and I led a 3-person development team using
+                    sprint-based agile workflows with regular code reviews and CI integration.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== KEY FEATURES ===== -->
+    <section class="py-14 mesh-bg-cyan">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="mb-8 reveal">
+                <h2
+                    class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight grad-text-section">
+                    Key Features
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/25 flex items-center justify-center">
+                            <i class="fas fa-shield-virus text-accent"></i>
+                        </div>
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary">Multi-Vector Analysis</h3>
+                    </div>
+                    <p class="text-[0.85rem] text-muted leading-relaxed">
+                        Each malware sample undergoes three independent analysis passes &mdash; static analysis
+                        (PE headers, string extraction, import tables), dynamic analysis (behavioral monitoring during
+                        sandboxed execution), and memory analysis (process memory dumps and forensic inspection).
+                        Results from all three vectors are merged into a unified threat assessment.
+                    </p>
+                </div>
+
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/25 flex items-center justify-center">
+                            <i class="fas fa-server text-accent"></i>
+                        </div>
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary">VM-Isolated Execution</h3>
+                    </div>
+                    <p class="text-[0.85rem] text-muted leading-relaxed">
+                        Every submitted sample runs inside its own isolated virtual machine to prevent cross-contamination
+                        and host compromise. The VM is spun up on demand, monitored throughout execution, and torn down
+                        after analysis completes. This ensures that even the most evasive malware cannot escape the
+                        sandbox boundary.
+                    </p>
+                </div>
+
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-accent2/10 border border-accent2/22 flex items-center justify-center">
+                            <i class="fas fa-bolt text-accent2"></i>
+                        </div>
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary">Async Task Processing</h3>
+                    </div>
+                    <p class="text-[0.85rem] text-muted leading-relaxed">
+                        The platform uses asynchronous Celery workers with Redis as the message broker to process
+                        submissions without blocking the web interface. Users can upload samples and continue working
+                        while analysis runs in the background. The system handles 200+ daily submissions with zero
+                        bottlenecks under high-volume loads.
+                    </p>
+                </div>
+
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-accent2/10 border border-accent2/22 flex items-center justify-center">
+                            <i class="fas fa-lock text-accent2"></i>
+                        </div>
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary">Hardened Security Layer</h3>
+                    </div>
+                    <p class="text-[0.85rem] text-muted leading-relaxed">
+                        Security-first design with JWT-based authentication, TOTP two-factor authentication for all user
+                        accounts, equation-based CAPTCHA to prevent automated abuse, and per-endpoint rate limiting.
+                        The combination ensures that only authenticated researchers can access the analysis platform
+                        while preventing brute-force and bot attacks.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== ARCHITECTURE ===== -->
+    <section class="py-14">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="mb-8 reveal">
+                <h2
+                    class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight grad-text-section">
+                    Architecture
+                </h2>
+            </div>
+            <div class="card-featured rounded-2xl p-8 reveal">
+                <p class="text-[0.9rem] text-muted leading-relaxed mb-5">
+                    The system follows a decoupled architecture with a clear separation between the frontend, API layer,
+                    and analysis backend. Here is how a sample flows through the pipeline:
+                </p>
+                <ul class="arrow-list list-none p-0 space-y-3">
+                    <li class="text-[0.88rem] text-muted leading-relaxed">
+                        <span class="text-primary font-medium">Upload &amp; Validation</span> &mdash; Users submit
+                        samples through the Next.js frontend. The Django REST Framework API validates the file, stores
+                        it securely, and enqueues an analysis task.
+                    </li>
+                    <li class="text-[0.88rem] text-muted leading-relaxed">
+                        <span class="text-primary font-medium">Task Dispatch</span> &mdash; Celery picks up the task
+                        from the Redis queue and provisions an isolated VM for the sample. Static, dynamic, and memory
+                        analysis modules run concurrently within the VM.
+                    </li>
+                    <li class="text-[0.88rem] text-muted leading-relaxed">
+                        <span class="text-primary font-medium">Analysis Execution</span> &mdash; Static analysis
+                        extracts file metadata and signatures. Dynamic analysis monitors runtime behavior including
+                        network calls, file system changes, and registry modifications. Memory analysis inspects process
+                        dumps for injected code and suspicious patterns.
+                    </li>
+                    <li class="text-[0.88rem] text-muted leading-relaxed">
+                        <span class="text-primary font-medium">Report Generation</span> &mdash; Results from all
+                        analysis vectors are aggregated, scored, and rendered into a comprehensive PDF report that is
+                        stored in PostgreSQL and made available for download.
+                    </li>
+                    <li class="text-[0.88rem] text-muted leading-relaxed">
+                        <span class="text-primary font-medium">Notification</span> &mdash; The user is notified upon
+                        completion and can view or download the report from the dashboard.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== TECH STACK ===== -->
+    <section class="py-14 pb-20">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="mb-8 reveal">
+                <h2
+                    class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight grad-text-section">
+                    Tech Stack
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[0.95rem] font-semibold text-primary mb-4">Backend</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">Django</span>
+                        <span class="skill-pill">Django REST Framework</span>
+                        <span class="skill-pill">Celery</span>
+                        <span class="skill-pill">Redis</span>
+                        <span class="skill-pill">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[0.95rem] font-semibold text-primary mb-4">Frontend</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill">Next.js</span>
+                        <span class="skill-pill">TypeScript</span>
+                        <span class="skill-pill">React</span>
+                    </div>
+                </div>
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[0.95rem] font-semibold text-primary mb-4">Infrastructure</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill">Docker</span>
+                        <span class="skill-pill">Virtual Machines</span>
+                        <span class="skill-pill">Linux</span>
+                    </div>
+                </div>
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[0.95rem] font-semibold text-primary mb-4">Security</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill">JWT Auth</span>
+                        <span class="skill-pill">TOTP 2FA</span>
+                        <span class="skill-pill">Rate Limiting</span>
+                        <span class="skill-pill">CAPTCHA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../js/components.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

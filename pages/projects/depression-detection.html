@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="base-path" content="../..">
+    <meta name="nav-active" content="projects">
+    <meta name="description"
+        content="Explainable Depression Detection — NLP pipeline using double domain adaptation and guided masking, with an explainability layer combining Integrated Gradients and LLM distillation.">
+    <title>Explainable Depression Detection | Rishikesh Kumar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/tailwind-output.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" href="../../Assets/Images/logo.svg" type="image/x-icon">
+</head>
+
+<body class="bg-bg text-primary">
+    <div id="nav-placeholder"></div>
+
+    <!-- ===== HERO ===== -->
+    <section class="pt-32 pb-12 mesh-bg-purple">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="reveal">
+                <a href="../projects.html"
+                    class="inline-flex items-center gap-2 text-muted text-[0.85rem] font-medium no-underline hover:text-accent transition-colors mb-5">
+                    <i class="fas fa-arrow-left text-[0.7rem]"></i> Back to Projects
+                </a>
+                <div class="flex flex-wrap items-center gap-3 mb-4">
+                    <span
+                        class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">NLP</span>
+                    <span class="text-[0.78rem] text-muted">Aug &ndash; Nov 2025</span>
+                </div>
+                <h1
+                    class="font-display text-[clamp(1.9rem,4.5vw,3rem)] font-bold tracking-tight leading-[1.12] grad-text-hero">
+                    Explainable Depression Detection
+                </h1>
+                <p class="text-[0.95rem] text-muted leading-relaxed max-w-[760px] mt-4">
+                    A research project under <span class="text-primary">Prof. Pushpak Bhattacharyya</span> that
+                    builds an NLP pipeline for detecting depression indicators in social media text. The approach
+                    combines double domain adaptation with guided masking to achieve 0.78 F1, and introduces an
+                    explainability pipeline that merges Integrated Gradients with LLM-based teacher-student
+                    distillation to identify the specific words driving each prediction.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HEADLINE STATS ===== -->
+    <section class="py-10">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card-elevated rounded-2xl p-5 text-center reveal">
+                    <div class="font-display text-[1.7rem] font-bold text-accent2">0.78</div>
+                    <p class="text-[0.78rem] text-muted mt-1 leading-snug">F1 Score<br>depression detection</p>
+                </div>
+                <div class="card-elevated rounded-2xl p-5 text-center reveal">
+                    <div class="font-display text-[1.7rem] font-bold text-accent2">2x</div>
+                    <p class="text-[0.78rem] text-muted mt-1 leading-snug">Domain adaptation<br>stages applied</p>
+                </div>
+                <div class="card-elevated rounded-2xl p-5 text-center reveal">
+                    <div class="font-display text-[1.7rem] font-bold text-accent2">IG</div>
+                    <p class="text-[0.78rem] text-muted mt-1 leading-snug">Integrated Gradients<br>for attribution</p>
+                </div>
+                <div class="card-elevated rounded-2xl p-5 text-center reveal">
+                    <div class="font-display text-[1.7rem] font-bold text-accent2">Top-k</div>
+                    <p class="text-[0.78rem] text-muted mt-1 leading-snug">Contributing words<br>extracted per prediction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== OVERVIEW ===== -->
+    <section class="py-14">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="mb-8 reveal">
+                <h2
+                    class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight grad-text-section">
+                    Overview
+                </h2>
+            </div>
+            <div class="card-featured rounded-2xl p-8 reveal">
+                <p class="text-[0.9rem] text-muted leading-relaxed mb-4">
+                    Depression detection from social media text is a challenging NLP task because the language of
+                    mental health distress is nuanced, often implicit, and varies significantly across platforms.
+                    Standard pretrained language models struggle because they are not calibrated for the informal,
+                    noisy, and emotionally charged text found on social media.
+                </p>
+                <p class="text-[0.9rem] text-muted leading-relaxed mb-4">
+                    This project addresses these challenges through a <span class="text-primary">double domain
+                        adaptation</span> strategy: the model first adapts from general-domain text to social media
+                    language, and then adapts from general social media to mental-health-specific content. Combined
+                    with <span class="text-primary">guided masking</span> &mdash; which selectively masks tokens
+                    during fine-tuning to force the model to learn robust depression-indicative patterns rather than
+                    surface-level shortcuts &mdash; the pipeline achieves an F1 score of 0.78.
+                </p>
+                <p class="text-[0.9rem] text-muted leading-relaxed">
+                    Beyond prediction accuracy, the project emphasizes explainability. A dedicated pipeline combines
+                    <span class="text-primary">Integrated Gradients</span> (a gradient-based attribution method) with
+                    <span class="text-primary">LLM-based teacher-student distillation</span> to extract the top-k
+                    words that contribute most strongly to each positive detection. This makes the model's decisions
+                    interpretable for clinicians and researchers.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== APPROACH ===== -->
+    <section class="py-14 mesh-bg-cyan">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="mb-8 reveal">
+                <h2
+                    class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight grad-text-section">
+                    Approach
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-accent2/10 border border-accent2/22 flex items-center justify-center">
+                            <span class="font-display text-[0.85rem] font-bold text-accent2">1</span>
+                        </div>
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary">First Domain Adaptation</h3>
+                    </div>
+                    <p class="text-[0.85rem] text-muted leading-relaxed">
+                        The base transformer model is first adapted from general-domain pretraining to social media
+                        language through continued pretraining on a large corpus of social media posts. This bridges
+                        the distribution gap between formal text and the informal, abbreviated, and emotionally
+                        expressive writing found on platforms like Reddit and Twitter.
+                    </p>
+                </div>
+
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-accent2/10 border border-accent2/22 flex items-center justify-center">
+                            <span class="font-display text-[0.85rem] font-bold text-accent2">2</span>
+                        </div>
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary">Second Domain Adaptation</h3>
+                    </div>
+                    <p class="text-[0.85rem] text-muted leading-relaxed">
+                        The social-media-adapted model undergoes a second adaptation stage focused specifically on
+                        mental health content. This stage exposes the model to depression-related discussions,
+                        clinical narratives, and emotional support communities, sharpening its sensitivity to the
+                        subtle linguistic markers of mental health distress.
+                    </p>
+                </div>
+
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/25 flex items-center justify-center">
+                            <span class="font-display text-[0.85rem] font-bold text-accent">3</span>
+                        </div>
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary">Guided Masking</h3>
+                    </div>
+                    <p class="text-[0.85rem] text-muted leading-relaxed">
+                        During fine-tuning, guided masking selectively masks tokens in the input to prevent the model
+                        from relying on surface-level lexical shortcuts. By forcing the model to make predictions
+                        with key tokens hidden, it learns to capture deeper contextual and syntactic patterns
+                        associated with depression, improving generalization to unseen data.
+                    </p>
+                </div>
+
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/25 flex items-center justify-center">
+                            <span class="font-display text-[0.85rem] font-bold text-accent">4</span>
+                        </div>
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary">Explainability Pipeline</h3>
+                    </div>
+                    <p class="text-[0.85rem] text-muted leading-relaxed">
+                        Integrated Gradients computes token-level attribution scores by interpolating between a
+                        baseline input and the actual input. These scores are refined through LLM-based
+                        teacher-student distillation, where a larger language model validates and contextualizes
+                        the attribution results. The final output is a ranked list of top-k words that most strongly
+                        drive each positive prediction.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== RESULTS ===== -->
+    <section class="py-14">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="mb-8 reveal">
+                <h2
+                    class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight grad-text-section">
+                    Results
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                <div class="card-featured rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[1.05rem] font-semibold text-primary mb-3">Detection Performance</h3>
+                    <p class="text-[0.85rem] text-muted leading-relaxed mb-4">
+                        The double domain adaptation + guided masking pipeline achieves competitive performance on
+                        social media depression detection benchmarks.
+                    </p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-[0.85rem] border-collapse">
+                            <thead>
+                                <tr class="text-muted">
+                                    <th class="font-semibold py-2 px-3 border-b border-accent/20">Metric</th>
+                                    <th class="font-semibold py-2 px-3 border-b border-accent/20 text-right">Score</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-muted">
+                                <tr>
+                                    <td class="py-2 px-3 border-b border-white/[0.06] text-primary">F1 Score</td>
+                                    <td class="py-2 px-3 border-b border-white/[0.06] text-accent2 font-semibold text-right">
+                                        0.78</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-3 border-b border-white/[0.06]">Precision</td>
+                                    <td class="py-2 px-3 border-b border-white/[0.06] text-right">High</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-3">Recall</td>
+                                    <td class="py-2 px-3 text-right">High</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card-featured rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[1.05rem] font-semibold text-primary mb-3">Explainability Output</h3>
+                    <p class="text-[0.85rem] text-muted leading-relaxed mb-4">
+                        The Integrated Gradients + LLM distillation pipeline successfully extracts interpretable
+                        explanations for model predictions.
+                    </p>
+                    <ul class="arrow-list list-none p-0 space-y-2">
+                        <li class="text-[0.85rem] text-muted leading-relaxed">
+                            <span class="text-primary">Top-k word extraction</span> identifies the specific tokens
+                            driving each positive detection
+                        </li>
+                        <li class="text-[0.85rem] text-muted leading-relaxed">
+                            <span class="text-primary">Attribution scores</span> are computed at the token level
+                            via Integrated Gradients interpolation
+                        </li>
+                        <li class="text-[0.85rem] text-muted leading-relaxed">
+                            <span class="text-primary">LLM distillation</span> validates attributions against a
+                            larger model's understanding, filtering noise from genuine signal
+                        </li>
+                        <li class="text-[0.85rem] text-muted leading-relaxed">
+                            Results are <span class="text-primary">clinically interpretable</span>, highlighting
+                            words consistent with known depression indicators
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== TECH STACK ===== -->
+    <section class="py-14 pb-20">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="mb-8 reveal">
+                <h2
+                    class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight grad-text-section">
+                    Tech Stack
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[0.95rem] font-semibold text-primary mb-4">Deep Learning</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill">PyTorch</span>
+                        <span class="skill-pill">HuggingFace Transformers</span>
+                        <span class="skill-pill">Transformer Models</span>
+                    </div>
+                </div>
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[0.95rem] font-semibold text-primary mb-4">NLP Techniques</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill">Domain Adaptation</span>
+                        <span class="skill-pill">Guided Masking</span>
+                        <span class="skill-pill">Text Classification</span>
+                    </div>
+                </div>
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[0.95rem] font-semibold text-primary mb-4">Explainability</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill">Integrated Gradients</span>
+                        <span class="skill-pill">Token Attribution</span>
+                        <span class="skill-pill">Teacher-Student Distillation</span>
+                    </div>
+                </div>
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[0.95rem] font-semibold text-primary mb-4">Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">Captum</span>
+                        <span class="skill-pill">scikit-learn</span>
+                        <span class="skill-pill">Weights &amp; Biases</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../js/components.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

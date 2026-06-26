@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="base-path" content="../..">
+    <meta name="nav-active" content="projects">
+    <meta name="description"
+        content="CyberAegis — a gamified cybersecurity awareness and training platform with 7 microservices, 41 simulators, and event-driven architecture.">
+    <title>CyberAegis | Rishikesh Kumar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/tailwind-output.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" href="../../Assets/Images/logo.svg" type="image/x-icon">
+</head>
+
+<body class="bg-bg text-primary">
+    <div id="nav-placeholder"></div>
+
+    <!-- ===== HERO ===== -->
+    <section class="pt-32 pb-12 mesh-bg-purple">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="reveal">
+                <a href="../projects.html"
+                    class="inline-flex items-center gap-2 text-muted text-[0.85rem] font-medium no-underline hover:text-accent transition-colors mb-5">
+                    <i class="fas fa-arrow-left text-[0.7rem]"></i> Back to Projects
+                </a>
+                <div class="flex flex-wrap items-center gap-3 mb-4">
+                    <span
+                        class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">Full
+                        Stack</span>
+                    <span class="text-[0.78rem] text-muted">May &ndash; Jun 2026</span>
+                </div>
+                <h1
+                    class="font-display text-[clamp(1.9rem,4.5vw,3rem)] font-bold tracking-tight leading-[1.12] grad-text-hero">
+                    CyberAegis
+                </h1>
+                <p class="text-[0.95rem] text-muted leading-relaxed max-w-[760px] mt-4">
+                    A gamified cybersecurity awareness and training platform built during an internship at
+                    <span class="text-primary">Jumps Automation</span>. The platform features 41 interactive attack
+                    simulators, a full gamification engine with XP and leveling, and a community forum &mdash; all
+                    powered by an event-driven microservice architecture designed to handle 5,000 concurrent users.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== KEY METRICS ===== -->
+    <section class="py-10">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card-elevated rounded-2xl p-5 text-center reveal">
+                    <div class="font-display text-[1.7rem] font-bold text-accent2">7</div>
+                    <p class="text-[0.78rem] text-muted mt-1 leading-snug">Microservices<br>in the architecture</p>
+                </div>
+                <div class="card-elevated rounded-2xl p-5 text-center reveal">
+                    <div class="font-display text-[1.7rem] font-bold text-accent2">41</div>
+                    <p class="text-[0.78rem] text-muted mt-1 leading-snug">Interactive attack<br>simulators</p>
+                </div>
+                <div class="card-elevated rounded-2xl p-5 text-center reveal">
+                    <div class="font-display text-[1.7rem] font-bold text-accent2">58K+</div>
+                    <p class="text-[0.78rem] text-muted mt-1 leading-snug">Lines of code<br>across the platform</p>
+                </div>
+                <div class="card-elevated rounded-2xl p-5 text-center reveal">
+                    <div class="font-display text-[1.7rem] font-bold text-accent2">261+</div>
+                    <p class="text-[0.78rem] text-muted mt-1 leading-snug">Integration tests<br>ensuring reliability</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== OVERVIEW ===== -->
+    <section class="py-14">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="mb-8 reveal">
+                <h2
+                    class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight grad-text-section">
+                    Overview
+                </h2>
+            </div>
+            <div class="card-featured rounded-2xl p-8 reveal">
+                <p class="text-[0.9rem] text-muted leading-relaxed mb-4">
+                    CyberAegis was conceived to bridge the gap between theoretical cybersecurity knowledge and practical
+                    hands-on experience. Instead of passive learning through videos or slides, the platform drops users
+                    into interactive simulators that replicate real-world attack scenarios &mdash; from phishing campaigns
+                    and SQL injection to network sniffing and privilege escalation.
+                </p>
+                <p class="text-[0.9rem] text-muted leading-relaxed mb-4">
+                    The platform is built on top of 7 independent microservices communicating through
+                    <span class="text-primary">RabbitMQ</span> for event-driven workflows. A dedicated gamification
+                    engine tracks user progress through an XP and leveling system, while <span
+                        class="text-primary">Redis-cached leaderboards</span> provide real-time competitive rankings.
+                    The community forum encourages collaboration and knowledge sharing among users.
+                </p>
+                <p class="text-[0.9rem] text-muted leading-relaxed">
+                    The entire codebase spans 58,000+ lines with 261+ integration tests, 128+ REST API endpoints, and
+                    Kubernetes deployment manifests for 9 containerized services. Load testing confirmed stable
+                    performance under 5,000 concurrent users.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== KEY FEATURES ===== -->
+    <section class="py-14 mesh-bg-cyan">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="mb-8 reveal">
+                <h2
+                    class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight grad-text-section">
+                    Key Features
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/25 flex items-center justify-center">
+                            <i class="fas fa-crosshairs text-accent"></i>
+                        </div>
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary">41 Attack Simulators</h3>
+                    </div>
+                    <p class="text-[0.85rem] text-muted leading-relaxed">
+                        Interactive simulators covering a wide spectrum of cybersecurity threats &mdash; phishing, SQL
+                        injection, cross-site scripting, man-in-the-middle, brute force, buffer overflow, and more.
+                        Each simulator provides a guided environment where users learn to both execute and defend against
+                        attacks in a safe, sandboxed setting.
+                    </p>
+                </div>
+
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/25 flex items-center justify-center">
+                            <i class="fas fa-trophy text-accent"></i>
+                        </div>
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary">Gamification Engine</h3>
+                    </div>
+                    <p class="text-[0.85rem] text-muted leading-relaxed">
+                        A full XP and leveling system that rewards users for completing simulators, quizzes, and
+                        community contributions. Redis-cached leaderboards provide real-time competitive rankings
+                        across the platform. Achievements and badges unlock as users progress through increasingly
+                        challenging scenarios.
+                    </p>
+                </div>
+
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-accent2/10 border border-accent2/22 flex items-center justify-center">
+                            <i class="fas fa-network-wired text-accent2"></i>
+                        </div>
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary">Event-Driven Architecture
+                        </h3>
+                    </div>
+                    <p class="text-[0.85rem] text-muted leading-relaxed">
+                        Seven microservices communicate asynchronously through RabbitMQ, enabling loose coupling and
+                        independent scaling. Events like simulator completions, XP awards, and leaderboard updates
+                        propagate through the system without tight dependencies. This architecture allows each service
+                        to be developed, tested, and deployed independently.
+                    </p>
+                </div>
+
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-accent2/10 border border-accent2/22 flex items-center justify-center">
+                            <i class="fas fa-users text-accent2"></i>
+                        </div>
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary">Community Forum</h3>
+                    </div>
+                    <p class="text-[0.85rem] text-muted leading-relaxed">
+                        An integrated community platform where users can discuss attack techniques, share solutions,
+                        and collaborate on challenges. Threaded discussions, voting, and moderation tools create a
+                        productive learning environment. Forum activity feeds into the gamification engine, rewarding
+                        knowledge-sharing alongside technical skills.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== ARCHITECTURE ===== -->
+    <section class="py-14">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="mb-8 reveal">
+                <h2
+                    class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight grad-text-section">
+                    Architecture
+                </h2>
+            </div>
+            <div class="card-featured rounded-2xl p-8 reveal">
+                <p class="text-[0.9rem] text-muted leading-relaxed mb-5">
+                    CyberAegis is decomposed into 7 microservices, each owning its domain and data store. The services
+                    are containerized in 9 Docker containers (including infrastructure services) and orchestrated via
+                    43 Kubernetes manifests for production deployment.
+                </p>
+                <ul class="arrow-list list-none p-0 space-y-3">
+                    <li class="text-[0.88rem] text-muted leading-relaxed">
+                        <span class="text-primary font-medium">API Gateway</span> &mdash; Routes incoming requests to
+                        the appropriate microservice, handles authentication, and enforces rate limits across 128+ REST
+                        API endpoints.
+                    </li>
+                    <li class="text-[0.88rem] text-muted leading-relaxed">
+                        <span class="text-primary font-medium">Simulator Service</span> &mdash; Manages the 41
+                        interactive attack simulators, tracking user progress, validating solutions, and issuing
+                        completion events.
+                    </li>
+                    <li class="text-[0.88rem] text-muted leading-relaxed">
+                        <span class="text-primary font-medium">Gamification Service</span> &mdash; Processes XP awards,
+                        level calculations, achievement unlocks, and badge distribution. Consumes events from other
+                        services via RabbitMQ.
+                    </li>
+                    <li class="text-[0.88rem] text-muted leading-relaxed">
+                        <span class="text-primary font-medium">Leaderboard Service</span> &mdash; Maintains real-time
+                        rankings using Redis sorted sets. Supports global, weekly, and per-category leaderboards with
+                        sub-millisecond query times.
+                    </li>
+                    <li class="text-[0.88rem] text-muted leading-relaxed">
+                        <span class="text-primary font-medium">Forum Service</span> &mdash; Powers the community
+                        platform with threaded discussions, voting, and moderation capabilities.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== TECH STACK ===== -->
+    <section class="py-14 pb-20">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="mb-8 reveal">
+                <h2
+                    class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight grad-text-section">
+                    Tech Stack
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[0.95rem] font-semibold text-primary mb-4">Backend</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill">Node.js</span>
+                        <span class="skill-pill">Express</span>
+                        <span class="skill-pill">PostgreSQL</span>
+                        <span class="skill-pill">Redis</span>
+                        <span class="skill-pill">RabbitMQ</span>
+                    </div>
+                </div>
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[0.95rem] font-semibold text-primary mb-4">Frontend</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill">React 18</span>
+                        <span class="skill-pill">JavaScript</span>
+                        <span class="skill-pill">Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[0.95rem] font-semibold text-primary mb-4">Infrastructure</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill">Docker</span>
+                        <span class="skill-pill">Kubernetes</span>
+                        <span class="skill-pill">CI/CD</span>
+                    </div>
+                </div>
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[0.95rem] font-semibold text-primary mb-4">Testing &amp; Quality</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill">261+ Integration Tests</span>
+                        <span class="skill-pill">Load Testing</span>
+                        <span class="skill-pill">58K+ LOC</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../js/components.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

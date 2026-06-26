@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="base-path" content="../..">
+    <meta name="nav-active" content="projects">
+    <meta name="description"
+        content="The Third Eye: VIntel Platform — a multi-agent cybersecurity intelligence platform with LLM editorial deliberation, Borda-count ranking, and polyglot microservice architecture.">
+    <title>VIntel Platform | Rishikesh Kumar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/tailwind-output.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" href="../../Assets/Images/logo.svg" type="image/x-icon">
+</head>
+
+<body class="bg-bg text-primary">
+    <div id="nav-placeholder"></div>
+
+    <!-- ===== HERO ===== -->
+    <section class="pt-32 pb-12 mesh-bg-purple">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="reveal">
+                <a href="../projects.html"
+                    class="inline-flex items-center gap-2 text-muted text-[0.85rem] font-medium no-underline hover:text-accent transition-colors mb-5">
+                    <i class="fas fa-arrow-left text-[0.7rem]"></i> Back to Projects
+                </a>
+                <div class="flex flex-wrap items-center gap-3 mb-4">
+                    <span
+                        class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-violet-400 bg-violet-400/10 border border-violet-400/25">Agentic
+                        AI</span>
+                    <span class="text-[0.78rem] text-muted">Jan &ndash; May 2026</span>
+                </div>
+                <h1
+                    class="font-display text-[clamp(1.9rem,4.5vw,3rem)] font-bold tracking-tight leading-[1.12] grad-text-hero">
+                    The Third Eye: VIntel Platform
+                </h1>
+                <p class="text-[0.95rem] text-muted leading-relaxed max-w-[760px] mt-4">
+                    A multi-agent cybersecurity intelligence platform that aggregates, curates, and ranks threat
+                    intelligence news using <span class="text-primary">LLM-powered editorial agents</span>. The
+                    system employs a two-round deliberation model with Borda-count cross-story ranking to overcome
+                    grade inflation, backed by a polyglot microservice architecture spanning Go, TypeScript, Rust,
+                    and React. Built as a course project for IE 624 &mdash; Generative &amp; Agentic AI under
+                    Prof. Manjesh K. Hanawal.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HEADLINE STATS ===== -->
+    <section class="py-10">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card-elevated rounded-2xl p-5 text-center reveal">
+                    <div class="font-display text-[1.7rem] font-bold text-accent2">4</div>
+                    <p class="text-[0.78rem] text-muted mt-1 leading-snug">Languages<br>Go, TS, Rust, React</p>
+                </div>
+                <div class="card-elevated rounded-2xl p-5 text-center reveal">
+                    <div class="font-display text-[1.7rem] font-bold text-accent2">2</div>
+                    <p class="text-[0.78rem] text-muted mt-1 leading-snug">Round LLM<br>editorial deliberation</p>
+                </div>
+                <div class="card-elevated rounded-2xl p-5 text-center reveal">
+                    <div class="font-display text-[1.7rem] font-bold text-accent2">A2A</div>
+                    <p class="text-[0.78rem] text-muted mt-1 leading-snug">Open agent-to-agent<br>protocol support</p>
+                </div>
+                <div class="card-elevated rounded-2xl p-5 text-center reveal">
+                    <div class="font-display text-[1.7rem] font-bold text-accent2">Borda</div>
+                    <p class="text-[0.78rem] text-muted mt-1 leading-snug">Count ranking<br>overcoming grade inflation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== OVERVIEW ===== -->
+    <section class="py-14">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="mb-8 reveal">
+                <h2
+                    class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight grad-text-section">
+                    Overview
+                </h2>
+            </div>
+            <div class="card-featured rounded-2xl p-8 reveal">
+                <p class="text-[0.9rem] text-muted leading-relaxed mb-4">
+                    The cybersecurity landscape generates a flood of news, vulnerability disclosures, and threat
+                    reports daily. VIntel Platform tackles this information overload by deploying multiple
+                    <span class="text-primary">LLM-powered agents</span> that independently evaluate incoming stories
+                    and then engage in a structured deliberation process to produce reliable, consensus-based rankings.
+                </p>
+                <p class="text-[0.9rem] text-muted leading-relaxed mb-4">
+                    The key innovation is a <span class="text-primary">two-round editorial deliberation model</span>.
+                    In the first round, each agent independently scores stories on relevance, severity, and novelty.
+                    In the second round, agents review each other's assessments and refine their scores. The final
+                    ranking uses <span class="text-primary">Borda-count aggregation</span> across agents, which
+                    inherently resists the grade inflation that plagues simple averaging of LLM-generated scores.
+                </p>
+                <p class="text-[0.9rem] text-muted leading-relaxed">
+                    The platform includes a persistent memory layer so agents can recall prior evaluations and maintain
+                    context over time, and implements the open A2A (Agent-to-Agent) protocol for interoperability with
+                    external agent systems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== ARCHITECTURE ===== -->
+    <section class="py-14 mesh-bg-cyan">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="mb-8 reveal">
+                <h2
+                    class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight grad-text-section">
+                    Architecture
+                </h2>
+            </div>
+            <div class="card-featured rounded-2xl p-8 reveal">
+                <p class="text-[0.9rem] text-muted leading-relaxed mb-5">
+                    VIntel follows a polyglot microservice architecture where each service is implemented in the
+                    language best suited for its role. The services communicate asynchronously and are designed for
+                    independent deployment and scaling.
+                </p>
+                <ul class="arrow-list list-none p-0 space-y-3">
+                    <li class="text-[0.88rem] text-muted leading-relaxed">
+                        <span class="text-primary font-medium">Ingestion Service (Go)</span> &mdash; High-throughput
+                        collector that aggregates cybersecurity news from RSS feeds, APIs, and web scrapers. Go's
+                        concurrency model handles parallel fetch operations efficiently across dozens of sources.
+                    </li>
+                    <li class="text-[0.88rem] text-muted leading-relaxed">
+                        <span class="text-primary font-medium">Agent Orchestrator (TypeScript)</span> &mdash; Manages
+                        the multi-agent editorial workflow. Coordinates the two-round deliberation process, dispatches
+                        stories to agents, collects scores, and runs the Borda-count ranking algorithm.
+                    </li>
+                    <li class="text-[0.88rem] text-muted leading-relaxed">
+                        <span class="text-primary font-medium">Memory Service (Rust)</span> &mdash; Provides a
+                        persistent memory layer for agents. Stores prior evaluations, user preferences, and contextual
+                        data with low-latency access. Rust ensures memory safety and performance for this
+                        latency-critical component.
+                    </li>
+                    <li class="text-[0.88rem] text-muted leading-relaxed">
+                        <span class="text-primary font-medium">Frontend (React)</span> &mdash; Presents the curated
+                        intelligence feed with ranked stories, agent consensus scores, and drill-down views into
+                        individual agent assessments. Users can configure topic filters and notification preferences.
+                    </li>
+                    <li class="text-[0.88rem] text-muted leading-relaxed">
+                        <span class="text-primary font-medium">A2A Gateway</span> &mdash; Implements the open
+                        Agent-to-Agent protocol, allowing external agent systems to submit stories for evaluation or
+                        subscribe to the platform's curated feed.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== KEY FEATURES ===== -->
+    <section class="py-14">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="mb-8 reveal">
+                <h2
+                    class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight grad-text-section">
+                    Key Features
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-violet-400/10 border border-violet-400/25 flex items-center justify-center">
+                            <i class="fas fa-brain text-violet-400"></i>
+                        </div>
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary">Two-Round Deliberation</h3>
+                    </div>
+                    <p class="text-[0.85rem] text-muted leading-relaxed">
+                        Multiple LLM agents independently evaluate each story in the first round, then review and
+                        refine their assessments in a second deliberation round. This mimics an editorial board's
+                        review process, producing more calibrated and reliable scores than single-pass evaluation.
+                    </p>
+                </div>
+
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-violet-400/10 border border-violet-400/25 flex items-center justify-center">
+                            <i class="fas fa-chart-bar text-violet-400"></i>
+                        </div>
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary">Borda-Count Ranking</h3>
+                    </div>
+                    <p class="text-[0.85rem] text-muted leading-relaxed">
+                        Instead of averaging raw scores (which suffer from LLM grade inflation), the system converts
+                        each agent's scores into ordinal rankings and applies Borda-count aggregation. This
+                        produces a final ranking that reflects relative importance rather than inflated absolute
+                        scores, delivering more meaningful prioritization.
+                    </p>
+                </div>
+
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-accent2/10 border border-accent2/22 flex items-center justify-center">
+                            <i class="fas fa-memory text-accent2"></i>
+                        </div>
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary">Persistent Memory Layer</h3>
+                    </div>
+                    <p class="text-[0.85rem] text-muted leading-relaxed">
+                        Agents maintain state across sessions through a dedicated memory service. This enables
+                        temporal awareness &mdash; agents can recognize when a story is a follow-up to a previously
+                        evaluated incident, adjust scores based on evolving threat landscapes, and avoid redundant
+                        coverage of the same event from multiple sources.
+                    </p>
+                </div>
+
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-accent2/10 border border-accent2/22 flex items-center justify-center">
+                            <i class="fas fa-plug text-accent2"></i>
+                        </div>
+                        <h3 class="font-display text-[1.05rem] font-semibold text-primary">A2A Protocol</h3>
+                    </div>
+                    <p class="text-[0.85rem] text-muted leading-relaxed">
+                        The platform implements the open Agent-to-Agent protocol, enabling interoperability with
+                        external agent systems. Third-party agents can submit stories for evaluation, query the
+                        curated feed, or integrate VIntel's ranking capabilities into their own workflows &mdash; all
+                        through a standardized communication interface.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ===== TECH STACK ===== -->
+    <section class="py-14 pb-20">
+        <div class="max-w-site mx-auto px-6 lg:px-12">
+            <div class="mb-8 reveal">
+                <h2
+                    class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight grad-text-section">
+                    Tech Stack
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[0.95rem] font-semibold text-primary mb-4">Services</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill">Go</span>
+                        <span class="skill-pill">TypeScript</span>
+                        <span class="skill-pill">Rust</span>
+                        <span class="skill-pill">Node.js</span>
+                    </div>
+                </div>
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[0.95rem] font-semibold text-primary mb-4">Frontend</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill">React</span>
+                        <span class="skill-pill">TypeScript</span>
+                        <span class="skill-pill">Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[0.95rem] font-semibold text-primary mb-4">AI &amp; Agents</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill">LLM Agents</span>
+                        <span class="skill-pill">A2A Protocol</span>
+                        <span class="skill-pill">Borda-Count</span>
+                        <span class="skill-pill">Multi-Agent Systems</span>
+                    </div>
+                </div>
+                <div class="card-elevated rounded-2xl p-6 reveal">
+                    <h3 class="font-display text-[0.95rem] font-semibold text-primary mb-4">Data</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill">PostgreSQL</span>
+                        <span class="skill-pill">Redis</span>
+                        <span class="skill-pill">Vector Store</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../js/components.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>
