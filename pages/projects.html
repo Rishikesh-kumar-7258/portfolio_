@@ -1,494 +1,289 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="base-path" content="..">
+    <meta name="nav-active" content="projects">
     <meta name="description" content="All projects by Rishikesh Kumar — SDE & ML Engineer, M.Tech IIT Bombay.">
     <meta property="og:title" content="Projects | Rishikesh Kumar">
     <meta property="og:description" content="Engineering, ML/Research, and Game projects by Rishikesh Kumar.">
     <meta property="og:type" content="website">
     <title>Projects | Rishikesh Kumar</title>
 
+    <script>
+        (function () {
+            try { var t = localStorage.getItem('theme'); document.documentElement.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light'); }
+            catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+        })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/tailwind-output.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/editorial.css">
     <link rel="shortcut icon" href="../Assets/Images/logo.svg" type="image/x-icon">
 </head>
 
-<body class="bg-bg text-primary">
+<body>
+    <div id="nav-placeholder"></div>
 
-    <!-- ===== NAVIGATION ===== -->
-    <nav id="navbar" class="fixed inset-x-0 top-0 z-[900] h-[72px] transition-all duration-300 scrolled">
-        <div class="max-w-site mx-auto px-6 lg:px-12 h-full flex items-center justify-between">
-            <a href="../index.html" class="font-display text-2xl font-bold text-primary tracking-tight no-underline">
-                RK<span class="text-accent">.</span>
-            </a>
-            <ul class="hidden md:flex items-center gap-1 list-none m-0 p-0">
-                <li><a href="../index.html#about"
-                        class="nav-link px-3.5 py-2 text-muted text-sm font-medium rounded-lg transition-colors hover:text-primary hover:bg-accent/10 no-underline">About</a>
-                </li>
-                <li><a href="../index.html#skills"
-                        class="nav-link px-3.5 py-2 text-muted text-sm font-medium rounded-lg transition-colors hover:text-primary hover:bg-accent/10 no-underline">Skills</a>
-                </li>
-                <li><a href="../index.html#experience"
-                        class="nav-link px-3.5 py-2 text-muted text-sm font-medium rounded-lg transition-colors hover:text-primary hover:bg-accent/10 no-underline">Experience</a>
-                </li>
-                <li><a href="projects.html"
-                        class="nav-link active px-3.5 py-2 text-muted text-sm font-medium rounded-lg transition-colors hover:text-primary hover:bg-accent/10 no-underline">Projects</a>
-                </li>
-                <li><a href="../index.html#contact"
-                        class="nav-link px-3.5 py-2 text-muted text-sm font-medium rounded-lg transition-colors hover:text-primary hover:bg-accent/10 no-underline">Contact</a>
-                </li>
-            </ul>
-            <a href="../index.html"
-                class="md:hidden flex items-center gap-2 text-muted text-sm font-medium no-underline hover:text-primary">
-                <i class="fas fa-arrow-left"></i> Back
-            </a>
+    <main>
+    <section class="section section--hero">
+        <div class="wrap">
+            <a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to home</a>
+            <span class="kicker" style="display:block;margin-bottom:.85rem">Selected & complete works</span>
+            <h1 class="page-title">All <span class="accent-text">Projects</span></h1>
         </div>
-    </nav>
+    </section>
 
-    <!-- ===== ALL PROJECTS ===== -->
-    <section class="pt-32 pb-20 lg:pb-28">
-        <div class="max-w-site mx-auto px-6 lg:px-12">
-
-            <div class="mb-5 reveal">
-                <a href="../index.html"
-                    class="inline-flex items-center gap-2 text-muted text-[0.85rem] font-medium no-underline hover:text-accent transition-colors mb-4">
-                    <i class="fas fa-arrow-left text-[0.7rem]"></i> Back to Home
-                </a>
-                <h1 class="font-display text-[clamp(2rem,5vw,3.4rem)] font-bold tracking-tight leading-[1.1]">All
-                    <span class="text-accent">Projects</span>
-                </h1>
-            </div>
-
-            <!-- Filter tabs -->
-            <div id="project-filters" class="flex flex-wrap gap-2.5 mb-12 reveal" role="tablist"
-                aria-label="Filter projects by category">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="engineering">Engineering</button>
-                <button class="filter-btn" data-filter="ml">ML / Research</button>
-                <button class="filter-btn" data-filter="games">Games</button>
+    <section class="section" style="padding-top:0">
+        <div class="wrap">
+            <div class="filters" role="tablist" aria-label="Filter projects by category">
+                <button class="chip active" data-filter="all">All</button>
+                <button class="chip" data-filter="engineering">Engineering</button>
+                <button class="chip" data-filter="ml">ML / Research</button>
+                <button class="chip" data-filter="games">Games</button>
             </div>
 
             <!-- Engineering -->
-            <div class="mb-14 project-group" data-group="engineering">
-                <div
-                    class="fade-line mb-7 font-display text-[0.76rem] font-semibold tracking-[3px] uppercase text-muted reveal">
-                    Engineering</div>
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-5">
+            <div class="proj-group" data-group="engineering">
+                <p class="group-label reveal">Engineering</p>
+                <div class="proj-grid">
 
-                    <div
-                        class="card-featured rounded-2xl p-6 flex flex-col gap-2.5 reveal">
-                        <div class="flex justify-between items-center">
-                            <span
-                                class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">Full
-                                Stack</span>
-                            <span class="text-[0.78rem] text-muted">May - Jun 2026</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">CyberAegis</h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Gamified Cybersecurity Awareness &amp; Training Platform</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built a gamified cybersecurity training platform with 7 microservices, 41 interactive simulators, and 128+ REST API endpoints serving a React 18 SPA</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Engineered event-driven architecture with RabbitMQ, Redis-cached leaderboards, gamification engine with XP/leveling, and community forum</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">58,000+ LOC, 261+ integration tests, load-tested for 5,000 concurrent users, 9 Docker containers, 43 Kubernetes manifests</li>
+                    <article class="proj-card reveal">
+                        <div class="top"><span class="badge">Full Stack</span><span class="when">May – Jun 2026</span></div>
+                        <h3><a href="projects/cyberaegis.html">CyberAegis</a></h3>
+                        <p class="role">Gamified Cybersecurity Awareness &amp; Training Platform</p>
+                        <ul class="pts">
+                            <li>7 microservices, 41 interactive simulators, and 128+ REST API endpoints serving a React 18 SPA</li>
+                            <li>Event-driven RabbitMQ architecture, Redis-cached leaderboards, gamification engine with XP/leveling, and a community forum</li>
+                            <li>58,000+ LOC, 261+ integration tests, load-tested for 5,000 concurrent users, 9 Docker containers, 43 Kubernetes manifests</li>
                         </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Node.js</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">React 18</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PostgreSQL</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Redis</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">RabbitMQ</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Docker</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Kubernetes</span>
-                        </div>
-                    </div>
+                        <div class="tech"><span>Node.js</span><span>React 18</span><span>PostgreSQL</span><span>Redis</span><span>RabbitMQ</span><span>Docker</span><span>Kubernetes</span></div>
+                    </article>
 
-                    <div
-                        class="card-featured rounded-2xl p-6 flex flex-col gap-2.5 reveal">
-                        <div class="flex justify-between items-center">
-                            <span
-                                class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">Full
-                                Stack</span>
-                            <span class="text-[0.78rem] text-muted">Aug - Dec 2025</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">Vajra Sandbox</h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Malware Analysis &amp; Threat Detection Platform</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Launched a malware analysis platform handling 200+ daily submissions with static, dynamic, and memory analysis and automated PDF report generation</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Each sample runs in an isolated VM; async Celery processing ensures zero bottlenecks under high volumes</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Security-first: JWT auth, TOTP 2FA, equation-based CAPTCHA, and rate limiting</li>
+                    <article class="proj-card reveal">
+                        <div class="top"><span class="badge">Full Stack</span><span class="when">Aug – Dec 2025</span></div>
+                        <h3><a href="projects/vajra-sandbox.html">Vajra Sandbox</a></h3>
+                        <p class="role">Malware Analysis &amp; Threat Detection Platform</p>
+                        <ul class="pts">
+                            <li>Malware analysis platform handling 200+ daily submissions with static, dynamic, and memory analysis plus automated PDF reports</li>
+                            <li>Each sample runs in an isolated VM; async Celery processing ensures zero bottlenecks under high volumes</li>
+                            <li>Security-first: JWT auth, TOTP 2FA, equation-based CAPTCHA, and rate limiting</li>
                         </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Python</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Django/DRF</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Next.js</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">TypeScript</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Docker</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Redis</span>
-                        </div>
-                    </div>
+                        <div class="tech"><span>Python</span><span>Django/DRF</span><span>Next.js</span><span>TypeScript</span><span>Docker</span><span>Redis</span></div>
+                    </article>
 
-                    <div
-                        class="card-featured rounded-2xl p-6 flex flex-col gap-2.5 reveal">
-                        <div class="flex justify-between items-center">
-                            <span
-                                class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">Android</span>
-                            <span class="text-[0.78rem] text-muted">2026</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
-                            <a href="https://github.com/Rishikesh-kumar-7258/MinimalistApp" target="_blank" rel="noopener"
-                                class="text-primary no-underline transition-colors hover:text-accent">
-                                Minimalist App <i class="fas fa-external-link-alt text-[0.62rem] opacity-60 ml-1"></i>
-                            </a>
-                        </h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Text-only Android home screen launcher</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built a distraction-free Android launcher with no icons or wallpaper — everything rendered as plain text</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Features focus profiles, per-app usage limits, and unified search across apps, contacts, and settings</li>
+                    <article class="proj-card reveal">
+                        <div class="top"><span class="badge">Android</span><span class="when">2026</span></div>
+                        <h3><a href="https://github.com/Rishikesh-kumar-7258/MinimalistApp" target="_blank" rel="noopener">Minimalist App <i class="fas fa-external-link-alt ext"></i></a></h3>
+                        <p class="role">Text-only Android home screen launcher</p>
+                        <ul class="pts">
+                            <li>Distraction-free Android launcher with no icons or wallpaper — everything rendered as plain text</li>
+                            <li>Focus profiles, per-app usage limits, and unified search across apps, contacts, and settings</li>
                         </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Kotlin</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Android</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Jetpack</span>
-                        </div>
-                    </div>
+                        <div class="tech"><span>Kotlin</span><span>Android</span><span>Jetpack</span></div>
+                    </article>
 
-                    <div
-                        class="card-featured rounded-2xl p-6 flex flex-col gap-2.5 reveal">
-                        <div class="flex justify-between items-center">
-                            <span
-                                class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">Full Stack</span>
-                            <span class="text-[0.78rem] text-muted">Dec 2025 - Present</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">VersatAI Lab Website</h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Lab site with profiles, event listings, and JWT/TOTP-secured admin</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Created a platform to showcase research activities, student profiles, projects and events with collaboration and feedback system</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built using Django/DRF for secure REST APIs and Next.js to power an SSR/SSG-based frontend</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Implemented JWT-based authentication, TOTP 2FA, equation-based CAPTCHA, and role-based access control</li>
+                    <article class="proj-card reveal">
+                        <div class="top"><span class="badge">Full Stack</span><span class="when">Dec 2025 – Present</span></div>
+                        <h3>VersatAI Lab Website</h3>
+                        <p class="role">Lab site with profiles, event listings, and JWT/TOTP-secured admin</p>
+                        <ul class="pts">
+                            <li>Platform showcasing research activities, student profiles, projects and events with a collaboration and feedback system</li>
+                            <li>Django/DRF secure REST APIs with a Next.js SSR/SSG frontend</li>
+                            <li>JWT authentication, TOTP 2FA, equation-based CAPTCHA, and role-based access control</li>
                         </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Django/DRF</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Next.js</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PostgreSQL</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">JWT</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">TOTP</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">RBAC</span>
-                        </div>
-                    </div>
+                        <div class="tech"><span>Django/DRF</span><span>Next.js</span><span>PostgreSQL</span><span>JWT</span><span>TOTP</span><span>RBAC</span></div>
+                    </article>
 
-                    <div
-                        class="card-featured rounded-2xl p-6 flex flex-col gap-2.5 reveal">
-                        <div class="flex justify-between items-center">
-                            <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">Frontend</span>
-                            <span class="text-[0.78rem] text-muted">Dec 2022 - Jan 2023</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
-                            <a href="https://github.com/Rishikesh-kumar-7258/sortingVisualizer" target="_blank" rel="noopener" class="text-primary no-underline transition-colors hover:text-accent">
-                                Sorting &amp; Pathfinding Visualizers <i class="fas fa-external-link-alt text-[0.62rem] opacity-60 ml-1"></i>
-                            </a>
-                        </h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Educational Algorithm Visualization Tool</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built interactive visualizers demonstrating algorithm behavior through real-time execution</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Developed using HTML, CSS, and JS applying OOP principles, data structures, and graph algorithms</li>
+                    <article class="proj-card reveal">
+                        <div class="top"><span class="badge">Frontend</span><span class="when">Dec 2022 – Jan 2023</span></div>
+                        <h3><a href="https://github.com/Rishikesh-kumar-7258/sortingVisualizer" target="_blank" rel="noopener">Sorting &amp; Pathfinding Visualizers <i class="fas fa-external-link-alt ext"></i></a></h3>
+                        <p class="role">Educational Algorithm Visualization Tool</p>
+                        <ul class="pts">
+                            <li>Interactive visualizers demonstrating algorithm behavior through real-time execution</li>
+                            <li>Built with HTML, CSS, and JS applying OOP principles, data structures, and graph algorithms</li>
                         </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">HTML</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">CSS</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">JavaScript</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Graph Algorithms</span>
-                        </div>
-                    </div>
+                        <div class="tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Graph Algorithms</span></div>
+                    </article>
 
-                    <div
-                        class="card-featured rounded-2xl p-6 flex flex-col gap-2.5 reveal">
-                        <div class="flex justify-between items-center">
-                            <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">Optimization</span>
-                            <span class="text-[0.78rem] text-muted">Jul - Nov 2024</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">Swarm Robotics Optimization</h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Mathematical Optimization Techniques | Course Project</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Collaborated with a team of four to develop an optimization model for drone deployment in disaster-affected areas</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Formulated mathematical constraints for coverage, deployment, and drone selection using grid-based coverage metrics</li>
+                    <article class="proj-card reveal">
+                        <div class="top"><span class="badge">Optimization</span><span class="when">Jul – Nov 2024</span></div>
+                        <h3>Swarm Robotics Optimization</h3>
+                        <p class="role">Mathematical Optimization Techniques | Course Project</p>
+                        <ul class="pts">
+                            <li>Optimization model for drone deployment in disaster-affected areas, with a team of four</li>
+                            <li>Formulated constraints for coverage, deployment, and drone selection using grid-based coverage metrics</li>
                         </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Python</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">MILP</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Gurobi</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Swarm Robotics</span>
-                        </div>
-                    </div>
+                        <div class="tech"><span>Python</span><span>MILP</span><span>Gurobi</span><span>Swarm Robotics</span></div>
+                    </article>
 
-                    <div
-                        class="card-featured rounded-2xl p-6 flex flex-col gap-2.5 reveal">
-                        <div class="flex justify-between items-center">
-                            <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-amber-400 bg-amber-400/10 border border-amber-400/25">Simulation</span>
-                            <span class="text-[0.78rem] text-muted">Jan - Apr 2024</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">Dark Store Operations Optimization</h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">IE 630 | Course Project</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built a Discrete-Event Simulation of dark store workflows to model demand fluctuations, workforce utilization, and inventory cycles</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Ran scenario-based experiments on staffing and replenishment, deriving strategies for dynamic workforce allocation and predictive inventory control</li>
+                    <article class="proj-card reveal">
+                        <div class="top"><span class="badge">Simulation</span><span class="when">Jan – Apr 2024</span></div>
+                        <h3>Dark Store Operations Optimization</h3>
+                        <p class="role">IE 630 | Course Project</p>
+                        <ul class="pts">
+                            <li>Discrete-event simulation of dark-store workflows modeling demand fluctuations, workforce utilization, and inventory cycles</li>
+                            <li>Scenario-based experiments on staffing and replenishment, deriving strategies for dynamic workforce allocation and predictive inventory control</li>
                         </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Python</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">SimPy</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">DES</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Data Analysis</span>
-                        </div>
-                    </div>
+                        <div class="tech"><span>Python</span><span>SimPy</span><span>DES</span><span>Data Analysis</span></div>
+                    </article>
 
                 </div>
             </div>
 
             <!-- ML / Research -->
-            <div class="project-group" data-group="ml">
-                <div class="fade-line mb-7 font-display text-[0.76rem] font-semibold tracking-[3px] uppercase text-muted reveal">ML / Research</div>
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-5">
+            <div class="proj-group" data-group="ml">
+                <p class="group-label reveal">ML / Research</p>
+                <div class="proj-grid">
 
-                    <div class="card-featured rounded-2xl p-6 flex flex-col gap-2.5 reveal">
-                        <div class="flex justify-between items-center">
-                            <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-violet-400 bg-violet-400/10 border border-violet-400/25">Agentic AI</span>
-                            <span class="text-[0.78rem] text-muted">Jan - May 2026</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">The Third Eye: VIntel Platform</h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">IE 624 - Generative &amp; Agentic AI | Course Project | Prof. Manjesh K. Hanawal</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built a multi-agent cybersecurity news platform with a two-round LLM editorial deliberation model and Borda-count cross-story ranking to overcome grade inflation</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Designed a polyglot microservice architecture (Go + TypeScript + Rust + React) with a persistent memory layer and an open A2A protocol for external agents</li>
+                    <article class="proj-card reveal">
+                        <div class="top"><span class="badge">Agentic AI</span><span class="when">Jan – May 2026</span></div>
+                        <h3><a href="projects/vintel-platform.html">The Third Eye: VIntel Platform</a></h3>
+                        <p class="role">IE 624 – Generative &amp; Agentic AI | Prof. Manjesh K. Hanawal</p>
+                        <ul class="pts">
+                            <li>Multi-agent cybersecurity news platform with two-round LLM editorial deliberation and Borda-count cross-story ranking to overcome grade inflation</li>
+                            <li>Polyglot microservice architecture (Go + TypeScript + Rust + React) with a persistent memory layer and an open A2A protocol</li>
                         </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Go</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">TypeScript</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Rust</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">React</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">LLM Agents</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PostgreSQL</span>
-                        </div>
-                    </div>
+                        <div class="tech"><span>Go</span><span>TypeScript</span><span>Rust</span><span>React</span><span>LLM Agents</span><span>PostgreSQL</span></div>
+                    </article>
 
-                    <div class="card-featured rounded-2xl p-6 flex flex-col gap-2.5 reveal">
-                        <div class="flex justify-between items-center">
-                            <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-violet-400 bg-violet-400/10 border border-violet-400/25">MTP Thesis</span>
-                            <span class="text-[0.78rem] text-muted">Jul - Nov 2025</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
-                            <a href="projects/mtp.html" class="text-primary no-underline transition-colors hover:text-accent">Parameter Specific Literature Retrieval <i class="fas fa-arrow-right text-[0.62rem] opacity-60 ml-1"></i></a>
-                        </h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Biomedical NLP Pipeline | Prof. Balamurugan Palaniappan</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built a pipeline querying PubMed to extract parameter-specific clinical data from 87K+ research abstracts</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Fine-tuned PubMedBERT NER model achieving 90% F1-score on manually annotated dataset</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built a provenance-tracked Neo4j knowledge graph + QA engine: 88% answer rate, every claim cited</li>
+                    <article class="proj-card reveal">
+                        <div class="top"><span class="badge">MTP Thesis</span><span class="when">Jul – Nov 2025</span></div>
+                        <h3><a href="projects/mtp.html">Parameter-Specific Literature Retrieval</a></h3>
+                        <p class="role">Biomedical NLP Pipeline | Prof. Balamurugan Palaniappan</p>
+                        <ul class="pts">
+                            <li>Pipeline querying PubMed to extract parameter-specific clinical data from 87K+ research abstracts</li>
+                            <li>Fine-tuned PubMedBERT NER model achieving 90% F1 on a manually annotated dataset</li>
+                            <li>Provenance-tracked Neo4j knowledge graph + QA engine: 88% answer rate, every claim cited</li>
                         </ul>
-                        <a href="projects/mtp.html" class="text-[0.8rem] font-semibold text-accent2 no-underline hover:text-accent transition-colors">View results &amp; evaluation <i class="fas fa-arrow-right text-[0.7rem]"></i></a>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PyTorch</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">HuggingFace</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Neo4j</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">REBEL</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PubMedBERT</span>
-                        </div>
-                    </div>
+                        <div class="tech"><span>PyTorch</span><span>HuggingFace</span><span>Neo4j</span><span>REBEL</span><span>PubMedBERT</span></div>
+                    </article>
 
-                    <div class="card-featured rounded-2xl p-6 flex flex-col gap-2.5 reveal">
-                        <div class="flex justify-between items-center">
-                            <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">NLP</span>
-                            <span class="text-[0.78rem] text-muted">Aug - Nov 2025</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">Explainable Depression Detection</h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Social Media Analysis | DL NLP Course | Prof. Pushpak Bhattacharyya</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built an NLP pipeline for depression detection using double domain adaptation and guided masking</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Designed an explainability pipeline combining Integrated Gradients with LLM-based teacher-student distillation</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Achieved an F1 score of 0.78 and extracted top-k words contributing most strongly to positive detection</li>
+                    <article class="proj-card reveal">
+                        <div class="top"><span class="badge">NLP</span><span class="when">Aug – Nov 2025</span></div>
+                        <h3><a href="projects/depression-detection.html">Explainable Depression Detection</a></h3>
+                        <p class="role">Social Media Analysis | DL NLP Course | Prof. Pushpak Bhattacharyya</p>
+                        <ul class="pts">
+                            <li>NLP pipeline for depression detection using double domain adaptation and guided masking</li>
+                            <li>Explainability pipeline combining Integrated Gradients with LLM-based teacher-student distillation</li>
+                            <li>Achieved 0.78 F1 and extracted top-k words contributing most strongly to positive detection</li>
                         </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PyTorch</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">HuggingFace</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">NLP</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Transformers</span>
-                        </div>
-                    </div>
+                        <div class="tech"><span>PyTorch</span><span>HuggingFace</span><span>NLP</span><span>Transformers</span></div>
+                    </article>
 
-                    <div class="card-featured rounded-2xl p-6 flex flex-col gap-2.5 reveal">
-                        <div class="flex justify-between items-center">
-                            <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">CV / RL</span>
-                            <span class="text-[0.78rem] text-muted">Feb - Mar 2025</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">HeadBall2 Game Player</h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Real-Time Mobile Game Automation</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Developed a real-time computer vision pipeline using OpenCV from live video streams at 30 FPS</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Designed a reinforcement learning system with WebSocket-based client-server communication at 50 ms end-to-end latency</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built a mobile automation framework integrating ADB, v4l2 and Python for reliable device control</li>
+                    <article class="proj-card reveal">
+                        <div class="top"><span class="badge">CV / RL</span><span class="when">Feb – Mar 2025</span></div>
+                        <h3>HeadBall2 Game Player</h3>
+                        <p class="role">Real-Time Mobile Game Automation</p>
+                        <ul class="pts">
+                            <li>Real-time computer-vision pipeline using OpenCV on live video streams at 30 FPS</li>
+                            <li>Reinforcement-learning system with WebSocket client-server communication at 50 ms end-to-end latency</li>
+                            <li>Mobile automation framework integrating ADB, v4l2 and Python for reliable device control</li>
                         </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">OpenCV</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Python</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">RL</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">WebSockets</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">ADB</span>
-                        </div>
-                    </div>
+                        <div class="tech"><span>OpenCV</span><span>Python</span><span>RL</span><span>WebSockets</span><span>ADB</span></div>
+                    </article>
 
-                    <div class="card-featured rounded-2xl p-6 flex flex-col gap-2.5 reveal">
-                        <div class="flex justify-between items-center">
-                            <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">ML</span>
-                            <span class="text-[0.78rem] text-muted">Jan - Apr 2025</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">Kernel PCA for OOD Detection</h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">ML Principles &amp; Techniques | Course Project</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Implemented Kernel PCA with a 2-member team for out-of-distribution detection in DL models, benchmarking against KNN</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Achieved AUROC of 99.57% and FPR of 1.73% on ResNet50 evaluated on Tiny-ImageNet-200</li>
+                    <article class="proj-card reveal">
+                        <div class="top"><span class="badge">ML</span><span class="when">Jan – Apr 2025</span></div>
+                        <h3>Kernel PCA for OOD Detection</h3>
+                        <p class="role">ML Principles &amp; Techniques | Course Project</p>
+                        <ul class="pts">
+                            <li>Implemented Kernel PCA for out-of-distribution detection in DL models, benchmarking against KNN</li>
+                            <li>AUROC of 99.57% and FPR of 1.73% on ResNet50 evaluated on Tiny-ImageNet-200</li>
                         </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Python</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PyTorch</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Kernel PCA</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">OOD Detection</span>
-                        </div>
-                    </div>
+                        <div class="tech"><span>Python</span><span>PyTorch</span><span>Kernel PCA</span><span>OOD Detection</span></div>
+                    </article>
 
-                    <div class="card-featured rounded-2xl p-6 flex flex-col gap-2.5 reveal">
-                        <div class="flex justify-between items-center">
-                            <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">RL / NLP</span>
-                            <span class="text-[0.78rem] text-muted">Jan - Apr 2025</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">Secrets of RLHF in LLMs: PPO</h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Reinforcement Learning Algorithms | Course Project</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Studied core RLHF mathematics and implemented PPO-max to improve training stability for LLM fine-tuning</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Built a demo that successfully fine-tuned an LLM, showing measurable gains over SFT baselines</li>
+                    <article class="proj-card reveal">
+                        <div class="top"><span class="badge">RL / NLP</span><span class="when">Jan – Apr 2025</span></div>
+                        <h3>Secrets of RLHF in LLMs: PPO</h3>
+                        <p class="role">Reinforcement Learning Algorithms | Course Project</p>
+                        <ul class="pts">
+                            <li>Studied core RLHF mathematics and implemented PPO-max to improve LLM fine-tuning stability</li>
+                            <li>Built a demo that fine-tuned an LLM, showing measurable gains over SFT baselines</li>
                         </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Python</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PPO</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">RLHF</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">HuggingFace</span>
-                        </div>
-                    </div>
+                        <div class="tech"><span>Python</span><span>PPO</span><span>RLHF</span><span>HuggingFace</span></div>
+                    </article>
 
-                    <div class="card-featured rounded-2xl p-6 flex flex-col gap-2.5 reveal">
-                        <div class="flex justify-between items-center">
-                            <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-amber-400 bg-amber-400/10 border border-amber-400/25">Published</span>
-                            <span class="text-[0.78rem] text-muted">Jul 2024</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
-                            <a href="https://doi.org/10.47839/ijc.23.4.3542" target="_blank" rel="noopener" class="text-primary no-underline transition-colors hover:text-accent">
-                                Plant Disease Classification with SOTA DL <i class="fas fa-external-link-alt text-[0.62rem] opacity-60 ml-1"></i>
-                            </a>
-                        </h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">International Journal of Computing | DOI: 10.47839/ijc.23.4.3542</p>
-                        <ul class="arrow-list list-none p-0 space-y-1.5 flex-1">
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Implemented and evaluated multiple CNN architectures on a dataset of 87,900+ leaf images across 38 classes</li>
-                            <li class="text-[0.855rem] text-muted leading-relaxed">Achieved up to 97.31% validation accuracy, showing robust generalization across multiple plant diseases</li>
+                    <article class="proj-card reveal">
+                        <div class="top"><span class="badge">Published</span><span class="when">Jul 2024</span></div>
+                        <h3><a href="https://doi.org/10.47839/ijc.23.4.3542" target="_blank" rel="noopener">Plant Disease Classification with SOTA DL <i class="fas fa-external-link-alt ext"></i></a></h3>
+                        <p class="role">International Journal of Computing | DOI: 10.47839/ijc.23.4.3542</p>
+                        <ul class="pts">
+                            <li>Implemented and evaluated multiple CNN architectures on 87,900+ leaf images across 38 classes</li>
+                            <li>Up to 97.31% validation accuracy, showing robust generalization across plant diseases</li>
                         </ul>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">PyTorch</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">CNN</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Deep Learning</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Computer Vision</span>
-                        </div>
-                    </div>
+                        <div class="tech"><span>PyTorch</span><span>CNN</span><span>Deep Learning</span><span>Computer Vision</span></div>
+                    </article>
 
                 </div>
             </div>
 
             <!-- Games -->
-            <div class="mt-14 project-group" data-group="games">
-                <div class="fade-line mb-7 font-display text-[0.76rem] font-semibold tracking-[3px] uppercase text-muted reveal">Games</div>
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+            <div class="proj-group" data-group="games">
+                <p class="group-label reveal">Games</p>
+                <div class="proj-grid three">
 
-                    <div class="card-featured rounded-2xl p-6 flex flex-col gap-2.5 reveal">
-                        <div class="flex justify-between items-center">
-                            <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">Web · AI</span>
-                            <span class="text-[0.78rem] text-muted">2021</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
-                            <a href="https://github.com/Rishikesh-kumar-7258/Tic-Tac-Toe" target="_blank" rel="noopener" class="text-primary no-underline transition-colors hover:text-accent">Tic Tac Toe <i class="fas fa-external-link-alt text-[0.62rem] opacity-60 ml-1"></i></a>
-                        </h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Browser game with minimax AI opponent</p>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">JavaScript</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">HTML/CSS</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Minimax</span>
-                        </div>
-                    </div>
+                    <article class="proj-card reveal">
+                        <div class="top"><span class="badge">Web · AI</span><span class="when">2021</span></div>
+                        <h3><a href="https://github.com/Rishikesh-kumar-7258/Tic-Tac-Toe" target="_blank" rel="noopener">Tic Tac Toe <i class="fas fa-external-link-alt ext"></i></a></h3>
+                        <p class="role">Browser game with minimax AI opponent</p>
+                        <div class="tech"><span>JavaScript</span><span>HTML/CSS</span><span>Minimax</span></div>
+                    </article>
 
-                    <div class="card-featured rounded-2xl p-6 flex flex-col gap-2.5 reveal">
-                        <div class="flex justify-between items-center">
-                            <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">Unity · 3D</span>
-                            <span class="text-[0.78rem] text-muted">2023</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
-                            <a href="https://github.com/Game-prince/runner_3d" target="_blank" rel="noopener" class="text-primary no-underline transition-colors hover:text-accent">Runner 3D <i class="fas fa-external-link-alt text-[0.62rem] opacity-60 ml-1"></i></a>
-                        </h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Endless 3D runner built in Unity</p>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Unity</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">C#</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">ShaderLab</span>
-                        </div>
-                    </div>
+                    <article class="proj-card reveal">
+                        <div class="top"><span class="badge">Unity · 3D</span><span class="when">2023</span></div>
+                        <h3><a href="https://github.com/Game-prince/runner_3d" target="_blank" rel="noopener">Runner 3D <i class="fas fa-external-link-alt ext"></i></a></h3>
+                        <p class="role">Endless 3D runner built in Unity</p>
+                        <div class="tech"><span>Unity</span><span>C#</span><span>ShaderLab</span></div>
+                    </article>
 
-                    <div class="card-featured rounded-2xl p-6 flex flex-col gap-2.5 reveal">
-                        <div class="flex justify-between items-center">
-                            <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">Pygame · Arcade</span>
-                            <span class="text-[0.78rem] text-muted">2022</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
-                            <a href="https://github.com/Rishikesh-kumar-7258/Block_breaker" target="_blank" rel="noopener" class="text-primary no-underline transition-colors hover:text-accent">Block Breaker <i class="fas fa-external-link-alt text-[0.62rem] opacity-60 ml-1"></i></a>
-                        </h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Classic brick-breaking arcade game</p>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Python</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Pygame</span>
-                        </div>
-                    </div>
+                    <article class="proj-card reveal">
+                        <div class="top"><span class="badge">Pygame · Arcade</span><span class="when">2022</span></div>
+                        <h3><a href="https://github.com/Rishikesh-kumar-7258/Block_breaker" target="_blank" rel="noopener">Block Breaker <i class="fas fa-external-link-alt ext"></i></a></h3>
+                        <p class="role">Classic brick-breaking arcade game</p>
+                        <div class="tech"><span>Python</span><span>Pygame</span></div>
+                    </article>
 
-                    <div class="card-featured rounded-2xl p-6 flex flex-col gap-2.5 reveal">
-                        <div class="flex justify-between items-center">
-                            <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-amber-400 bg-amber-400/10 border border-amber-400/25">Lua · Board</span>
-                            <span class="text-[0.78rem] text-muted">2023</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
-                            <a href="https://github.com/Game-prince/ludo" target="_blank" rel="noopener" class="text-primary no-underline transition-colors hover:text-accent">Ludo <i class="fas fa-external-link-alt text-[0.62rem] opacity-60 ml-1"></i></a>
-                        </h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Digital Ludo board game in Lua / LOVE2D</p>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Lua</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">LOVE2D</span>
-                        </div>
-                    </div>
+                    <article class="proj-card reveal">
+                        <div class="top"><span class="badge">Lua · Board</span><span class="when">2023</span></div>
+                        <h3><a href="https://github.com/Game-prince/ludo" target="_blank" rel="noopener">Ludo <i class="fas fa-external-link-alt ext"></i></a></h3>
+                        <p class="role">Digital Ludo board game in Lua / LOVE2D</p>
+                        <div class="tech"><span>Lua</span><span>LOVE2D</span></div>
+                    </article>
 
-                    <div class="card-featured rounded-2xl p-6 flex flex-col gap-2.5 reveal">
-                        <div class="flex justify-between items-center">
-                            <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">C++ · Console</span>
-                            <span class="text-[0.78rem] text-muted">2024</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
-                            <a href="https://github.com/Game-prince/TheHunter" target="_blank" rel="noopener" class="text-primary no-underline transition-colors hover:text-accent">The Hunter <i class="fas fa-external-link-alt text-[0.62rem] opacity-60 ml-1"></i></a>
-                        </h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Console text adventure in C++</p>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">C++</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">OOP</span>
-                        </div>
-                    </div>
+                    <article class="proj-card reveal">
+                        <div class="top"><span class="badge">C++ · Console</span><span class="when">2024</span></div>
+                        <h3><a href="https://github.com/Game-prince/TheHunter" target="_blank" rel="noopener">The Hunter <i class="fas fa-external-link-alt ext"></i></a></h3>
+                        <p class="role">Console text adventure in C++</p>
+                        <div class="tech"><span>C++</span><span>OOP</span></div>
+                    </article>
 
-                    <div class="card-featured rounded-2xl p-6 flex flex-col gap-2.5 reveal">
-                        <div class="flex justify-between items-center">
-                            <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">Pygame · Puzzle</span>
-                            <span class="text-[0.78rem] text-muted">2021</span>
-                        </div>
-                        <h3 class="font-display text-[1.05rem] font-semibold text-primary leading-snug">
-                            <a href="https://github.com/Game-prince/Tetris" target="_blank" rel="noopener" class="text-primary no-underline transition-colors hover:text-accent">Tetris <i class="fas fa-external-link-alt text-[0.62rem] opacity-60 ml-1"></i></a>
-                        </h3>
-                        <p class="text-[0.82rem] text-muted leading-relaxed">Classic Tetris puzzle game in Python</p>
-                        <div class="flex flex-wrap gap-1.5 pt-3.5 mt-auto border-t border-accent/[0.12]">
-                            <span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Python</span><span class="text-[0.72rem] px-2 py-0.5 rounded bg-accent/[0.07] text-muted border border-white/[0.05]">Pygame</span>
-                        </div>
-                    </div>
+                    <article class="proj-card reveal">
+                        <div class="top"><span class="badge">Pygame · Puzzle</span><span class="when">2021</span></div>
+                        <h3><a href="https://github.com/Game-prince/Tetris" target="_blank" rel="noopener">Tetris <i class="fas fa-external-link-alt ext"></i></a></h3>
+                        <p class="role">Classic Tetris puzzle game in Python</p>
+                        <div class="tech"><span>Python</span><span>Pygame</span></div>
+                    </article>
 
                 </div>
             </div>
-
         </div>
     </section>
+    </main>
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="border-t border-accent/[0.22] py-8">
-        <div class="max-w-site mx-auto px-6 lg:px-12 flex items-center justify-between flex-wrap gap-4">
-            <p class="text-[0.88rem] text-muted">Designed &amp; Built by <span class="text-accent">Rishikesh Kumar</span></p>
-            <div class="flex gap-[18px]">
-                <a href="https://github.com/Rishikesh-kumar-7258" target="_blank" rel="noopener" class="text-muted text-base no-underline transition-colors hover:text-accent"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/rishikesh-kumar-profile" target="_blank" rel="noopener" class="text-muted text-base no-underline transition-colors hover:text-accent"><i class="fab fa-linkedin-in"></i></a>
-                <a href="mailto:rishi7258prince@gmail.com" class="text-muted text-base no-underline transition-colors hover:text-accent"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
+    <button id="to-top" class="to-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script>
-    (function () {
-        'use strict';
-        var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (!reducedMotion && typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-            gsap.registerPlugin(ScrollTrigger);
-            gsap.utils.toArray('.reveal').forEach(function (el) {
-                gsap.to(el, { scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }, y: 0, opacity: 1, duration: 0.85, ease: 'power3.out' });
-            });
-        } else {
-            document.querySelectorAll('.reveal').forEach(function (el) { el.style.opacity = '1'; el.style.transform = 'none'; });
-        }
-
-        var filterBtns = document.querySelectorAll('#project-filters .filter-btn');
-        var projectGroups = document.querySelectorAll('.project-group');
-        filterBtns.forEach(function (btn) {
-            btn.addEventListener('click', function () {
-                filterBtns.forEach(function (b) { b.classList.toggle('active', b === btn); });
-                var filter = btn.dataset.filter;
-                projectGroups.forEach(function (group) {
-                    group.classList.toggle('hidden-group', filter !== 'all' && group.dataset.group !== filter);
-                });
-                if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
-            });
-        });
-    }());
-    </script>
+    <script src="../js/components.js"></script>
+    <script src="../js/editorial.js"></script>
 </body>
 
 </html>

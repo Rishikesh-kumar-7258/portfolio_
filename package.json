@@ -4,8 +4,6 @@
   "description": "This is my portfolio website made by me using HTML, SCSS, Javascript and JQuery.",
   "main": "index.js",
   "scripts": {
-    "build:css": "tailwindcss -i css/tailwind-input.css -o css/tailwind-output.css --minify",
-    "watch:css": "tailwindcss -i css/tailwind-input.css -o css/tailwind-output.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,8 +17,5 @@
   "bugs": {
     "url": "https://github.com/Rishikesh-kumar-7258/portfolio_/issues"
   },
-  "homepage": "https://github.com/Rishikesh-kumar-7258/portfolio_#readme",
-  "devDependencies": {
-    "tailwindcss": "^3.4.19"
-  }
+  "homepage": "https://github.com/Rishikesh-kumar-7258/portfolio_#readme"
 }

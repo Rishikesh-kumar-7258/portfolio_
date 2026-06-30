@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,235 +9,165 @@
     <meta name="description" content="Full-Stack Developer Intern at Vajra Labs, IIT Bombay — built a sandbox-based malware analysis platform handling 200+ daily samples.">
     <title>Full-Stack Developer Intern at Vajra Labs | Rishikesh Kumar</title>
 
+    <script>
+        (function () {
+            try { var t = localStorage.getItem('theme'); document.documentElement.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light'); }
+            catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+        })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../../css/tailwind-output.css">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/editorial.css">
     <link rel="shortcut icon" href="../../Assets/Images/logo.svg" type="image/x-icon">
 </head>
 
-<body class="bg-bg text-primary">
+<body>
     <div id="nav-placeholder"></div>
 
-    <!-- ===== HERO ===== -->
-    <section class="pt-32 pb-12 mesh-bg-purple">
-        <div class="max-w-site mx-auto px-6 lg:px-12">
-            <div class="reveal">
-                <a href="../experience.html" class="inline-flex items-center gap-2 text-muted text-[0.85rem] font-medium no-underline hover:text-accent transition-colors mb-5">
-                    <i class="fas fa-arrow-left text-[0.7rem]"></i> Back to Experience
-                </a>
-                <div class="flex flex-wrap items-center gap-3 mb-4">
-                    <span class="text-[0.78rem] text-muted bg-accent/[0.09] border border-accent/20 px-2.5 py-1 rounded-full">Aug 2025 &ndash; Present</span>
-                    <span class="text-[0.78rem] text-muted">Powai, Maharashtra</span>
-                </div>
-                <h1 class="font-display text-[clamp(1.9rem,4.5vw,3rem)] font-bold tracking-tight leading-[1.12] grad-text-hero">
-                    Full-Stack Developer Intern
-                </h1>
-                <p class="text-[1.1rem] text-accent2 font-medium mt-2">Vajra Labs, IIT Bombay</p>
-                <p class="text-[0.95rem] text-muted leading-relaxed max-w-[760px] mt-4">
-                    Built a sandbox-based malware analysis platform handling 200+ daily sample submissions with automated static, dynamic, and memory analysis reports. Led a 3-person team using sprint-based workflows and code reviews, shipping features on a 2-week release cadence.
-                </p>
+    <main>
+    <!-- HERO -->
+    <section class="section section--hero">
+        <div class="wrap">
+            <a href="../experience.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to experience</a>
+            <div class="tagrow"><span class="badge">Aug 2025 – Present</span><span class="when">Powai, Maharashtra</span></div>
+            <h1 class="page-title">Full-Stack Developer Intern</h1>
+            <p class="detail-org">Vajra Labs, IIT Bombay</p>
+            <p class="page-sub">
+                Built a sandbox-based malware-analysis platform handling 200+ daily sample submissions with automated
+                static, dynamic, and memory-analysis reports. Led a 3-person team using sprint-based workflows and code
+                reviews, shipping features on a 2-week release cadence.
+            </p>
+        </div>
+    </section>
+
+    <!-- ROLE OVERVIEW -->
+    <section class="section">
+        <div class="wrap">
+            <h2 class="detail-h reveal">Role Overview</h2>
+            <div class="prose-card reveal">
+                <p>As a full-stack developer intern at Vajra Labs within IIT Bombay, I worked on building and scaling a
+                    cloud-based malware sandbox platform from the ground up. The system ingests suspicious files, detonates
+                    them in isolated Docker containers, and generates comprehensive analysis reports covering static
+                    signatures, dynamic behavior traces, and memory forensics. My role spanned the entire stack — designing
+                    Django REST APIs, building Next.js dashboards, orchestrating asynchronous analysis pipelines with Celery
+                    and Redis, and managing PostgreSQL schemas for multi-tenant data isolation.</p>
+                <p>Beyond individual contributions, I led a 3-person development team, running sprint planning, conducting
+                    code reviews, and maintaining a 2-week release cadence. This role sharpened both my technical depth in
+                    systems-level Python and my ability to ship production software under real deadlines.</p>
             </div>
         </div>
     </section>
 
-    <!-- ===== ROLE OVERVIEW ===== -->
-    <section class="py-14">
-        <div class="max-w-site mx-auto px-6 lg:px-12">
-            <div class="mb-8 reveal">
-                <h2 class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight">
-                    Role <span class="grad-text-section">Overview</span>
-                </h2>
-                <p class="text-[0.9rem] text-muted leading-relaxed max-w-[760px] mt-3">
-                    As a full-stack developer intern at Vajra Labs within IIT Bombay, I worked on building and scaling a cloud-based malware sandbox platform from the ground up. The system ingests suspicious files, detonates them in isolated Docker containers, and generates comprehensive analysis reports covering static signatures, dynamic behavior traces, and memory forensics. My role spanned the entire stack &mdash; designing Django REST APIs, building Next.js dashboards, orchestrating asynchronous analysis pipelines with Celery and Redis, and managing PostgreSQL schemas for multi-tenant data isolation.
-                </p>
-                <p class="text-[0.9rem] text-muted leading-relaxed max-w-[760px] mt-3">
-                    Beyond individual contributions, I led a 3-person development team, running sprint planning sessions, conducting code reviews, and maintaining a 2-week release cadence. This role sharpened both my technical depth in systems-level Python and my ability to ship production software under real deadlines.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- ===== KEY RESPONSIBILITIES ===== -->
-    <section class="py-14 mesh-bg-cyan">
-        <div class="max-w-site mx-auto px-6 lg:px-12">
-            <div class="mb-8 reveal">
-                <h2 class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight">
-                    Key <span class="grad-text-section">Responsibilities</span>
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div class="card-elevated rounded-2xl p-6 reveal">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
-                            <i class="fas fa-server text-accent text-sm"></i>
-                        </div>
-                        <h3 class="font-display text-[1rem] font-semibold text-primary">Backend Architecture</h3>
-                    </div>
-                    <p class="text-[0.87rem] text-muted leading-relaxed">
-                        Designed and implemented the Django REST Framework backend with modular app structure, handling file uploads, analysis job orchestration, and result aggregation across static, dynamic, and memory analysis engines.
-                    </p>
+    <!-- KEY RESPONSIBILITIES -->
+    <section class="section">
+        <div class="wrap">
+            <h2 class="detail-h reveal">Key Responsibilities</h2>
+            <div class="feature-grid">
+                <div class="feature reveal">
+                    <div class="ic"><i class="fas fa-server"></i></div>
+                    <h3>Backend Architecture</h3>
+                    <p>Designed and implemented the Django REST Framework backend with a modular app structure, handling
+                        file uploads, analysis-job orchestration, and result aggregation across static, dynamic, and memory
+                        analysis engines.</p>
                 </div>
-
-                <div class="card-elevated rounded-2xl p-6 reveal">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
-                            <i class="fas fa-display text-accent text-sm"></i>
-                        </div>
-                        <h3 class="font-display text-[1rem] font-semibold text-primary">Frontend Dashboard</h3>
-                    </div>
-                    <p class="text-[0.87rem] text-muted leading-relaxed">
-                        Built the Next.js + TypeScript analyst dashboard with real-time submission tracking, interactive report viewers for each analysis type, and filterable tables for historical sample data with pagination and search.
-                    </p>
+                <div class="feature reveal">
+                    <div class="ic"><i class="fas fa-display"></i></div>
+                    <h3>Frontend Dashboard</h3>
+                    <p>Built the Next.js + TypeScript analyst dashboard with real-time submission tracking, interactive
+                        report viewers for each analysis type, and filterable tables for historical sample data with
+                        pagination and search.</p>
                 </div>
-
-                <div class="card-elevated rounded-2xl p-6 reveal">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
-                            <i class="fas fa-gears text-accent text-sm"></i>
-                        </div>
-                        <h3 class="font-display text-[1rem] font-semibold text-primary">Async Pipeline Engineering</h3>
-                    </div>
-                    <p class="text-[0.87rem] text-muted leading-relaxed">
-                        Engineered the asynchronous analysis pipeline using Celery workers with Redis as the message broker, enabling parallel execution of static analysis, dynamic sandboxing, and memory forensics tasks with retry logic and dead-letter handling.
-                    </p>
+                <div class="feature reveal">
+                    <div class="ic"><i class="fas fa-gears"></i></div>
+                    <h3>Async Pipeline Engineering</h3>
+                    <p>Engineered the asynchronous analysis pipeline using Celery workers with Redis as the message broker,
+                        enabling parallel execution of static analysis, dynamic sandboxing, and memory forensics with retry
+                        logic and dead-letter handling.</p>
                 </div>
-
-                <div class="card-elevated rounded-2xl p-6 reveal">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
-                            <i class="fas fa-docker text-accent text-sm"></i>
-                        </div>
-                        <h3 class="font-display text-[1rem] font-semibold text-primary">Containerized Sandbox</h3>
-                    </div>
-                    <p class="text-[0.87rem] text-muted leading-relaxed">
-                        Configured Docker-based sandboxing environments for safe malware detonation, implementing resource limits, network isolation, and snapshot capture for behavioral analysis of malicious executables and scripts.
-                    </p>
+                <div class="feature reveal">
+                    <div class="ic"><i class="fab fa-docker"></i></div>
+                    <h3>Containerized Sandbox</h3>
+                    <p>Configured Docker-based sandboxing environments for safe malware detonation, implementing resource
+                        limits, network isolation, and snapshot capture for behavioral analysis of malicious executables and
+                        scripts.</p>
                 </div>
-
-                <div class="card-elevated rounded-2xl p-6 reveal">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
-                            <i class="fas fa-database text-accent text-sm"></i>
-                        </div>
-                        <h3 class="font-display text-[1rem] font-semibold text-primary">Database &amp; Schema Design</h3>
-                    </div>
-                    <p class="text-[0.87rem] text-muted leading-relaxed">
-                        Designed and maintained the PostgreSQL schema supporting multi-tenant data isolation, sample metadata storage, analysis result indexing, and efficient querying across large volumes of historical submissions.
-                    </p>
+                <div class="feature reveal">
+                    <div class="ic"><i class="fas fa-database"></i></div>
+                    <h3>Database &amp; Schema Design</h3>
+                    <p>Designed and maintained the PostgreSQL schema supporting multi-tenant data isolation, sample-metadata
+                        storage, analysis-result indexing, and efficient querying across large volumes of historical
+                        submissions.</p>
                 </div>
-
-                <div class="card-elevated rounded-2xl p-6 reveal">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
-                            <i class="fas fa-users text-accent text-sm"></i>
-                        </div>
-                        <h3 class="font-display text-[1rem] font-semibold text-primary">Team Leadership</h3>
-                    </div>
-                    <p class="text-[0.87rem] text-muted leading-relaxed">
-                        Led a 3-person development team using sprint-based workflows with Jira, conducting weekly code reviews, running stand-ups, and maintaining a consistent 2-week release cadence to ship features on schedule.
-                    </p>
+                <div class="feature reveal">
+                    <div class="ic"><i class="fas fa-users"></i></div>
+                    <h3>Team Leadership</h3>
+                    <p>Led a 3-person development team using sprint-based workflows with Jira, conducting weekly code
+                        reviews, running stand-ups, and maintaining a consistent 2-week release cadence to ship features on
+                        schedule.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="section-divider"></div>
-
-    <!-- ===== KEY DELIVERABLES ===== -->
-    <section class="py-14">
-        <div class="max-w-site mx-auto px-6 lg:px-12">
-            <div class="mb-8 reveal">
-                <h2 class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight">
-                    Key <span class="grad-text-section">Deliverables</span>
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
-                <div class="card-elevated rounded-2xl p-6 reveal">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">Platform</span>
-                    </div>
-                    <h3 class="font-display text-[1.05rem] font-semibold text-primary mb-2">Vajra Sandbox Platform</h3>
-                    <p class="text-[0.87rem] text-muted leading-relaxed mb-4">
-                        A production-grade malware analysis platform processing 200+ daily sample submissions, providing automated static, dynamic, and memory analysis with detailed PDF-exportable reports and a real-time analyst dashboard.
-                    </p>
-                    <a href="../../pages/projects/vajra-sandbox.html" class="inline-flex items-center gap-2 text-accent text-[0.85rem] font-medium no-underline hover:text-accent2 transition-colors">
-                        View Project Details <i class="fas fa-arrow-right text-[0.7rem]"></i>
-                    </a>
+    <!-- KEY DELIVERABLES -->
+    <section class="section">
+        <div class="wrap">
+            <h2 class="detail-h reveal">Key Deliverables</h2>
+            <div class="feature-grid">
+                <div class="deliverable reveal">
+                    <span class="badge">Platform</span>
+                    <h3>Vajra Sandbox Platform</h3>
+                    <p>A production-grade malware analysis platform processing 200+ daily sample submissions, providing
+                        automated static, dynamic, and memory analysis with detailed PDF-exportable reports and a real-time
+                        analyst dashboard.</p>
+                    <a href="../projects/vajra-sandbox.html" class="more">View project details <i class="fas fa-arrow-right"></i></a>
                 </div>
-
-                <div class="card-elevated rounded-2xl p-6 reveal">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">Pipeline</span>
-                    </div>
-                    <h3 class="font-display text-[1.05rem] font-semibold text-primary mb-2">Celery Analysis Pipeline</h3>
-                    <p class="text-[0.87rem] text-muted leading-relaxed">
-                        Asynchronous task pipeline orchestrating parallel static analysis (YARA rules, PE header parsing), dynamic sandboxing (API call tracing, network capture), and memory forensics (Volatility-based) with Redis-backed result caching and retry logic.
-                    </p>
+                <div class="deliverable reveal">
+                    <span class="badge">Pipeline</span>
+                    <h3>Celery Analysis Pipeline</h3>
+                    <p>Asynchronous task pipeline orchestrating parallel static analysis (YARA rules, PE header parsing),
+                        dynamic sandboxing (API call tracing, network capture), and memory forensics (Volatility-based) with
+                        Redis-backed result caching and retry logic.</p>
                 </div>
-
-                <div class="card-elevated rounded-2xl p-6 reveal">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">API</span>
-                    </div>
-                    <h3 class="font-display text-[1.05rem] font-semibold text-primary mb-2">REST API Suite</h3>
-                    <p class="text-[0.87rem] text-muted leading-relaxed">
-                        Comprehensive Django REST Framework API powering file submissions, analysis status polling, report retrieval, user management, and admin operations &mdash; with token-based authentication and role-based access control.
-                    </p>
+                <div class="deliverable reveal">
+                    <span class="badge">API</span>
+                    <h3>REST API Suite</h3>
+                    <p>Comprehensive Django REST Framework API powering file submissions, analysis status polling, report
+                        retrieval, user management, and admin operations — with token-based authentication and role-based
+                        access control.</p>
                 </div>
-
-                <div class="card-elevated rounded-2xl p-6 reveal">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">Dashboard</span>
-                    </div>
-                    <h3 class="font-display text-[1.05rem] font-semibold text-primary mb-2">Analyst Dashboard</h3>
-                    <p class="text-[0.87rem] text-muted leading-relaxed">
-                        Next.js + TypeScript SPA with real-time WebSocket updates for submission tracking, interactive report viewers with syntax highlighting, filterable sample history tables, and exportable analysis summaries.
-                    </p>
+                <div class="deliverable reveal">
+                    <span class="badge">Dashboard</span>
+                    <h3>Analyst Dashboard</h3>
+                    <p>Next.js + TypeScript SPA with real-time WebSocket updates for submission tracking, interactive report
+                        viewers with syntax highlighting, filterable sample-history tables, and exportable analysis
+                        summaries.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="section-divider"></div>
-
-    <!-- ===== SKILLS USED ===== -->
-    <section class="py-14 mesh-bg-purple">
-        <div class="max-w-site mx-auto px-6 lg:px-12">
-            <div class="mb-8 reveal">
-                <h2 class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight">
-                    Skills <span class="grad-text-section">Used</span>
-                </h2>
-            </div>
-            <div class="flex flex-wrap gap-2 reveal">
-                <span class="skill-pill">Python</span>
-                <span class="skill-pill">Django</span>
-                <span class="skill-pill">Django REST Framework</span>
-                <span class="skill-pill">Next.js</span>
-                <span class="skill-pill">TypeScript</span>
-                <span class="skill-pill">Docker</span>
-                <span class="skill-pill">Redis</span>
-                <span class="skill-pill">Celery</span>
-                <span class="skill-pill">PostgreSQL</span>
-                <span class="skill-pill">REST APIs</span>
-                <span class="skill-pill">Git</span>
-                <span class="skill-pill">Agile / Scrum</span>
+    <!-- SKILLS USED -->
+    <section class="section">
+        <div class="wrap">
+            <h2 class="detail-h reveal">Skills Used</h2>
+            <div class="skill-list reveal">
+                <span>Python</span><span>Django</span><span>Django REST Framework</span><span>Next.js</span><span>TypeScript</span><span>Docker</span><span>Redis</span><span>Celery</span><span>PostgreSQL</span><span>REST APIs</span><span>Git</span><span>Agile / Scrum</span>
             </div>
         </div>
     </section>
+    </main>
 
     <div id="footer-placeholder"></div>
+    <button id="to-top" class="to-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
 
     <script src="../../js/components.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="../../js/main.js"></script>
+    <script src="../../js/editorial.js"></script>
 </body>
 
 </html>

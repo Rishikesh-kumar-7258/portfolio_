@@ -1,58 +1,66 @@
+/* ═══════════════════════════════════════════════════════════
+   Shared editorial nav + footer injection for sub-pages.
+   Reads <meta name="base-path"> (path back to site root) and
+   <meta name="nav-active"> (projects | experience). Run this
+   BEFORE editorial.js so the toggle/menu wiring finds the nodes.
+   ═══════════════════════════════════════════════════════════ */
 (function () {
     'use strict';
 
-    var base = document.querySelector('meta[name="base-path"]');
-    var b = base ? base.content : '.';
+    var baseMeta = document.querySelector('meta[name="base-path"]');
+    var b = baseMeta ? baseMeta.content : '.';
+    var activeMeta = document.querySelector('meta[name="nav-active"]');
+    var active = activeMeta ? activeMeta.content : '';
 
-    function injectNav(opts) {
-        var el = document.getElementById('nav-placeholder');
-        if (!el) return;
+    function navClass(name) { return name === active ? ' class="active"' : ''; }
 
-        var activeLink = opts && opts.active || '';
-
-        function cls(name) {
-            var isActive = name === activeLink;
-            return 'nav-link px-3.5 py-2 text-muted text-sm font-medium rounded-lg transition-colors hover:text-primary hover:bg-accent/10 no-underline' + (isActive ? ' active' : '');
-        }
-
-        el.innerHTML =
-            '<nav id="navbar" class="fixed inset-x-0 top-0 z-[900] h-[72px] transition-all duration-300 scrolled">' +
-                '<div class="max-w-site mx-auto px-6 lg:px-12 h-full flex items-center justify-between">' +
-                    '<a href="' + b + '/index.html" class="font-display text-2xl font-bold text-primary tracking-tight no-underline">' +
-                        'RK<span class="text-accent">.</span>' +
-                    '</a>' +
-                    '<ul class="hidden md:flex items-center gap-1 list-none m-0 p-0">' +
-                        '<li><a href="' + b + '/index.html#about" class="' + cls('about') + '">About</a></li>' +
-                        '<li><a href="' + b + '/index.html#skills" class="' + cls('skills') + '">Skills</a></li>' +
-                        '<li><a href="' + b + '/pages/experience.html" class="' + cls('experience') + '">Experience</a></li>' +
-                        '<li><a href="' + b + '/pages/projects.html" class="' + cls('projects') + '">Projects</a></li>' +
-                        '<li><a href="' + b + '/index.html#contact" class="' + cls('contact') + '">Contact</a></li>' +
+    var navEl = document.getElementById('nav-placeholder');
+    if (navEl) {
+        navEl.innerHTML =
+            '<nav id="site-nav" class="site-nav scrolled">' +
+                '<div class="wrap nav-inner">' +
+                    '<a href="' + b + '/index.html" class="brand">Rishikesh Kumar<span class="dot">.</span></a>' +
+                    '<ul id="nav-links" class="nav-links">' +
+                        '<li><a href="' + b + '/pages/projects.html"' + navClass('projects') + '>Work</a></li>' +
+                        '<li><a href="' + b + '/index.html#about">About</a></li>' +
+                        '<li><a href="' + b + '/pages/experience.html"' + navClass('experience') + '>Experience</a></li>' +
+                        '<li><a href="' + b + '/index.html#skills">Skills</a></li>' +
+                        '<li><a href="' + b + '/index.html#contact">Contact</a></li>' +
                     '</ul>' +
-                    '<a href="' + b + '/index.html" class="md:hidden flex items-center gap-2 text-muted text-sm font-medium no-underline hover:text-primary">' +
-                        '<i class="fas fa-arrow-left"></i> Back' +
-                    '</a>' +
+                    '<div class="nav-side">' +
+                        '<div id="resume-wrap" class="resume-wrap">' +
+                            '<button id="resume-btn" class="resume-btn" aria-haspopup="true" aria-expanded="false" aria-controls="resume-menu">' +
+                                'Résumé <i class="chev fas fa-chevron-down"></i>' +
+                            '</button>' +
+                            '<div id="resume-menu" class="resume-menu">' +
+                                '<a href="' + b + '/Assets/sde.pdf" target="_blank" rel="noopener"><i class="fas fa-code"></i> SDE / Full Stack</a>' +
+                                '<a href="' + b + '/Assets/ml.pdf" target="_blank" rel="noopener"><i class="fas fa-brain"></i> ML / Data Science</a>' +
+                            '</div>' +
+                        '</div>' +
+                        '<button id="theme-toggle" class="theme-toggle" aria-label="Switch theme">' +
+                            '<i class="fas fa-moon"></i><i class="fas fa-sun"></i>' +
+                        '</button>' +
+                        '<button id="menu-btn" class="menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">' +
+                            '<span></span><span></span><span></span>' +
+                        '</button>' +
+                    '</div>' +
                 '</div>' +
+                '<div id="scroll-progress" class="scroll-progress"></div>' +
             '</nav>';
     }
 
-    function injectFooter() {
-        var el = document.getElementById('footer-placeholder');
-        if (!el) return;
-
-        el.innerHTML =
-            '<footer class="border-t border-accent/[0.22] py-8">' +
-                '<div class="max-w-site mx-auto px-6 lg:px-12 flex items-center justify-between flex-wrap gap-4">' +
-                    '<p class="text-[0.88rem] text-muted">Designed &amp; Built by <span class="text-accent">Rishikesh Kumar</span></p>' +
-                    '<div class="flex gap-[18px]">' +
-                        '<a href="https://github.com/Rishikesh-kumar-7258" target="_blank" rel="noopener" class="text-muted text-base no-underline transition-colors hover:text-accent"><i class="fab fa-github"></i></a>' +
-                        '<a href="https://www.linkedin.com/in/rishikesh-kumar-profile" target="_blank" rel="noopener" class="text-muted text-base no-underline transition-colors hover:text-accent"><i class="fab fa-linkedin-in"></i></a>' +
-                        '<a href="mailto:rishi7258prince@gmail.com" class="text-muted text-base no-underline transition-colors hover:text-accent"><i class="fas fa-envelope"></i></a>' +
+    var footEl = document.getElementById('footer-placeholder');
+    if (footEl) {
+        footEl.innerHTML =
+            '<footer class="site-footer">' +
+                '<div class="wrap footer-inner">' +
+                    '<p>Designed &amp; built by <span class="accent">Rishikesh Kumar</span> · 2026</p>' +
+                    '<div class="footer-socials">' +
+                        '<a href="https://github.com/Rishikesh-kumar-7258" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>' +
+                        '<a href="https://www.linkedin.com/in/rishikesh-kumar-profile" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>' +
+                        '<a href="mailto:rishi7258prince@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>' +
                     '</div>' +
                 '</div>' +
             '</footer>';
     }
-
-    var navOpts = document.querySelector('meta[name="nav-active"]');
-    injectNav(navOpts ? { active: navOpts.content } : {});
-    injectFooter();
 }());

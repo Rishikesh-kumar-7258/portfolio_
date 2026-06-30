@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,230 +9,163 @@
     <meta name="description" content="Full Stack Intern at Dimensionless Technologies — built an image processing pipeline for automated medicine identification using Node.js, OpenCV.js, and Google Vision API.">
     <title>Full Stack Intern at Dimensionless Technologies | Rishikesh Kumar</title>
 
+    <script>
+        (function () {
+            try { var t = localStorage.getItem('theme'); document.documentElement.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light'); }
+            catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+        })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../../css/tailwind-output.css">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/editorial.css">
     <link rel="shortcut icon" href="../../Assets/Images/logo.svg" type="image/x-icon">
 </head>
 
-<body class="bg-bg text-primary">
+<body>
     <div id="nav-placeholder"></div>
 
-    <!-- ===== HERO ===== -->
-    <section class="pt-32 pb-12 mesh-bg-purple">
-        <div class="max-w-site mx-auto px-6 lg:px-12">
-            <div class="reveal">
-                <a href="../experience.html" class="inline-flex items-center gap-2 text-muted text-[0.85rem] font-medium no-underline hover:text-accent transition-colors mb-5">
-                    <i class="fas fa-arrow-left text-[0.7rem]"></i> Back to Experience
-                </a>
-                <div class="flex flex-wrap items-center gap-3 mb-4">
-                    <span class="text-[0.78rem] text-muted bg-accent/[0.09] border border-accent/20 px-2.5 py-1 rounded-full">Nov 2021 &ndash; Jan 2022</span>
-                    <span class="text-[0.78rem] text-muted">Navi Mumbai, Maharashtra</span>
-                </div>
-                <h1 class="font-display text-[clamp(1.9rem,4.5vw,3rem)] font-bold tracking-tight leading-[1.12] grad-text-hero">
-                    Full Stack Intern
-                </h1>
-                <p class="text-[1.1rem] text-accent2 font-medium mt-2">Dimensionless Technologies</p>
-                <p class="text-[0.95rem] text-muted leading-relaxed max-w-[760px] mt-4">
-                    Built an image processing pipeline using Node.js, OpenCV.js, and Google Vision API that automated medicine identification from batch photos, replacing manual data entry. Designed an auto-populated Excel-compatible inventory system that reduced medicine cataloging time from hours to minutes per batch.
-                </p>
+    <main>
+    <!-- HERO -->
+    <section class="section section--hero">
+        <div class="wrap">
+            <a href="../experience.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to experience</a>
+            <div class="tagrow"><span class="badge">Nov 2021 – Jan 2022</span><span class="when">Navi Mumbai, Maharashtra</span></div>
+            <h1 class="page-title">Full Stack Intern</h1>
+            <p class="detail-org">Dimensionless Technologies</p>
+            <p class="page-sub">
+                Built an image-processing pipeline using Node.js, OpenCV.js, and Google Vision API that automated medicine
+                identification from batch photos, replacing manual data entry. Designed an auto-populated Excel-compatible
+                inventory system that reduced medicine cataloging time from hours to minutes per batch.
+            </p>
+        </div>
+    </section>
+
+    <!-- ROLE OVERVIEW -->
+    <section class="section">
+        <div class="wrap">
+            <h2 class="detail-h reveal">Role Overview</h2>
+            <div class="prose-card reveal">
+                <p>At Dimensionless Technologies, I worked on automating a manual and time-consuming process in
+                    pharmaceutical inventory management. Pharmacies and distributors were cataloging medicines by hand —
+                    photographing batches of products, then manually transcribing names, dosages, manufacturers, and expiry
+                    dates into spreadsheets. This took hours per batch and was error-prone.</p>
+                <p>I built an end-to-end pipeline that takes batch photographs of medicines, applies image preprocessing
+                    with OpenCV.js (perspective correction, contrast enhancement, noise reduction), extracts text using
+                    Google Vision API's OCR, and parses the extracted text into structured inventory fields. The final
+                    output auto-populates an Excel-compatible spreadsheet, reducing a multi-hour manual task to a few minutes
+                    of automated processing per batch.</p>
             </div>
         </div>
     </section>
 
-    <!-- ===== ROLE OVERVIEW ===== -->
-    <section class="py-14">
-        <div class="max-w-site mx-auto px-6 lg:px-12">
-            <div class="mb-8 reveal">
-                <h2 class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight">
-                    Role <span class="grad-text-section">Overview</span>
-                </h2>
-                <p class="text-[0.9rem] text-muted leading-relaxed max-w-[760px] mt-3">
-                    At Dimensionless Technologies, I worked on automating a manual and time-consuming process in pharmaceutical inventory management. Pharmacies and distributors were cataloging medicines by hand &mdash; photographing batches of products, then manually transcribing names, dosages, manufacturers, and expiry dates into spreadsheets. This process took hours per batch and was error-prone.
-                </p>
-                <p class="text-[0.9rem] text-muted leading-relaxed max-w-[760px] mt-3">
-                    I built an end-to-end pipeline that takes batch photographs of medicines, applies image preprocessing with OpenCV.js (perspective correction, contrast enhancement, noise reduction), extracts text using Google Vision API's OCR, and then parses the extracted text into structured inventory fields. The final output auto-populates an Excel-compatible spreadsheet, reducing what was a multi-hour manual task to a few minutes of automated processing per batch.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- ===== KEY RESPONSIBILITIES ===== -->
-    <section class="py-14 mesh-bg-cyan">
-        <div class="max-w-site mx-auto px-6 lg:px-12">
-            <div class="mb-8 reveal">
-                <h2 class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight">
-                    Key <span class="grad-text-section">Responsibilities</span>
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div class="card-elevated rounded-2xl p-6 reveal">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
-                            <i class="fas fa-image text-accent text-sm"></i>
-                        </div>
-                        <h3 class="font-display text-[1rem] font-semibold text-primary">Image Preprocessing</h3>
-                    </div>
-                    <p class="text-[0.87rem] text-muted leading-relaxed">
-                        Built the image preprocessing stage using OpenCV.js &mdash; implementing perspective correction for skewed photos, adaptive thresholding for varying lighting conditions, contrast enhancement, noise reduction, and automatic region-of-interest detection to isolate individual medicine labels from batch photographs.
-                    </p>
+    <!-- KEY RESPONSIBILITIES -->
+    <section class="section">
+        <div class="wrap">
+            <h2 class="detail-h reveal">Key Responsibilities</h2>
+            <div class="feature-grid">
+                <div class="feature reveal">
+                    <div class="ic"><i class="fas fa-image"></i></div>
+                    <h3>Image Preprocessing</h3>
+                    <p>Built the image-preprocessing stage using OpenCV.js — perspective correction for skewed photos,
+                        adaptive thresholding for varying lighting, contrast enhancement, noise reduction, and automatic
+                        region-of-interest detection to isolate individual medicine labels from batch photographs.</p>
                 </div>
-
-                <div class="card-elevated rounded-2xl p-6 reveal">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
-                            <i class="fas fa-eye text-accent text-sm"></i>
-                        </div>
-                        <h3 class="font-display text-[1rem] font-semibold text-primary">OCR Integration</h3>
-                    </div>
-                    <p class="text-[0.87rem] text-muted leading-relaxed">
-                        Integrated Google Vision API for optical character recognition, configuring language hints, handling multi-orientation text detection, and implementing confidence-based filtering to discard low-quality extractions before they reach the parsing stage.
-                    </p>
+                <div class="feature reveal">
+                    <div class="ic"><i class="fas fa-eye"></i></div>
+                    <h3>OCR Integration</h3>
+                    <p>Integrated Google Vision API for optical character recognition, configuring language hints, handling
+                        multi-orientation text detection, and implementing confidence-based filtering to discard
+                        low-quality extractions before the parsing stage.</p>
                 </div>
-
-                <div class="card-elevated rounded-2xl p-6 reveal">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
-                            <i class="fas fa-code text-accent text-sm"></i>
-                        </div>
-                        <h3 class="font-display text-[1rem] font-semibold text-primary">Text Parsing &amp; Structuring</h3>
-                    </div>
-                    <p class="text-[0.87rem] text-muted leading-relaxed">
-                        Developed regex-based and rule-based parsers to extract structured fields from raw OCR text &mdash; medicine names, active ingredients, dosage information, manufacturer details, batch numbers, manufacturing dates, and expiry dates &mdash; with fuzzy matching for common OCR errors.
-                    </p>
+                <div class="feature reveal">
+                    <div class="ic"><i class="fas fa-code"></i></div>
+                    <h3>Text Parsing &amp; Structuring</h3>
+                    <p>Developed regex-based and rule-based parsers to extract structured fields from raw OCR text —
+                        medicine names, active ingredients, dosage, manufacturer details, batch numbers, manufacturing and
+                        expiry dates — with fuzzy matching for common OCR errors.</p>
                 </div>
-
-                <div class="card-elevated rounded-2xl p-6 reveal">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
-                            <i class="fas fa-file-excel text-accent text-sm"></i>
-                        </div>
-                        <h3 class="font-display text-[1rem] font-semibold text-primary">Excel Automation</h3>
-                    </div>
-                    <p class="text-[0.87rem] text-muted leading-relaxed">
-                        Designed the auto-populated Excel-compatible inventory output using Node.js libraries, generating formatted spreadsheets with medicine details, stock quantities, expiry tracking, and validation highlighting for entries requiring manual review.
-                    </p>
+                <div class="feature reveal">
+                    <div class="ic"><i class="fas fa-file-excel"></i></div>
+                    <h3>Excel Automation</h3>
+                    <p>Designed the auto-populated Excel-compatible inventory output using Node.js libraries, generating
+                        formatted spreadsheets with medicine details, stock quantities, expiry tracking, and validation
+                        highlighting for entries needing manual review.</p>
                 </div>
-
-                <div class="card-elevated rounded-2xl p-6 reveal">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
-                            <i class="fas fa-upload text-accent text-sm"></i>
-                        </div>
-                        <h3 class="font-display text-[1rem] font-semibold text-primary">Batch Upload System</h3>
-                    </div>
-                    <p class="text-[0.87rem] text-muted leading-relaxed">
-                        Built the Node.js backend handling batch photo uploads with progress tracking, image queue management, and sequential processing &mdash; allowing users to upload entire batches of medicine photos and receive consolidated inventory reports.
-                    </p>
+                <div class="feature reveal">
+                    <div class="ic"><i class="fas fa-upload"></i></div>
+                    <h3>Batch Upload System</h3>
+                    <p>Built the Node.js backend handling batch photo uploads with progress tracking, image-queue
+                        management, and sequential processing — allowing users to upload entire batches and receive
+                        consolidated inventory reports.</p>
                 </div>
-
-                <div class="card-elevated rounded-2xl p-6 reveal">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
-                            <i class="fas fa-check-double text-accent text-sm"></i>
-                        </div>
-                        <h3 class="font-display text-[1rem] font-semibold text-primary">Quality Assurance</h3>
-                    </div>
-                    <p class="text-[0.87rem] text-muted leading-relaxed">
-                        Implemented validation and review workflows &mdash; flagging low-confidence extractions for manual review, providing side-by-side image-to-text comparison views, and tracking extraction accuracy metrics across different medicine packaging types.
-                    </p>
+                <div class="feature reveal">
+                    <div class="ic"><i class="fas fa-check-double"></i></div>
+                    <h3>Quality Assurance</h3>
+                    <p>Implemented validation and review workflows — flagging low-confidence extractions for manual review,
+                        providing side-by-side image-to-text comparison views, and tracking extraction accuracy across
+                        different medicine packaging types.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="section-divider"></div>
-
-    <!-- ===== KEY DELIVERABLES ===== -->
-    <section class="py-14">
-        <div class="max-w-site mx-auto px-6 lg:px-12">
-            <div class="mb-8 reveal">
-                <h2 class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight">
-                    Key <span class="grad-text-section">Deliverables</span>
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
-                <div class="card-elevated rounded-2xl p-6 reveal">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">Core</span>
-                    </div>
-                    <h3 class="font-display text-[1.05rem] font-semibold text-primary mb-2">Image Processing Pipeline</h3>
-                    <p class="text-[0.87rem] text-muted leading-relaxed">
-                        End-to-end pipeline from raw batch photographs to structured medicine data &mdash; OpenCV.js preprocessing, Google Vision API OCR, rule-based text parsing, and structured field extraction with confidence scoring.
-                    </p>
+    <!-- KEY DELIVERABLES -->
+    <section class="section">
+        <div class="wrap">
+            <h2 class="detail-h reveal">Key Deliverables</h2>
+            <div class="feature-grid">
+                <div class="deliverable reveal">
+                    <span class="badge">Core</span>
+                    <h3>Image Processing Pipeline</h3>
+                    <p>End-to-end pipeline from raw batch photographs to structured medicine data — OpenCV.js preprocessing,
+                        Google Vision API OCR, rule-based text parsing, and structured field extraction with confidence
+                        scoring.</p>
                 </div>
-
-                <div class="card-elevated rounded-2xl p-6 reveal">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">Output</span>
-                    </div>
-                    <h3 class="font-display text-[1.05rem] font-semibold text-primary mb-2">Auto-Populated Inventory System</h3>
-                    <p class="text-[0.87rem] text-muted leading-relaxed">
-                        Excel-compatible inventory spreadsheets automatically generated from processed images, complete with medicine names, dosages, manufacturers, batch numbers, expiry dates, and stock quantities &mdash; reducing cataloging from hours to minutes per batch.
-                    </p>
+                <div class="deliverable reveal">
+                    <span class="badge">Output</span>
+                    <h3>Auto-Populated Inventory System</h3>
+                    <p>Excel-compatible inventory spreadsheets automatically generated from processed images — medicine
+                        names, dosages, manufacturers, batch numbers, expiry dates, and stock quantities — reducing
+                        cataloging from hours to minutes per batch.</p>
                 </div>
-
-                <div class="card-elevated rounded-2xl p-6 reveal">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent bg-accent/10 border border-accent/25">Tool</span>
-                    </div>
-                    <h3 class="font-display text-[1.05rem] font-semibold text-primary mb-2">Batch Processing Interface</h3>
-                    <p class="text-[0.87rem] text-muted leading-relaxed">
-                        Web interface for uploading batch photos with drag-and-drop support, processing progress indicators, side-by-side image-to-extracted-data review panels, and one-click export to formatted Excel files.
-                    </p>
+                <div class="deliverable reveal">
+                    <span class="badge">Tool</span>
+                    <h3>Batch Processing Interface</h3>
+                    <p>Web interface for uploading batch photos with drag-and-drop support, processing progress indicators,
+                        side-by-side image-to-extracted-data review panels, and one-click export to formatted Excel files.</p>
                 </div>
-
-                <div class="card-elevated rounded-2xl p-6 reveal">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="text-[0.7rem] font-bold tracking-[1.5px] uppercase px-2.5 py-0.5 rounded-full text-accent2 bg-accent2/10 border border-accent2/22">Impact</span>
-                    </div>
-                    <h3 class="font-display text-[1.05rem] font-semibold text-primary mb-2">Process Automation</h3>
-                    <p class="text-[0.87rem] text-muted leading-relaxed">
-                        Replaced a fully manual data entry workflow &mdash; what previously required hours of transcribing medicine details from photographs into spreadsheets was reduced to minutes of automated processing with human review only for flagged low-confidence entries.
-                    </p>
+                <div class="deliverable reveal">
+                    <span class="badge">Impact</span>
+                    <h3>Process Automation</h3>
+                    <p>Replaced a fully manual data-entry workflow — what previously required hours of transcribing medicine
+                        details from photographs was reduced to minutes of automated processing, with human review only for
+                        flagged low-confidence entries.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="section-divider"></div>
-
-    <!-- ===== SKILLS USED ===== -->
-    <section class="py-14 mesh-bg-purple">
-        <div class="max-w-site mx-auto px-6 lg:px-12">
-            <div class="mb-8 reveal">
-                <h2 class="font-display text-[clamp(1.6rem,3.5vw,2.3rem)] font-bold tracking-tight leading-tight">
-                    Skills <span class="grad-text-section">Used</span>
-                </h2>
-            </div>
-            <div class="flex flex-wrap gap-2 reveal">
-                <span class="skill-pill">Node.js</span>
-                <span class="skill-pill">OpenCV.js</span>
-                <span class="skill-pill">Google Vision API</span>
-                <span class="skill-pill">Excel Automation</span>
-                <span class="skill-pill">JavaScript</span>
-                <span class="skill-pill">Image Processing</span>
-                <span class="skill-pill">OCR</span>
-                <span class="skill-pill">REST APIs</span>
-                <span class="skill-pill">Regex</span>
-                <span class="skill-pill">Git</span>
+    <!-- SKILLS USED -->
+    <section class="section">
+        <div class="wrap">
+            <h2 class="detail-h reveal">Skills Used</h2>
+            <div class="skill-list reveal">
+                <span>Node.js</span><span>OpenCV.js</span><span>Google Vision API</span><span>Excel Automation</span><span>JavaScript</span><span>Image Processing</span><span>OCR</span><span>REST APIs</span><span>Regex</span><span>Git</span>
             </div>
         </div>
     </section>
+    </main>
 
     <div id="footer-placeholder"></div>
+    <button id="to-top" class="to-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
 
     <script src="../../js/components.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="../../js/main.js"></script>
+    <script src="../../js/editorial.js"></script>
 </body>
 
 </html>
